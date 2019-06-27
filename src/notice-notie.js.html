@@ -1,0 +1,63 @@
+//= template/head.html
+//= template/head-end.html
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<section class="box-typical box-typical-padding">
+				<h3 class="with-border">notie.js</h3>
+				<button type="button" class="btn btn-success" onclick="success();">Success</button>
+				<button type="button" class="btn btn-warning" onclick="warning();">Warning</button>
+				<button type="button" class="btn btn-danger" onclick="error();">Error</button>
+				<button type="button" class="btn btn-info" onclick="info();">Information</button>
+				<button type="button" class="btn" onclick="confirm();">Confirm</button>
+				<button type="button" class="btn" onclick="input();">Input</button>
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/modal-upload-1.html
+
+	//= template/modal-upload-2.html
+
+	//= template/footer.html
+
+	<script src="js/lib/notie/notie.js"></script>
+	<script>
+		function success() {
+			notie.alert(1, 'Success!', 2);
+		}
+
+		function warning() {
+			notie.alert(2, 'Warning<br><b>with</b><br><i>HTML</i><br><u>included.</u>', 2);
+		}
+
+		function error() {
+			notie.alert(3, 'Error.', 2);
+		}
+
+		function info() {
+			notie.alert(4, 'Information.', 2);
+		}
+
+		function confirm() {
+			notie.confirm('Are you sure you want to do that?<br><b>That\'s a bold move...</b>', 'Yes', 'Cancel', function() {
+				notie.alert(1, 'Good choice!', 2);
+			});
+		}
+
+		function input() {
+			notie.input('Please enter your email address:', 'Submit', 'Cancel', 'email', 'name@example.com', function(value_entered) {
+				notie.alert(1, 'You entered: ' + value_entered, 2);
+			});
+		}
+	</script>
+
+//= template/foot.html
+
+
+

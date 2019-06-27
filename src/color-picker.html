@@ -1,0 +1,287 @@
+//= template/head.html
+<link rel="stylesheet" href="css/lib/jquery-minicolors/jquery.minicolors.css">
+<link rel="stylesheet" href="css/separate/vendor/jquery.minicolors.min.css">
+//= template/head-end.html
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<div class="tbl-row">
+						<div class="tbl-cell">
+							<h3>Color Picker</h3>
+							<ol class="breadcrumb breadcrumb-simple">
+								<li><a href="#">StartUI</a></li>
+								<li><a href="#">Components</a></li>
+								<li class="active">Color Picker</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="box-typical box-typical-padding">
+				<h3>Control Types</h3>
+				<div class="well">
+					<div class="row">
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="hue-demo">Hue (default)</label>
+								<input type="text" id="hue-demo" class="form-control demo" data-control="hue" value="#ff6161">
+							</div>
+							<div class="form-group">
+								<label for="saturation-demo">Saturation</label>
+								<input type="text" id="saturation-demo" class="form-control demo" data-control="saturation" value="#0088cc">
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="brightness-demo">Brightness</label>
+								<input type="text" id="brightness-demo" class="form-control demo" data-control="brightness" value="#00ffff">
+							</div>
+							<div class="form-group">
+								<label for="wheel-demo">Wheel</label>
+								<input type="text" id="wheel-demo" class="form-control demo" data-control="wheel" value="#ff99ee">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Input modes -->
+				<h3>Input Modes</h3>
+				<div class="well">
+					<div class="row">
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="text-field">Text field</label>
+								<br>
+								<input type="text" id="text-field" class="form-control demo" value="#70c24a">
+							</div>
+							<div class="form-group">
+								<label for="hidden-input">Hidden Input</label>
+								<br>
+								<input type="hidden" id="hidden-input" class="demo" value="#db913d">
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="inline">Inline</label>
+								<br>
+								<input type="text" id="inline" class="form-control demo" data-inline="true" value="#4fc8db">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Positions -->
+				<h3>Positions</h3>
+				<div class="well">
+					<p>
+						Valid positions include <code>bottom left</code>, <code>bottom right</code>, <code>top
+						left</code>, and <code>top right</code>.
+					</p>
+					<div class="row">
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="position-bottom-left">bottom left (default)</label>
+								<input type="text" id="position-bottom-left" class="form-control demo" data-position="bottom left" value="#0088cc">
+							</div>
+							<div class="form-group">
+								<label for="position-top-left">top left</label>
+								<input type="text" id="position-top-left" class="form-control demo" data-position="top left" value="#0088cc">
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="position-bottom-right">bottom right</label>
+								<input type="text" id="position-bottom-right" class="form-control demo" data-position="bottom right" value="#0088cc">
+							</div>
+							<div class="form-group">
+								<label for="position-top-right">top right</label>
+								<input type="text" id="position-top-right" class="form-control demo" data-position="top right" value="#0088cc">
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-12">
+						</div>
+					</div>
+				</div>
+
+				<!-- RGB(A) -->
+				<h3>RGB(A)</h3>
+				<div class="well">
+					<div class="row">
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="rgb">RGB</label>
+								<br>
+								<input type="text" id="rgb" class="form-control demo" data-format="rgb" value="rgb(33, 147, 58)">
+                            <span class="help-block">
+                                RGB input can be assigned by setting the <code>format</code> option
+                                to <code>rgb</code>.
+                            </span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="rgba">RGBA</label>
+								<br>
+								<input type="text" id="rgba" class="form-control demo" data-format="rgb" data-opacity=".5" value="rgba(52, 64, 158, 0.5)">
+                            <span class="help-block">
+                                RGBA input can be assigned by setting the <code>format</code>
+                                option to <code>rgb</code> and <code>opacity</code> option to
+                                <code>true</code>.
+                            </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- and more -->
+				<h3>&hellip;and more!</h3>
+				<div class="well">
+					<div class="row">
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="opacity">Opacity</label>
+								<br>
+								<input type="text" id="opacity" class="form-control demo" data-opacity=".5" value="#766fa8">
+                            <span class="help-block">
+                                Opacity can be assigned by including the <code>data-opacity</code>
+                                attribute or by setting the <code>opacity</code> option to
+                                <code>true</code>.
+                            </span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="keywords">Keywords</label>
+								<br>
+								<input type="text" id="keywords" class="form-control demo" data-keywords="transparent, initial, inherit" value="transparent">
+                            <span class="help-block">
+                                CSS-wide keywords can be assigned by setting the <code>keywords</code>
+                                option to a comma-separated list of valid keywords: <code>transparent,
+                                initial, inherit</code>.
+                            </span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="default-value">Default Value</label>
+								<br>
+								<input type="text" id="default-value" class="form-control demo" data-defaultValue="#ff6600">
+                            <span class="help-block">
+                                This field has a default value assigned to it, so it will never be empty.
+                            </span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="letter-case">Letter Case</label>
+								<br>
+								<input type="text" id="letter-case" class="form-control demo" data-letterCase="uppercase" value="#abcdef">
+                                    <span class="help-block">
+                                        This field will always be uppercase.
+                                    </span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="input-group">Input Groups</label>
+								<div class="input-group">
+									<input type="text" id="input-group" class="form-control demo" value="#ff0000"/>
+                                        <span class="input-group-append">
+                                            <button class="btn btn-primary-outline" type="button">Button</button>
+                                        </span>
+								</div>
+                                    <span class="help-block">
+                                        Example using Bootstrap's input groups.
+                                    </span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="more-input-group">More Input Groups</label>
+
+								<div class="input-group">
+									<span class="input-group-prepend"><span class="input-group-text">Color</span></span>
+									<input type="text" id="more-input-group" class="form-control demo" value="#ff0000"/>
+									<span class="input-group-append">
+										<button class="btn btn-primary" type="button">Search!</button>
+									</span>
+								</div>
+
+                                    <span class="help-block">
+                                        Input group example with addon.
+                                    </span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="letter-case">Swatches</label>
+								<br>
+								<input type="text" id="swatches" class="form-control demo" data-swatches="#fff|#000|#f00|#0f0|#00f|#ff0|#0ff"  value="#abcdef">
+                            <span class="help-block">
+                                Example with swatches.
+                            </span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-4 col-12">
+							<div class="form-group">
+								<label for="letter-case">Swatches and opacity</label>
+								<br>
+								<input type="text" id="swatches" class="form-control demo" data-format="rgb" data-opacity="1" data-swatches="#fff|#000|#f00|#0f0|#00f|#ff0|rgba(0,0,255,0.5)"  value="rgba(14, 206, 235, .5)">
+                            <span class="help-block">
+                                Example with swatches and opacity.
+                            </span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div><!--.page-content-->
+
+	//= template/modal-upload-1.html
+
+	//= template/modal-upload-2.html
+
+	//= template/footer.html
+
+<script src="js/lib/jquery-minicolors/jquery.minicolors.min.js"></script>
+<script>
+	(function () {
+		$(document).ready(function () {
+			$('.demo').each( function() {
+				$(this).minicolors({
+					control: $(this).attr('data-control') || 'hue',
+					defaultValue: $(this).attr('data-defaultValue') || '',
+					format: $(this).attr('data-format') || 'hex',
+					keywords: $(this).attr('data-keywords') || '',
+					inline: $(this).attr('data-inline') === 'true',
+					letterCase: $(this).attr('data-letterCase') || 'lowercase',
+					opacity: $(this).attr('data-opacity'),
+					position: $(this).attr('data-position') || 'bottom left',
+					swatches: $(this).attr('data-swatches') ? $(this).attr('data-swatches').split('|') : [],
+					theme: 'bootstrap'
+				});
+
+			});
+		});
+	})();
+</script>
+//= template/foot.html
+
+
+

@@ -1,0 +1,96 @@
+//= template/head.html
+	<link rel="stylesheet" href="css/lib/bootstrap-table/bootstrap-table.min.css">
+//= template/head-end.html
+<body class="with-side-menu-addl-full">
+
+//= template/header.html
+
+//= template/side-menu.html
+
+<nav class="side-menu-addl">
+	<ul class="side-menu-addl-list">
+		<li>
+			<a href="bootstrap-datatables.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Default</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-filter-control.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Filter Control</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-fixed-columns.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Fixed Columns</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-mobile.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Mobile (Responsive)</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-reorder-columns.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Reorder Columns</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-reorder-rows.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Reorder Rows</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-resize-columns.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Resize Columns</span>
+					</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	<div class="page-content">
+		<div class="container-fluid">
+
+			<section class="box-typical">
+				<div id="toolbar">
+					Filter control
+				</div>
+				<div class="table-responsive">
+					<table id="table"
+						   data-filter-control="true"
+						   data-toolbar="#toolbar">
+						<thead>
+						<tr>
+							<th data-field="id" data-sortable="true" data-width="60" class="valign-top">ID</th>
+							<th data-field="name" data-filter-control="input" data-sortable="true">Item Name</th>
+							<th data-field="price" data-filter-control="select" data-sortable="true">Item Price</th>
+						</tr>
+						</thead>
+					</table>
+				</div>
+			</section><!--.box-typical-->
+
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/bootstrap-table/bootstrap-table.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table-filter-control.min.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table-filter-control-init.js"></script>
+
+//= template/foot.html
+

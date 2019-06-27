@@ -1,0 +1,36 @@
+@import '../partials/reset';
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Print
+   ========================================================================== */
+
+@media print {
+   @page {
+      //size: letter landscape;
+   }
+   body { background: #fff !important; }
+   .site-header,
+   .side-menu { display: none; }
+
+   .page-content { padding: 15px 0;
+      .dark-theme & { padding-top: 15px; }
+      .chrome-browser.with-side-menu & { padding-left: 255px; margin-left: -255px;
+         @media (max-width: @md-max-width) { padding-left: 0; padding-right: 0; }
+      }
+      .chrome-browser.with-side-menu-compact & { padding-left: 115px; margin-left: -115px;
+         @media (max-width: @md-max-width) { padding-left: 0; padding-right: 0; }
+      }
+      .chrome-browser.with-side-menu-addl & { padding-left: 335px; margin-left: -335px;
+         @media (max-width: @md-max-width) { padding-left: 0; padding-right: 0; }
+      }
+   }
+
+   .box-typical { padding: 0 !important; border: none !important; }
+   .row>div { width: 100% !important; float: none !important; margin: 0 !important; }
+}
+
+
+
+

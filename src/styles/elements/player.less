@@ -1,0 +1,126 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Player
+   ========================================================================== */
+
+.cstm-player { line-height: normal; margin: 0 0 30px; .clearfix();
+   .cstm-player-video { position: relative;
+      img { display: block; width: 100%; border-radius: .25rem .25rem 0 0; }
+      .hover { position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; background: fade(#000, 30%); border-radius: .25rem .25rem 0 0; text-align: center; color: #fff; cursor: pointer;
+         .font-icon-play { display: block; position: absolute; left: 50%; top: 50%; font-size: 2.5rem /*40/16*/; line-height: 1; margin: -20px 0 0 -13px; }
+      }
+   }
+   .cstm-player-progress { height: 10px; background: #444444; position: relative;
+      >div { position: absolute; left: 0; top: 0; height: 100%; background: @color-blue; }
+   }
+   .cstm-player-inner { background: #fff; position: relative; border: solid 1px @color-border-light; }
+   .cstm-player-volume { margin: 0 auto; height: 10px; width: 100%; max-width: 320px; background: @color-bg-page; border-radius: 25rem; position: relative;
+      .progress { position: absolute; left: 0; top: 0; height: 100%; background: @color-blue; border-radius: 25rem; }
+      .handle { width: 28px; height: 28px; border-radius: 50%; background: #fff; position: absolute; top: 50%; right: -14px; margin-top: -14px; cursor: pointer; box-shadow: 0 0 3px rgba(0,0,0,0.2), 0 3px 1px rgba(0,0,0,0.1); }
+   }
+   .cstm-player-album { color: @color-grey-blue-txt; }
+   .cstm-player-controls { text-align: center; line-height: 1;
+      .font-icon { cursor: pointer; color: @color-border-light; vertical-align: middle;
+         &:hover { color: @color-blue; }
+      }
+   }
+
+   // Big
+   &.cstm-player-big {
+      .cstm-player-inner { border-top: none; border-radius: 0 0 .25rem .25rem; padding: 20px 10px 40px; text-align: center;
+         .time { font-size: .875rem; color: @color-grey-blue-txt; position: absolute; top: 8px;
+            &.time-left { left: 10px; }
+            &.time-right { right: 10px; }
+         }
+      }
+      .cstm-player-singer { font-size: 1.75rem /*28/16*/; margin: 0 0 6px; }
+      .cstm-player-song { font-size: 1.25rem /*20/16*/; margin: 0 0 8px; }
+      .cstm-player-controls { font-size: 2.5rem /*40/16*/; padding: 20px 0;
+         .font-icon {
+            &.font-icon-play-circle { font-size: 6rem /*96/16*/; margin: 0 1rem; }
+         }
+      }
+   }
+
+   // Small
+   &.cstm-player-small {
+      .cstm-player-preview { float: left; width: 147px; position: relative; z-index: 5;
+         &:after { content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: fade(#000,30%); border-radius: .25rem 0 0 0; }
+         img { display: block; width: 100%; border-radius: .25rem 0 0 0; }
+      }
+      .cstm-player-inner { float: right; width: 100%; margin-left: -147px; border-left: none; border-bottom: none; border-radius: 0 .25rem 0 0; }
+      .cstm-player-inner-in { margin-left: 167px; height: 97px; overflow: hidden; }
+      .cstm-player-progress { clear: both; height: 8px; border-radius: 0 0 .25rem .25rem; overflow: hidden;
+         >div { border-radius: 0 0 0 .25rem; }
+      }
+      .cstm-player-controls { width: 135px; float: right; position: relative; z-index: 5; font-size: 1.25rem; line-height: 100px;
+         .font-icon {
+            &.font-icon-play-circle { font-size: 3.125rem /*50/16*/; margin: 0 5px; }
+         }
+      }
+      .cstm-player-info { float: left; width: 100%; margin-right: -135px; }
+      .cstm-player-info-in { margin-right: 135px; padding: 12px 0 0; }
+      .cstm-player-singer,
+      .cstm-player-song,
+      .cstm-player-album { white-space: nowrap; width: 100%; overflow: hidden; text-overflow: ellipsis; line-height: 24px; }
+      .cstm-player-singer { font-weight: 600; }
+      .cstm-player-song,
+      .cstm-player-album { font-size: .875rem; }
+
+   }
+}
+
+/* ==========================================================================
+   Video Player
+   ========================================================================== */
+
+.cstm-video-player { margin: 0 0 30px; height: 320px; border-radius: .25rem; background: #000 no-repeat 50% 50%; background-size: cover; position: relative;
+   .cstm-video-player-controls { height: 75px; width: 100%; position: absolute; left: 0; bottom: 0; border-radius: 0 0 .25rem .25rem; background: url('@{path-images}/player-controls.png') repeat-x bottom; background-size: 2px 75px; padding: 32px 10px 0; z-index: 5; }
+   .cstm-video-player-controls-left,
+   .cstm-video-player-controls-right { .clearfix(); padding: 5px; }
+   .cstm-video-player-controls-left { float: left; }
+   .cstm-video-player-controls-right { float: right; }
+
+   .cstm-video-player-progress { height: 3px; position: relative; background: #444;
+      .downloaded, .played { position: absolute; left: 0; top: 0; height: 100%; }
+      .downloaded { background: #777; }
+      .played { background: @color-blue; }
+   }
+   .cstm-video-player-btn { float: left; width: 36px; height: 32px; border: none; background: none; color: #fff; text-align: center;
+      &:hover { color: @color-blue; }
+      .font-icon { position: relative; top: 1px; }
+   }
+
+   .cstm-video-player-hover { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: fade(#000, 30%); border-radius: .25rem; color: #fff;
+      .font-icon { font-size: 2.625rem; line-height: 1; position: absolute; left: 50%; top: 50%; margin: -40px 0 0 -16px; cursor: pointer;
+         &:hover { color: @color-blue; }
+      }
+   }
+}
+
+/* ==========================================================================
+   Minimalistic Player
+   ========================================================================== */
+
+.minimalistic-player { position: relative; padding: 0 85px 0 0;
+   .progress { height: 4px; background: #eaedef; border-radius: 2px; position: relative; overflow: hidden; margin: 0;
+      >div { position: absolute; left: 0; top: 0; height: 100%; border-radius: 2px 0 0 2px; background: @color-blue; }
+
+      &.sound { position: absolute; right: 0; bottom: 0; width: 70px; overflow: visible;
+         .handle { content: ''; display: block; width: 6px; height: 12px; border: solid 1px #fff; background: @color-blue; position: absolute; right: 0; top: 50%; margin: -6px -3px 0 0; cursor: pointer; }
+      }
+   }
+
+   .minimalistic-player-header { margin: 0 0 5px;
+      .tbl-cell { vertical-align: top; }
+      .tbl-cell-action { padding-right: 8px; width: 5px;
+         button { border: none; background: none; color: @color-grey; position: relative; top: 1px;
+            &:hover { color: @color-blue; }
+         }
+      }
+      .tbl-cell-caption { padding-left: 4px; }
+      .tbl-cell-time { text-align: right; white-space: nowrap; width: 20px; padding-left: 10px; color: @color-grey-blue-lighter-txt; }
+   }
+}

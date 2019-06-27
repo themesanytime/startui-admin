@@ -1,0 +1,63 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Typical cards
+   ========================================================================== */
+
+.card-typical { background: #fff; border: solid 1px @color-border-light; border-radius: .25rem;
+   p { margin: 0; }
+   .card-typical-section { padding: 15px; border-top: solid 1px @color-border-light; .clearfix();
+      &:first-child { border-top: none; }
+   }
+   .card-typical-content { font-size: .875rem;
+      .photo { margin: -10px -10px 15px;
+         img { display: block; width: 100%; }
+      }
+      .title { font-weight: 600; font-size: 1rem; margin: 0 0 5px;
+         a { .a_color_text(); }
+      }
+   }
+   .card-typical-linked,
+   .card-typical-likes { color: @color-grey-blue-lighter-txt; line-height: 1rem; font-size: .875rem; }
+   .card-typical-linked { float: left; }
+   .card-typical-likes { float: right;
+      .font-icon { margin: 0 2px 0 0; vertical-align: middle; font-size: .875rem; }
+      &:hover { color: @color-blue; }
+   }
+
+   .cards-grid & { margin: 0 15px 30px; }
+}
+
+/* ==========================================================================
+   Grid cards
+   ========================================================================== */
+
+.cards-grid {
+
+   &[data-columns]::before { content: '3 .column.size-1of3'; }
+
+   .column { float: left; }
+   .size-1of4 { width: 25%; }
+   .size-1of3 { width: 33.333%; }
+   .size-1of2 { width: 50%; }
+
+   @media screen and (max-width: 520px) {
+      &[data-columns]::before { content: '1 .column'; }
+   }
+
+   @media screen and (min-width: 521px) and (max-width: @sm-max-width) {
+      &[data-columns]::before { content: '2 .column.size-1of2'; }
+   }
+
+   @media screen and (min-width: @sm-min-width) and (max-width: 1300px) {
+      &[data-columns]::before { content: '3 .column.size-1of3'; }
+   }
+
+   @media screen and (min-width: 1301px) {
+      &[data-columns]::before { content: '4 .column.size-1of4'; }
+   }
+
+}
+
+

@@ -1,0 +1,105 @@
+//= template/head.html
+//= template/head-end.html
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<div class="tbl-row">
+						<div class="tbl-cell">
+							<h3>Form extras</h3>
+							<ol class="breadcrumb breadcrumb-simple">
+								<li><a href="#">StartUI</a></li>
+								<li><a href="#">Forms</a></li>
+								<li class="active">Form extras</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="card">
+				<div class="card-block">
+					<h5 class="with-border">Elastic textarea</h5>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<fieldset class="form-group">
+								<label class="form-label" for="exampleInputEmail1">Text</label>
+								<textarea rows="4" class="form-control" placeholder="Press Enter" data-autosize></textarea>
+							</fieldset>
+						</div>
+					</div><!--.row-->
+
+					<h5 class="with-border m-t-lg">Max Length</h5>
+
+					<div class="row">
+						<div class="col-lg-4">
+							<fieldset class="form-group">
+								<label class="form-label" for="exampleInput">First Name</label>
+								<input type="text" class="form-control maxlength-simple" id="exampleInput" placeholder="First Name" maxlength="15">
+								<small class="text-muted">Max length 15, simple</small>
+							</fieldset>
+						</div>
+						<div class="col-lg-4">
+							<fieldset class="form-group">
+								<label class="form-label" for="exampleInputEmail1">Email address</label>
+								<input type="email" class="form-control maxlength-custom-message" id="exampleInputEmail1" placeholder="Enter email" maxlength="20">
+								<small class="text-muted">Max length 20, custom message</small>
+							</fieldset>
+						</div>
+						<div class="col-lg-4">
+							<fieldset class="form-group">
+								<label class="form-label" for="exampleInputPassword1">Password</label>
+								<input type="password" class="form-control maxlength-always-show" id="exampleInputPassword1" placeholder="Password" maxlength="10">
+								<small class="text-muted">Max length 10, always show</small>
+							</fieldset>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<fieldset class="form-group">
+								<label class="form-label" for="exampleInputEmail1">Text</label>
+								<textarea rows="2" class="form-control maxlength-simple" placeholder="Textarea max length 20 chars" maxlength="20"></textarea>
+							</fieldset>
+						</div>
+					</div>
+
+					<h5 class="with-border m-t-lg">Hide/Show Password</h5>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="form-group">
+								<label class="form-label" for="hide-show-password">Password</label>
+								<input id="hide-show-password" type="password" class="form-control" value="Example">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/autosize/autosize.min.js"></script>
+	<script src="js/lib/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+	<script src="js/lib/bootstrap-maxlength/bootstrap-maxlength-init.js"></script>
+	<script src="js/lib/hide-show-password/bootstrap-show-password.min.js"></script>
+	<script src="js/lib/hide-show-password/bootstrap-show-password-init.js"></script>
+
+	<script>
+		$(function() {
+			autosize($('textarea[data-autosize]'));
+		});
+	</script>
+//= template/foot.html
+
+
+

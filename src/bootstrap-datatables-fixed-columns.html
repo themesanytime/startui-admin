@@ -1,0 +1,90 @@
+//= template/head.html
+	<link rel="stylesheet" href="css/lib/bootstrap-table/bootstrap-table.min.css">
+	<link rel="stylesheet" href="css/lib/bootstrap-table/bootstrap-table-fixed-columns.css">
+//= template/head-end.html
+<body class="with-side-menu-addl-full">
+
+//= template/header.html
+
+//= template/side-menu.html
+
+<nav class="side-menu-addl">
+	<ul class="side-menu-addl-list">
+		<li>
+			<a href="bootstrap-datatables.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Default</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-filter-control.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Filter Control</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-fixed-columns.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Fixed Columns</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-mobile.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Mobile (Responsive)</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-reorder-columns.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Reorder Columns</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-reorder-rows.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Reorder Rows</span>
+					</span>
+			</a>
+		</li>
+		<li>
+			<a href="bootstrap-datatables-resize-columns.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Resize Columns</span>
+					</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	<div class="page-content">
+		<div class="container-fluid">
+
+			<section class="box-typical">
+				<div id="toolbar" class="form-inline">
+					<span>Fixed Number: </span>
+					<input class="form-control" id="fixedNumber" type="number" value="1" min="1" max="5">
+				</div>
+				<div class="table-responsive">
+					<table id="table" data-toggle="table" data-height="500" data-show-columns="true"></table>
+				</div>
+			</section><!--.box-typical-->
+
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/bootstrap-table/bootstrap-table.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table-fixed-columns.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table-fixed-columns-init.js"></script>
+
+//= template/foot.html
+
+
+

@@ -1,0 +1,67 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Tasks
+   ========================================================================== */
+
+.tasks-grid { .clearfix();
+   .tasks-grid-col { float: left; width: 230px; margin: 0 30px 0 0; }
+   .tasks-grid-col-title { margin: 0 0 10px;
+      strong { font-weight: 600; }
+   }
+   .sortable { padding: 0 0 30px; }
+}
+
+.task-card { margin: 0 0 30px;
+   .task-card-create-title { padding: 15px; font-weight: 600; }
+   .task-card-create {
+      input[type="text"] { border: none; background: none; padding: 15px; font-size: 1rem; font-weight: 600; color: @color-text; }
+      ::-webkit-input-placeholder { color: @color-text !important; }
+      ::-moz-placeholder { color: @color-text !important; opacity: 1 !important; }
+      :-moz-placeholder { color: @color-text !important; opacity: 1 !important; }
+      ::-moz-placeholder { color: @color-text !important; }
+      :-ms-input-placeholder { color: @color-text !important; }
+   }
+   .task-card-footer { padding: 8px 15px; background: @color-bg-grey-light; border-radius: 0 0 3px 3px; border-top: solid 1px @color-border-light; .clearfix(); }
+   .task-card-in { padding: 0 15px; position: relative; }
+
+   .task-card-photo { margin: 0 15px 10px;
+      img { display: block; width: 100%; }
+   }
+   .task-card-title { margin: 0 15px 10px 0;
+      a { .a_color_text(); }
+   }
+   .task-card-title-label { color: @color-grey-blue-txt; font-size: .875rem; }
+   .task-card-tags { padding: 5px 0 11px;
+      .label { font-size: .875rem; color: @color-grey-blue-txt; font-weight: 400; margin: 0 3px 8px 0;
+         &:hover { color: #fff; }
+      }
+   }
+   .avatar-preview { float: right; }
+   .task-card-meta-item { float: left; height: 32px; line-height: 32px; margin: 0 15px 0 0; font-size: .875rem; position: relative; top: 1px;
+      .font-icon { color: @color-grey-blue-lighter-txt; margin: 0 5px 0 0; }
+   }
+
+   .task-card-menu { position: absolute; top: 0; right: 9px;
+      button { border: none; background: none; color: @color-grey-blue-lighter-txt; }
+      &.open button, button:hover { color: @color-blue; }
+      .dropdown-menu { min-width: auto; margin-top: 0; }
+   }
+
+   .progress-compact-style { margin: 0 0 3px;
+      .progress-compact-style-label { font-size: .875rem; }
+   }
+
+   &.task { padding-top: 20px; border-top: solid 4px @color-blue; border-radius: 5px 5px .25rem .25rem;
+      .tasks-grid-col.red & { border-top-color: @color-red; }
+      .tasks-grid-col.green & { border-top-color: @color-green; }
+      .tasks-grid-col.purple & { border-top-color: @color-purple; }
+   }
+}
+
+.sortable-placeholder { height: 100px; text-align: center; line-height: 96px; border: dashed 2px @color-grey; border-radius: .25rem; margin: 0 0 30px;
+   &:before { content: 'Move'; font-size: .875rem; font-weight: 600; color: @color-grey-blue-lighter-txt; }
+}
+
+

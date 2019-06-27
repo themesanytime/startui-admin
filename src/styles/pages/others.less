@@ -1,0 +1,115 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Faq
+   ========================================================================== */
+
+.faq-item { position: relative; padding: 0 0 0 60px; }
+.faq-item-circle { width: 40px; height: 40px; text-align: center; line-height: 34px; font-weight: 700; color: @color-grey-blue-lighter-txt; position: absolute; left: 0; top: 0; background: @color-bg-grey; border-radius: 50%; border: solid 3px @color-border-light;  }
+
+/* ==========================================================================
+   Faq search
+   ========================================================================== */
+
+.faq-page { }
+
+.faq-page-header-search { border-radius: .25rem .25rem 0 0; margin: -1px -1px 0 -1px; padding: 35px 30px; background: #1873d2 url('@{path-images}/faq-search.jpg') no-repeat 50% 50%; background-size: cover;
+   .search { position: relative; }
+   .form-control { border: none; padding-right: 44px; }
+   .find { display: block; width: 44px; height: 36px; position: absolute; right: 0; top: 0; text-align: center; border: none; background: none; color: @color-grey;
+      &:hover { color: @color-blue; }
+      .font-icon { position: relative; top: 1px;  }
+   }
+}
+.faq-page-cats { padding: 45px 30px 0; border-bottom: solid 1px @color-border-light;
+   .faq-page-cat { text-align: center; margin: 0 0 40px; }
+   .faq-page-cat-icon { margin: 0 0 25px;
+      img { height: 80px; }
+   }
+   .faq-page-cat-title { font-size: 1.25rem /*20/16*/; margin: 0 0 .5rem;
+      a { .a_color_text(); }
+   }
+   .faq-page-cat-txt { color: @color-grey-blue-lighter-txt; }
+}
+.faq-page-questions { padding: 25px 30px 30px;
+   >h1, >h2, >h3, >h4 { text-align: center; margin-bottom: 25px; }
+   .faq-page-quest { margin: 0 0 22px; }
+   .faq-page-quest-title { font-weight: 600; margin: 0 0 5px;
+      a { .a_colored(@color-link, @color-red); }
+   }
+}
+
+/* ==========================================================================
+   Add customers
+   ========================================================================== */
+
+.add-customers-screen { text-align: center; display: table; width: 100%; height: 100%;
+   .add-customers-screen-in { display: table-cell; vertical-align: middle; padding: 15px; }
+   .add-customers-screen-user { width: 80px; height: 80px; margin: 0 auto 1.5rem; border: solid 1px @color-border; text-align: center; line-height: 78px; border-radius: 5px; color: @color-grey; font-size: 2.5rem;
+      .font-icon { line-height: inherit; vertical-align: middle; }
+   }
+   .lead { font-size: 1.5rem; }
+   .btn { margin: 1rem 0 0; }
+}
+
+/* ==========================================================================
+   Documentation
+   ========================================================================== */
+
+.documentation { }
+.documentation-meta { padding: 0 0 14px; border-bottom: solid 1px @color-border;
+   p { margin: 10px 0; }
+   .inline { display: inline; margin: 0 30px 0 0; }
+   a { .a_color_text(); }
+}
+.documentation-header { margin: 0 0 .75rem;
+   h1, h2, h3, h4, h5, h6, .lead { margin: 0 0 .5rem; }
+}
+.documentation-header-by { color: @color-grey-blue-lighter-txt;
+   a { .a_color_text(); }
+   .avatar-preview { margin: 0 5px; position: relative; top: -1px; }
+}
+
+/* ==========================================================================
+   Icons page
+   ========================================================================== */
+
+.bs-glyphicons { .clearfix(); margin: 1rem 0 0;
+   .bs-glyphicons-list { .clearfix(); }
+   li { float: left; width: 25%; height: 115px; padding: 10px; font-size: 10px; line-height: 1.4; text-align: center; background-color: #f9f9f9; border: 1px solid #fff;
+      &:hover { color: #fff; background-color: @color-blue;
+         .glyphicon, .font-icon { color: #fff; }
+      }
+   }
+   .glyphicon, .font-icon { margin-top: 5px; margin-bottom: 10px; font-size: 24px; color: @color-grey; }
+   .glyphicon-class { display: block; text-align: center; word-wrap: break-word; }
+
+   @media (min-width: @sm-min-width) {
+      li { width: 12.5%; font-size: 14px; }
+   }
+}
+
+.flag-icon-list {
+   .flag-wrapper { width: 100%; display: inline-block; position: relative; box-shadow: 0 0 2px black; overflow: hidden; margin: 10px 0;
+      &:after { padding-top: 75%; display: block; content: ''; }
+   }
+   .flag { position: absolute; top: 0; bottom: 0; right: 0; left: 0; width: 100%; height: 100%; background-size: cover; }
+   .flag-icon-background { background-size: contain; background-position: 50%; background-repeat: no-repeat; }
+}
+
+.fontawesome-icon-list {
+   >div { margin-bottom: 10px; }
+   a { .a_colored(@color-text, @color-link); }
+   .fa { color: @color-grey; }
+}
+
+
+
+
+
+
+
+
+
+

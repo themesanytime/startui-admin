@@ -1,0 +1,210 @@
+//= template/head.html
+
+<link rel="stylesheet" href="css/separate/vendor/jquery-steps.min.css">
+
+//= template/head-end.html
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<div class="tbl-row">
+						<div class="tbl-cell">
+							<h3>Form Steps</h3>
+							<ol class="breadcrumb breadcrumb-simple">
+								<li><a href="#">StartUI</a></li>
+								<li><a href="#">Components</a></li>
+								<li class="active">Form Steps</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="card mb-4">
+				<header class="card-header">
+					Basic steps example
+					<button type="button" class="modal-close">
+						<i class="font-icon-close-2"></i>
+					</button>
+				</header>
+				<div class="card-block">
+					<div id="example-basic">
+						<h3>Keyboard</h3>
+						<section>
+							<p>Try the keyboard navigation by clicking arrow left or right!</p>
+						</section>
+						<h3>Effects</h3>
+						<section>
+							<p>Wonderful transition effects.</p>
+						</section>
+						<h3>Pager</h3>
+						<section>
+							<p>The next and previous buttons help you to navigate through your content.</p>
+						</section>
+					</div>
+				</div>
+			</section>
+
+			<section class="box-typical box-panel mb-4">
+				<header class="box-typical-header">
+					<div class="tbl-row">
+						<div class="tbl-cell tbl-cell-title">
+							<h3>Form steps example</h3>
+						</div>
+					</div>
+				</header>
+				<div class="box-typical-body">
+					<form id="example-form" action="#" class="form-wizard">
+						<div>
+							<h3>Account</h3>
+							<section>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Email address</label>
+									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+									<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Password</label>
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Confirm Password</label>
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+								</div>
+							</section>
+							<h3>Profile</h3>
+							<section>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Address</label>
+									<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter text" required>
+									<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+								</div>
+							</section>
+							<h3>Hints</h3>
+							<section>
+								<ul>
+									<li>Foo</li>
+									<li>Bar</li>
+									<li>Foobar</li>
+								</ul>
+							</section>
+							<h3>Finish</h3>
+							<section>
+								<div class="form-group">
+									<div class="checkbox">
+										<input type="checkbox" id="agree" class="required" required>
+										<label for="agree">Terms and Conditions</label>
+									</div>
+								</div>
+							</section>
+						</div>
+					</form>
+				</div><!--.box-typical-body-->
+			</section>
+
+			<section class="box-typical box-panel">
+				<header class="box-typical-header">
+					<div class="tbl-row">
+						<div class="tbl-cell tbl-cell-title">
+							<h3>Vertical steps example</h3>
+						</div>
+					</div>
+				</header>
+				<div class="box-typical-body">
+					<div id="example-vertical">
+						<h3>Keyboard</h3>
+						<section>
+							<p>Try the keyboard navigation by clicking arrow left or right!</p>
+						</section>
+						<h3>Effects</h3>
+						<section>
+							<p>Wonderful transition effects.</p>
+						</section>
+						<h3>Pager</h3>
+						<section>
+							<p>The next and previous buttons help you to navigate through your content.</p>
+						</section>
+					</div>
+				</div><!--.box-typical-body-->
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/jquery-validation/jquery.validate.min.js"></script>
+	<script src="js/lib/jquery-steps/jquery.steps.min.js"></script>
+	<script>
+		$(function() {
+			$("#example-basic ").steps({
+				headerTag: "h3",
+				bodyTag: "section",
+				transitionEffect: "slideLeft",
+				autoFocus: true
+			});
+
+			var form = $("#example-form");
+			form.validate({
+				rules: {
+					agree: {
+						required: true
+					}
+				},
+				errorPlacement: function errorPlacement(error, element) { element.closest('.form-group').find('.form-control').after(error); },
+				highlight: function(element) {
+					$(element).closest('.form-group').addClass('has-error');
+				},
+				unhighlight: function(element) {
+					$(element).closest('.form-group').removeClass('has-error');
+				}
+			});
+
+			form.children("div").steps({
+				headerTag: "h3",
+				bodyTag: "section",
+				transitionEffect: "slideLeft",
+				onStepChanging: function (event, currentIndex, newIndex)
+				{
+					form.validate().settings.ignore = ":disabled,:hidden";
+					return form.valid();
+				},
+				onFinishing: function (event, currentIndex)
+				{
+					form.validate().settings.ignore = ":disabled";
+					return form.valid();
+				},
+				onFinished: function (event, currentIndex)
+				{
+					alert("Submitted!");
+				}
+			});
+
+			$("#example-tabs").steps({
+				headerTag: "h3",
+				bodyTag: "section",
+				transitionEffect: "slideLeft",
+				enableFinishButton: false,
+				enablePagination: false,
+				enableAllSteps: true,
+				titleTemplate: "#title#",
+				cssClass: "tabcontrol"
+			});
+
+			$("#example-vertical").steps({
+				headerTag: "h3",
+				bodyTag: "section",
+				transitionEffect: "slideLeft",
+				stepsOrientation: "vertical"
+			});
+		});
+	</script>
+//= template/foot.html
+
+
+

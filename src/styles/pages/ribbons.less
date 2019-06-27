@@ -1,0 +1,52 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Ribbons
+   ========================================================================== */
+
+.ribbon-block {
+    background: @color-bg-white;
+    padding: 30px;
+    border: 1px solid @color-border;
+    margin-bottom: 30px;
+    position: relative;
+    min-height: 175px;
+    .block-icon {
+        font-size: 84px;
+        color: @color-bg-grey-new;
+        position: relative;
+    }
+    .title {
+        display: block;
+        font-size: 15px;
+        margin-top: 10px;
+        position: relative;
+    }
+    &.with-bg {
+        background-color: @color-bg-blue;
+        border-color: @color-bg-blue;
+        color: @color-white;
+        .block-icon {
+            color: @color-white;
+        }
+    }
+    &.with-image {
+        background-color: @color-bg-black;
+        color: @color-white;
+        .block-icon {
+            color: @color-white;
+        }
+        .background-image {
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: 0;
+            opacity: .4;
+        }
+    }
+}
+

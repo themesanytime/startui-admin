@@ -1,0 +1,50 @@
+@import '../partials/vars';
+
+.checklist {
+  border-color: @color-border-light;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.checklist > * {
+  color: @color-blue;
+}
+
+.checklist > .active {
+  border: 2px solid @color-bg-blue;
+  color: #343434;
+}
+
+.checklist > .right-side {
+  border-left: 2px solid transparent;
+}
+.checklist > .left-side {
+  border-right: 2px solid transparent;
+}
+.checklist > .center-side {
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.checklist.vertical > .right-side {
+  border-left-color: @color-bg-blue;
+}
+
+.checklist.vertical > .left-side {
+  border-right-color: @color-bg-blue;
+}
+
+.checklist.vertical > .center-side {
+  border-left-color: @color-bg-blue;
+  border-right-color: @color-bg-blue;
+}
+
+.checklist.vertical {
+  width: 48px;
+  padding: 3px 5px;
+}

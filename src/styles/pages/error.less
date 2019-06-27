@@ -1,0 +1,29 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Error
+   ========================================================================== */
+
+html {
+   height: 100%;
+}
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+}
+
+.page-error-box { background: #fff; border: solid 1px @color-border-light; border-radius: 5px; padding: 50px 30px 55px; text-align: center; margin: 0 auto; width: 100%; max-width: 475px; color: @color-grey-blue-lighter-txt; line-height: 1;
+   .error-code { font-size: 9.375rem /*150/16*/; font-weight: 600; }
+   .error-title { font-size: 2.25rem /*36/16*/; font-weight: 600; margin: 0 0 1.5rem /*24/16*/; }
+}
+
+@media (max-width: @sm-max-width) {
+   .page-error-box { padding: 25px 15px;
+      .error-code { font-size: 5.5rem; }
+      .error-title { font-size: 1.5rem; }
+   }
+}

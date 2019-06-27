@@ -1,0 +1,328 @@
+//= template/head.html
+<link rel="stylesheet" href="css/separate/vendor/tags_editor.min.css">
+<link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/separate/vendor/select2.min.css">
+//= template/head-end.html
+
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<div class="tbl-row">
+						<div class="tbl-cell">
+							<h3>Selects</h3>
+							<ol class="breadcrumb breadcrumb-simple">
+								<li><a href="#">StartUI</a></li>
+								<li><a href="#">Forms</a></li>
+								<li class="active">Selects</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="card box-typical-full-height">
+				<div class="card-block">
+					<h5 class="with-border m-t-0">Select2</h5>
+					<div class="row">
+						<div class="col-md-3">
+							<select class="select2">
+								<option>Quant Verbal</option>
+								<option>Real Gmat Test</option>
+								<option>Prep test</option>
+								<option>Catprep test</option>
+								<option>Long long long extra long example line long long long extra long example line </option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="select2">
+								<optgroup label="Group first">
+									<option>Quant Verbal</option>
+									<option>Real Gmat Test</option>
+								</optgroup>
+								<optgroup label="Group second">
+									<option>Prep test</option>
+									<option>Catprep test</option>
+									<option>Third Party Test</option>
+								</optgroup>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="select2-icon">
+								<option data-icon="font-icon-home">Quant Verbal</option>
+								<option data-icon="font-icon-cart">Real Gmat Test</option>
+								<option data-icon="font-icon-speed">Prep test</option>
+								<option data-icon="font-icon-users">Catprep test</option>
+								<option data-icon="font-icon-comments">Third Party Test</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="select2-photo">
+								<option data-photo="img/photo-64-1.jpg">Jenny Hess</option>
+								<option data-photo="img/photo-64-2.jpg">Elliot Fu</option>
+								<option data-photo="img/photo-64-3.jpg">Stevie Felicano</option>
+								<option data-photo="img/photo-64-4.jpg">Christian</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+					</div><!--.row-->
+
+					<div class="row">
+						<div class="col-md-3">
+							<select class="select2" disabled>
+								<option>Quant Verbal</option>
+								<option>Real Gmat Test</option>
+								<option>Prep test</option>
+								<option>Catprep test</option>
+								<option>Long long long extra long example line long long long extra long example line </option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="select2" disabled>
+								<optgroup label="Group first">
+									<option>Quant Verbal</option>
+									<option>Real Gmat Test</option>
+								</optgroup>
+								<optgroup label="Group second">
+									<option>Prep test</option>
+									<option>Catprep test</option>
+									<option>Third Party Test</option>
+								</optgroup>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="select2-icon" disabled>
+								<option data-icon="font-icon-home">Quant Verbal</option>
+								<option data-icon="font-icon-cart">Real Gmat Test</option>
+								<option data-icon="font-icon-speed">Prep test</option>
+								<option data-icon="font-icon-users">Catprep test</option>
+								<option data-icon="font-icon-comments">Third Party Test</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="select2-photo" disabled>
+								<option data-photo="img/photo-64-1.jpg">Jenny Hess</option>
+								<option data-photo="img/photo-64-2.jpg">Elliot Fu</option>
+								<option data-photo="img/photo-64-3.jpg">Stevie Felicano</option>
+								<option data-photo="img/photo-64-4.jpg">Christian</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+					</div><!--.row-->
+
+					<div class="row">
+						<div class="col-md-3">
+							<select class="select2-arrow">
+								<option>Quant Verbal</option>
+								<option>Real Gmat Test</option>
+								<option>Prep test</option>
+								<option>Catprep test</option>
+								<option>Long long long extra long example line long long long extra long example line </option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="select2-arrow manual select2-no-search-arrow">
+								<option>Quant Verbal</option>
+								<option>Real Gmat Test</option>
+								<option>Prep test</option>
+								<option>Catprep test</option>
+								<option>Long long long extra long example line long long long extra long example line </option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="manual select2-no-search-default">
+								<option>Quant Verbal</option>
+								<option>Real Gmat Test</option>
+								<option>Prep test</option>
+								<option>Catprep test</option>
+								<option>Long long long extra long example line long long long extra long example line </option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+					</div><!--.row-->
+
+					<h5 class="with-border m-t-lg">Select2 Multiple</h5>
+
+					<div class="row">
+						<div class="col-md-6">
+							<select class="select2" multiple="multiple">
+								<option data-icon="font-icon-home">Quant Verbal</option>
+								<option selected data-icon="font-icon-cart">Real Gmat Test</option>
+								<option data-icon="font-icon-speed">Prep test</option>
+								<option data-icon="font-icon-users">Catprep test</option>
+								<option data-icon="font-icon-comments">Third Party Test</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+					</div><!--.row-->
+
+					<h5 class="with-border m-t-lg">Bootstrap select</h5>
+
+					<div class="row">
+						<div class="col-md-3">
+							<select class="bootstrap-select">
+								<option>Quant Verbal</option>
+								<option>Real Gmat Test</option>
+								<option>Prep test</option>
+								<option>Catprep test</option>
+								<option>Long long long extra long example line long long long extra long example line </option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="bootstrap-select">
+								<optgroup label="Group first">
+									<option>Quant Verbal</option>
+									<option>Real Gmat Test</option>
+								</optgroup>
+								<optgroup label="Group second">
+									<option>Prep test</option>
+									<option>Catprep test</option>
+									<option>Third Party Test</option>
+								</optgroup>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="bootstrap-select">
+								<option data-content='<span class="font-icon font-icon-home"></span>Quant Verbal'>Quant Verbal</option>
+								<option data-content='<span class="font-icon font-icon-cart"></span>Real Gmat Test'>Real Gmat Test</option>
+								<option data-content='<span class="font-icon font-icon-speed"></span>Prep test'>Prep test</option>
+								<option data-content='<span class="font-icon font-icon-users"></span>Catprep test'>Catprep test</option>
+								<option data-content='<span class="font-icon font-icon-comments"></span>Third Party Test'>Third Party Test</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="bootstrap-select">
+								<option data-content='<span class="user-item"><img src="img/photo-64-1.jpg"/>Jenny Hess</span>'>Jenny Hess</option>
+								<option data-content='<span class="user-item"><img src="img/photo-64-2.jpg"/>Elliot Fu</span>'>Elliot Fu</option>
+								<option data-content='<span class="user-item"><img src="img/photo-64-3.jpg"/>Stevie Felicano</span>'>Stevie Felicano</option>
+								<option data-content='<span class="user-item"><img src="img/photo-64-4.jpg"/>Christian</span>'>Christian</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+					</div><!--.row-->
+
+					<div class="row">
+						<div class="col-md-3">
+							<select class="bootstrap-select" disabled>
+								<option>Quant Verbal</option>
+								<option>Real Gmat Test</option>
+								<option>Prep test</option>
+								<option>Catprep test</option>
+								<option>Long long long extra long example line</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="bootstrap-select" disabled>
+								<optgroup label="Group first">
+									<option>Quant Verbal</option>
+									<option>Real Gmat Test</option>
+								</optgroup>
+								<optgroup label="Group second">
+									<option>Prep test</option>
+									<option>Catprep test</option>
+									<option>Third Party Test</option>
+								</optgroup>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="bootstrap-select" disabled>
+								<option data-content='<span class="font-icon font-icon-home"></span>Quant Verbal'>Quant Verbal</option>
+								<option data-content='<span class="font-icon font-icon-cart"></span>Real Gmat Test'>Real Gmat Test</option>
+								<option data-content='<span class="font-icon font-icon-speed"></span>Prep test'>Prep test</option>
+								<option data-content='<span class="font-icon font-icon-users"></span>Catprep test'>Catprep test</option>
+								<option data-content='<span class="font-icon font-icon-comments"></span>Third Party Test'>Third Party Test</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+						<div class="col-md-3">
+							<select class="bootstrap-select" disabled>
+								<option data-content='<span class="user-item"><img src="img/photo-64-1.jpg"/>Jenny Hess</span>'>Jenny Hess</option>
+								<option data-content='<span class="user-item"><img src="img/photo-64-2.jpg"/>Elliot Fu</span>'>Elliot Fu</option>
+								<option data-content='<span class="user-item"><img src="img/photo-64-3.jpg"/>Stevie Felicano</span>'>Stevie Felicano</option>
+								<option data-content='<span class="user-item"><img src="img/photo-64-4.jpg"/>Christian</span>'>Christian</option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+					</div><!--.row-->
+
+					<div class="row">
+						<div class="col-md-3">
+							<select class="bootstrap-select bootstrap-select-arrow">
+								<option>Quant Verbal</option>
+								<option>Real Gmat Test</option>
+								<option>Prep test</option>
+								<option>Catprep test</option>
+								<option>Long long long extra long example line long long long extra long example line </option>
+							</select>
+							<br/>
+							<br/>
+						</div>
+					</div><!--.row-->
+
+					<h5 class="with-border m-t-lg">Tags Editor</h5>
+					<div class="row">
+						<div class="col-lg-12">
+							<textarea id="tags-editor-textarea">example,example,example</textarea>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/jquery-tag-editor/jquery.caret.min.js"></script>
+	<script src="js/lib/jquery-tag-editor/jquery.tag-editor.min.js"></script>
+	<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="js/lib/select2/select2.full.min.js"></script>
+
+	<script>
+		$(function() {
+			$('#tags-editor-textarea').tagEditor();
+		});
+	</script>
+
+//= template/foot.html
+
+
+

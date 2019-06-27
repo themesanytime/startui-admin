@@ -1,0 +1,136 @@
+//= template/head.html
+<link rel="stylesheet" href="css/separate/vendor/blockui.min.css">
+//= template/head-end.html
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 col-lg-4">
+					<section id="blockui-element-container-default" class="card">
+						<header class="card-header">
+							Default BlockUI Example
+						</header>
+						<div class="card-block display-table" style="min-height: 300px">
+							<p class="text-vertical-middle text-center">
+								To view default blockui in action
+								<a href="#" id="blockui-block-element-default">click here</a>
+							</p>
+						</div>
+					</section>
+				</div>
+				<div class="col-md-4 col-lg-4">
+					<section id="blockui-element-container-dark" class="card">
+						<header class="card-header">
+							Dark BlockUI Example
+						</header>
+						<div class="card-block display-table" style="min-height: 300px">
+							<p class="text-vertical-middle text-center">
+								To view dark blockui in action
+								<a href="#" id="blockui-block-element-dark">click here</a>
+							</p>
+						</div>
+					</section>
+				</div>
+				<div class="col-md-4 col-lg-4">
+					<section id="blockui-element-container-message-loader" class="card">
+						<header class="card-header">
+							Message Loader BlockUI Example
+						</header>
+						<div class="card-block display-table" style="min-height: 300px">
+							<p class="text-vertical-middle text-center">
+								To view message loader blockui in action
+								<a href="#" id="blockui-block-element-message-loader">click here</a>
+							</p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script type="text/javascript" src="js/lib/blockUI/jquery.blockUI.js"></script>
+	<script>
+		$(function() {
+			$.blockUI({
+				overlayCSS:  {
+					background: 'rgba(142, 159, 167, 0.3)',
+					opacity: 1,
+					cursor: 'wait'
+				},
+				css: {
+					width: 'auto',
+					top: '45%',
+                    left: '45%'
+				},
+				message: '<div class="blockui-default-message">Loading...</div>',
+				blockMsgClass: 'block-msg-message-loader'
+			});
+			setTimeout($.unblockUI, 2000);
+
+			$('#blockui-block-element-default').on('click', function() {
+				$('#blockui-element-container-default').block({
+					message: '<div class="blockui-default-message"><i class="fa fa-circle-o-notch fa-spin"></i><h6>We are processing your request. <br> Please be patient.</h6></div>',
+					overlayCSS:  {
+						background: 'rgba(142, 159, 167, 0.8)',
+						opacity: 1,
+						cursor: 'wait'
+					},
+					css: {
+						width: '50%'
+					},
+					blockMsgClass: 'block-msg-default'
+				});
+
+				setTimeout(function() {
+					$('#blockui-element-container-default').unblock()
+				}, 2000);
+			});
+
+			$('#blockui-block-element-dark').on('click', function() {
+				$('#blockui-element-container-dark').block({
+					message: '<div class="blockui-default-message"><i class="fa fa-circle-o-notch fa-spin"></i><h6>Please Wait</h6></div>',
+					overlayCSS:  {
+						background: 'rgba(24, 44, 68, 0.8)',
+						opacity: 1,
+						cursor: 'wait'
+					},
+					css: {
+						width: '50%'
+					},
+					blockMsgClass: 'block-msg-default'
+				});
+
+				setTimeout(function() {
+					$('#blockui-element-container-dark').unblock()
+				}, 2000);
+			});
+
+			$('#blockui-block-element-message-loader').on('click', function() {
+				$('#blockui-element-container-message-loader').block({
+					message: '<div class="blockui-default-message">Please Wait</div>',
+					overlayCSS:  {
+						background: 'rgba(0, 151, 219, 0.8)',
+						opacity: 1,
+						cursor: 'wait'
+					},
+					css: {
+						width: 'auto'
+					},
+					blockMsgClass: 'block-msg-message-loader'
+				});
+
+				setTimeout(function() {
+				 	$('#blockui-element-container-message-loader').unblock()
+				 }, 2000);
+			});
+		});
+	</script>
+
+//= template/foot.html

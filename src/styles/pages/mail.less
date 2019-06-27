@@ -1,0 +1,159 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Mail
+   ========================================================================== */
+
+.mail-box { .clearfix(); }
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.mail-box-header { padding: 10px 15px; .clearfix(); border-bottom: solid 1px @color-border-light;
+   .mail-box-header-left,
+   .mail-box-header-right { .clearfix(); }
+   .mail-box-header-left { float: left; }
+   .mail-box-header-right { float: right; }
+
+   .write, .btn-icon, .btns-icon { float: left; }
+   .btns-icon { .clearfix(); }
+   .write { margin: 0 25px 0 0; }
+
+   .btn-icon { height: 38px; padding: 0; background: none; border: none; color: @color-grey-blue-lighter-txt; margin: 0 18px 0 0;
+      &:hover { color: @color-blue; }
+      .font-icon { vertical-align: middle; position: relative; top: 1px; }
+   }
+
+   .search { float: left; width: 216px; position: relative;
+      .form-control { padding-right: 35px; }
+      .btn-icon { position: absolute; right: 0; top: -1px; width: 12px; }
+   }
+
+   .mail-box-header-nav { float: left; line-height: 38px; .clearfix(); font-weight: 600;
+      li { float: left; margin: 0 30px 0 0; }
+      a { .a_color_text();
+         &.active { color: @color-link; }
+      }
+   }
+}
+
+/* ==========================================================================
+   List
+   ========================================================================== */
+
+.mail-box-list { float: left; width: 372px; position: relative; border-right: solid 1px @color-border-light; background: @color-bg-grey-light; border-radius: 0 0 0 3px; }
+
+.mail-box-item { padding: 15px; position: relative; border-top: solid 1px @color-border-light; cursor: default; font-size: .9375rem;
+   &:first-child { border-top: none; }
+
+   .mail-box-item-header { padding: 0 0 0 44px; position: relative; min-height: 32px; }
+   .mail-box-item-photo { width: 32px; height: 32px; position: absolute; left: 0; top: 0;
+      img { width: 100%; border-radius: 50%; display: block; }
+   }
+   .mail-box-item-head-tbl { line-height: 1rem; margin: 0 0 4px;
+      .tbl-cell { vertical-align: top; }
+      .tbl-cell-date { text-align: right; width: 20px; white-space: nowrap; color: @color-grey-blue-lighter-txt; font-size: .875rem /*14/16*/; padding-left: 10px; padding-top: 1px; }
+   }
+   .mail-box-item-user-tbl { width: auto;
+      .tbl-cell-name { font-weight: 600; }
+      .tbl-cell-new { white-space: nowrap; width: 10px; padding-left: 5px;
+         .label { font-size: .75rem /*12/16*/; position: relative; top: -1px; padding-bottom: 2px; }
+      }
+      .tbl-cell-status { width: 10px; white-space: nowrap; padding-left: 5px;
+         .online { width: 6px; height: 6px; border-radius: 50%; position: relative; top: 5px; background: @color-green;}
+      }
+   }
+   .mail-box-item-title { width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+   .mail-box-item-content { position: relative; padding: 0 0 0 44px; color: @color-grey-blue-lighter-txt;
+      .attach { width: 32px; position: absolute; left: 0; top: 1px; text-align: center; font-size: .875rem; }
+      .txt { width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+   }
+
+   // Classes
+   &:hover,
+   &.selected { background-color: @color-bg-grey; }
+   &.selected-line {
+      &:after { content: ''; display: block; width: 4px; position: absolute; top: 10px; left: -1px; bottom: 10px; background: @color-purple; border-radius: 0 4px 4px 0; }
+      &.red:after { background-color: @color-red; }
+   }
+}
+
+/* ==========================================================================
+   Word area
+   ========================================================================== */
+
+.mail-box-work-area { float: right; width: 100%; margin-left: -373px;
+   .mail-box-work-area-in { margin-left: 372px; }
+}
+
+.mail-box-work-area-header { border-bottom: solid 1px @color-border-light; position: relative; padding: 12px 15px;
+   &:after { content: ''; display: block; width: 4px; position: absolute; top: 10px; left: -1px; bottom: 10px; background: @color-purple; border-radius: 0 4px 4px 0; }
+   .tbl-cell-btns { width: 10px; white-space: nowrap; }
+
+   .btn-icon { height: 32px; padding: 0; background: none; border: none; color: @color-grey-blue-lighter-txt; margin: 0 0 0 20px;
+      &:hover { color: @color-blue; }
+      .font-icon { vertical-align: middle; position: relative; top: 1px; }
+   }
+
+   .user-card-row { font-size: .9375rem; }
+   .letters-num { color: @color-grey-txt; margin: 0 20px 0 0; }
+}
+
+.mail-box-work-area-cont { }
+
+.mail-box-letter-item { margin: 5px; border-radius: .25rem; background: @color-bg-grey-light; padding: 13px; line-height: 18px; font-size: .9375rem;
+   .mail-box-letter-item-in { position: relative; padding: 0 0 0 44px; min-height: 32px; }
+   .mail-box-letter-item-photo { width: 32px; height: 32px; position: absolute; left: 0; top: 2px;
+      img { width: 100%; border-radius: 50%; display: block; }
+   }
+   .mail-box-letter-item-header {
+      .tbl-cell { vertical-align: middle; }
+      .tbl-cell-name { font-weight: 600; }
+      .tbl-cell-date { width: 10px; padding-left: 10px; white-space: nowrap; text-align: right; color: @color-grey-blue-lighter-txt; font-size: .875rem; }
+   }
+   .mail-box-letter-item-txt { width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+
+.mail-box-letter-opened { padding: 18px; overflow: hidden;
+   .mail-box-letter-opened-header {
+      .tbl-cell { vertical-align: top; }
+      .tbl-cell-name { font-weight: 600; }
+      .tbl-cell-date { white-space: nowrap; padding-left: 10px; width: 20px; color: @color-grey-blue-lighter-txt; font-size: .875rem; }
+      .tbl-cell-action { white-space: nowrap; padding-left: 10px; width: 10px;
+         button { border: none; background: none; color: @color-grey-blue-lighter-txt;
+            &:hover { color: @color-blue; }
+         }
+      }
+   }
+
+   .mail-box-letter-files { margin: 0 -30px 0 0; padding: .5rem 0 1rem; }
+
+   .chat-area-bottom { padding: 0; border: none; }
+}
+
+.mail-file { display: inline-block; max-width: 100%; vertical-align: top; position: relative; padding: 2px 30px 0 52px; height: 43px; background: no-repeat 0 0; background-size: auto 43px; margin: 0 0 20px 0; color: @color-grey-txt; font-size: .9375rem;
+   p { width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin: 0; }
+
+   &.pdf { background-image: url('@{path-images}/file-pdf.png'); }
+   &.doc { background-image: url('@{path-images}/file-doc.png'); }
+   &.xls { background-image: url('@{path-images}/file-xls.png'); }
+   &.img { background-image: url('@{path-images}/file-img.png'); }
+}
+
+.chat-area-bottom { padding: 15px; border-top: solid 1px @color-border-light; .clearfix();
+   .caption, .btn { margin: 2px 12px 2px 0; }
+   .caption { display: inline-block; padding: .375rem 0 .375rem 42px; font-size: 1rem; line-height: 1.5; text-align: center; vertical-align: middle; }
+   .attach { float: right; position: relative; top: 11px; }
+   .write-message { position: relative; padding: 0 0 0 42px;
+      .form-group { margin-bottom: 10px; }
+      .avatar { position: absolute; left: -3px; top: 0; width: 32px; height: 32px;
+         img { display: block; width: 100%; height: 100%; border-radius: 50%; }
+      }
+   }
+
+   @media (max-width: @lg-max-width) {
+      .caption { padding-left: 0; }
+   }
+}

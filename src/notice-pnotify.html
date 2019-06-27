@@ -1,0 +1,146 @@
+//= template/head.html
+<link rel="stylesheet" href="css/separate/vendor/pnotify.min.css">
+//= template/head-end.html
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<section class="box-typical box-typical-padding">
+				<h3 class="with-border">PNotify</h3>
+				<div class="form-group">
+					<button type="button" class="btn" onclick="pnSimple();">Simple</button>
+					<button type="button" class="btn" onclick="pnRegular();">Regular Notice</button>
+					<button type="button" class="btn" onclick="pnGlyphicon();">Glyphicon</button>
+					<button type="button" class="btn" onclick="pnCustomIcon();">Custom Icon</button>
+					<button type="button" class="btn" onclick="pnNoIcon();">No Icon Notice</button>
+				</div>
+
+				<div class="form-group">
+					<button type="button" class="btn" onclick="pnInfo();">Info</button>
+					<button type="button" class="btn btn-success" onclick="pnSuccess();">Success</button>
+					<button type="button" class="btn btn-warning" onclick="pnWarning();">Warning</button>
+					<button type="button" class="btn btn-danger" onclick="pnError();">Error</button>
+					<button type="button" class="btn btn-info" onclick="pnPurple();">Purple</button>
+					<button type="button" class="btn btn-secondary" onclick="pnWhite();">White</button>
+					<button type="button" class="btn btn-secondary" onclick="pnGrey();">Grey</button>
+				</div>
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script>
+		function pnSimple() {
+			new PNotify('Check me out! I\'m a notice.');
+		}
+
+		function pnRegular() {
+			new PNotify({
+				title: 'Regular Notice',
+				text: 'Check me out! I\'m a notice.',
+				addclass: 'alert-with-icon'
+			});
+		}
+
+		function pnGlyphicon() {
+			new PNotify({
+				title: 'Bootstrap Icon',
+				text: 'I have an icon that uses the Bootstrap icon styles.',
+				icon: 'glyphicon glyphicon-envelope',
+				addclass: 'alert-with-icon'
+			});
+		}
+
+		function pnCustomIcon() {
+			new PNotify({
+				title: 'Custom Icon',
+				text: 'I have an icon that uses the Bootstrap icon styles.',
+				icon: 'font-icon font-icon-warning',
+				addclass: 'alert-with-icon'
+			});
+		}
+
+		function pnNoIcon() {
+			new PNotify({
+				title: 'No Icon Notice',
+				text: 'I have no icon.',
+				icon: false
+			});
+		}
+
+		function pnInfo() {
+			new PNotify({
+				title: 'New Thing',
+				text: 'Just to let you know, something happened.',
+				type: 'info',
+				icon: 'font-icon font-icon-warning',
+				addclass: 'alert-with-icon'
+			});
+		}
+
+		function pnSuccess() {
+			new PNotify({
+				title: 'Regular Success',
+				text: 'That thing that you were trying to do worked!',
+				type: 'success',
+				icon: 'font-icon font-icon-check-circle',
+				addclass: 'alert-with-icon'
+			});
+		}
+
+		function pnError() {
+			new PNotify({
+				title: 'Oh No!',
+				text: 'Something terrible happened.',
+				type: 'error',
+				icon: 'font-icon font-icon-warning',
+				addclass: 'alert-with-icon'
+			});
+		}
+
+		function pnWarning() {
+			new PNotify({
+				title: 'Oh No!',
+				text: 'Something terrible happened.',
+				icon: 'font-icon font-icon-warning',
+				addclass: 'alert-with-icon'
+			});
+		}
+
+		function pnPurple() {
+			new PNotify({
+				title: 'Oh No!',
+				text: 'Something terrible happened.',
+				icon: 'font-icon font-icon-warning',
+				addclass: 'alert-with-icon alert-purple'
+			});
+		}
+
+		function pnWhite() {
+			new PNotify({
+				title: 'Oh No!',
+				text: 'Something terrible happened.',
+				icon: 'font-icon font-icon-warning',
+				addclass: 'alert-with-icon alert-white'
+			});
+		}
+
+		function pnGrey() {
+			new PNotify({
+				title: 'Oh No!',
+				text: 'Something terrible happened.',
+				icon: 'font-icon font-icon-warning',
+				addclass: 'alert-with-icon alert-grey'
+			});
+		}
+	</script>
+
+//= template/foot.html
+
+
+

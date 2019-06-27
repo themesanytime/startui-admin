@@ -1,0 +1,93 @@
+//= template/head.html
+<link rel="stylesheet" href="css/lib/simplemde/simplemde.min.css"/>
+<link rel="stylesheet" href="css/separate/pages/editor.min.css">
+//= template/head-end.html
+
+<body class="with-side-menu-addl-full">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<nav class="side-menu-addl">
+		<ul class="side-menu-addl-list">
+			<li>
+				<a href="editor-summernote.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Summernote</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="editor-simplemde.html">
+                <span class="tbl-row">
+                    <span class="tbl-cell tbl-cell-caption">Simplemde</span>
+                </span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<h3>Simplemde Markdown Editor</h3>
+					<ol class="breadcrumb breadcrumb-simple">
+						<li><a href="#">StartUI</a></li>
+						<li><a href="#">Editors</a></li>
+						<li class="active">Simplemde Markdown Editor</li>
+					</ol>
+				</div>
+			</header>
+
+			<section class="box-typical box-typical-padding">
+				<textarea id="demo1"># Intro
+Go ahead, play around with the editor! Be sure to check out **bold** and *italic* styling, or even [links](http://google.com). You can type the Markdown syntax, use the toolbar, or use shortcuts like `cmd-b` or `ctrl-b`.
+
+## Lists
+Unordered lists can be started using the toolbar or by typing `* `, `- `, or `+ `. Ordered lists can be started by typing `1. `.
+
+#### Unordered
+* Lists are a piece of cake
+* They even auto continue as you type
+* A double enter will end them
+* Tabs and shift-tabs work too
+
+#### Ordered
+1. Numbered lists...
+2. ...work too!
+
+## What about images?
+![Yes](http://i.imgur.com/sZlktY7.png)</textarea>
+
+				<h2>Hidden toolbar and status bar</h2>
+
+<textarea id="demo2"># This one is bare
+You can also choose to hide the statusbar and/or toolbar for a simple and clean appearance. This one also checks for misspelled words as you type!</textarea>
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/simplemde/simplemde.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			new SimpleMDE({
+				element: document.getElementById("demo1"),
+				spellChecker: false
+			});
+
+			new SimpleMDE({
+				element: document.getElementById("demo2"),
+				status: false,
+				toolbar: false
+			});
+		});
+	</script>
+
+//= template/foot.html
+
+
+

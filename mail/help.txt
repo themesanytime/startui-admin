@@ -1,0 +1,4 @@
+Documentation https://mjml.io/documentation/#standard-components
+
+For compile html email template, run:
+mjml -r confirm-1.mjml -o confirm-1.html

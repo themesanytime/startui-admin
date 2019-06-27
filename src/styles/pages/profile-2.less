@@ -1,0 +1,199 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Profile
+   ========================================================================== */
+
+.profile-header-photo { height: 245px; margin: -27px -15px 20px; background: #232936 no-repeat 50% 50%; background-size: cover; position: relative; color: #fff;
+   .profile-header-photo-in { display: table; width: 100%; height: 100%; border-collapse: collapse;
+      >.tbl-cell { vertical-align: bottom; }
+   }
+
+   .change-cover { position: absolute; right: 30px; top: 20px; .a_colored(#fff, @color-blue); background: fade(#000, 40%); font-size: .875rem; padding: 6px 8px; border-radius: 3px; overflow: hidden;
+      input[type="file"] { position: absolute; left: 0; top: 0; bottom: 0; right: 0; font-size: 100rem; opacity: 0; cursor: pointer; }
+      .font-icon { font-size: 1rem; margin: 0 4px 0 0; position: relative; top: 1px; }
+   }
+
+   .info-block { padding: 0 15px; }
+
+   .info-tbl {
+      p { margin: 0; }
+      .tbl-cell { vertical-align: bottom; padding: 15px 0; }
+      .tbl-cell-stat { width: 15%; text-align: right; }
+      .title { font-size: 1.5rem; font-weight: 600; }
+      .inline-block { display: inline-block; text-align: center; }
+   }
+
+   &.gradient {
+      .info-block { background: -moz-linear-gradient(top,  rgba(125,185,232,0) 0%, rgba(0,0,0,1) 100%);
+         background: -webkit-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(0,0,0,1) 100%);
+         background: linear-gradient(to bottom,  rgba(125,185,232,0) 0%,rgba(0,0,0,1) 100%);
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#000000',GradientType=0 );
+      }
+   }
+   &.opacity {
+      .info-block { background: fade(#000, 40%); }
+   }
+}
+
+/* ==========================================================================
+   Profile side
+   ========================================================================== */
+
+.profile-side { margin: -245px 0 20px; position: relative;
+   p { margin: 0; }
+   .box-typical { margin: 0 0 15px; }
+   .box-typical-inner { padding: 12px 15px;
+      .line-with-icon:last-child { margin-bottom: 0; }
+   }
+   .progress-compact-style { margin: 0 0 15px;
+      &:last-child { margin-bottom: 0; }
+   }
+}
+
+.profile-side-user { text-align: center; padding: 28px 15px 15px;
+   .avatar-preview { display: block; border: none; background: none; position: relative; margin: 0 auto 20px; color: #fff; text-align: center; overflow: hidden; cursor: pointer;
+      input[type="file"] { position: absolute; left: 0; top: 0; bottom: 0; right: 0; font-size: 100rem; opacity: 0; cursor: pointer; }
+      .update { display: block; opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 100%; border-radius: 50%; background: fade(#000, 40%); font-size: .875rem; padding: 35% 0 0; .hover_animate(); }
+      .font-icon { display: block; font-size: 1rem; }
+
+      &:hover .update { opacity: 1; }
+   }
+
+   .btn, .btn-group { width: 100%; max-width: 180px; margin: 0 5px; }
+   .btn-group { margin-top: 10px; margin-bottom: 10px; }
+   .dropdown-menu { min-width: 100%; }
+
+   .bottom-txt { color: @color-grey-blue-txt; padding: 6px 0 0; }
+}
+
+.profile-side-stat { text-align: center;
+   .tbl-cell { vertical-align: middle; border-left: solid 1px @color-border-light; padding: 12px 10px;
+      &:first-child { border-left: none; }
+   }
+   .number { display: block; font-weight: 600; font-size: 1rem; }
+}
+
+.line-with-icon, p.line-with-icon { position: relative; padding: 0 0 0 1.75em; margin: 0 0 1em;
+   .font-icon { color: @color-grey; position: absolute; left: 0; top: 0; font-size: 1rem; }
+   a { .a_bordered(@color-link); }
+}
+
+@media (max-width: @md-max-width) {
+   .profile-side { margin-top: 0; }
+}
+
+/* ==========================================================================
+   Profile tabs
+   ========================================================================== */
+
+.profile-tabs {
+   .tab-pane .box-typical { margin: 0 0 15px;
+      &:first-child { border-top: none; border-top-left-radius: 0; border-top-right-radius: 0; padding-top: 15px; }
+   }
+
+   // Write status
+   .write-something { background: none; border: none; border-radius: 0; padding: 15px; color: @color-text !important; width: 100%; border-top: solid 1px @color-border-light; }
+}
+
+.profile-post {
+   .profile-post-header { border-bottom: solid 1px @color-border-light; padding: 12px 40px 12px 15px; position: relative;
+      .user-card-row { font-size: 1rem; line-height: 20px; }
+      .shared { position: absolute; right: 15px; top: 50%; margin-top: -10px; .a_colored(@color-grey-blue-lighter-txt, @color-blue); }
+   }
+   .profile-post-content { padding: 15px;
+      .cstm-video-player { max-width: 425px; width: 100%; margin: 15px 0 0; }
+      .profile-post-content-note { color: @color-grey-blue-lighter-txt; margin: 0 0 .5em;
+         a { .a_bordered(@color-grey-blue-lighter-txt); }
+      }
+      @media (min-width: @sm-min-width) {
+         .minimalistic-player { width: 50%; margin: 15px 0 5px; }
+      }
+   }
+
+   .comment-rows-container { border-bottom: none; }
+
+   .profile-post-meta {
+      .meta-item { margin: 0 20px 0 0; .a_colored(@color-grey-blue-lighter-txt, @color-blue);
+         .font-icon { margin: 0 4px 0 0; position: relative;
+            &.font-icon-comment { top: 1px; }
+         }
+      }
+   }
+
+   .profile-post-gall-fluid { .clearfix(); margin: 15px -10px -15px -15px;
+      .col { padding: 0 0 5px 5px; }
+      img { display: block; width: 100%; }
+   }
+
+   .profile-post-gall { .clearfix(); margin: 15px -5px 0 0;
+      .col { float: left; width: 195px; padding: 0 5px 5px 0;
+         &:first-child { width: 390px; }
+      }
+      img { display: block; width: 100%; }
+   }
+
+   .profile-post-gall-grid {
+      &[data-columns]::before { content: '3 .column.size-1of3'; }
+
+      .column { float: left; }
+      .size-1of4 { width: 25%; }
+      .size-1of3 { width: 33.333%; }
+      .size-1of2 { width: 50%; }
+
+      @media screen and (max-width: 520px) {
+         &[data-columns]::before { content: '1 .column'; }
+      }
+
+      @media screen and (min-width: 521px) and (max-width: @sm-max-width) {
+         &[data-columns]::before { content: '2 .column.size-1of2'; }
+      }
+
+      @media screen and (min-width: @sm-min-width) and (max-width: 1300px) {
+         &[data-columns]::before { content: '3 .column.size-1of3'; }
+      }
+
+      @media screen and (min-width: 1301px) {
+         &[data-columns]::before { content: '4 .column.size-1of4'; }
+      }
+   }
+
+   .profile-post-card { margin: 15px 0 0;
+      p { margin: 0; }
+      .tbl-cell-photo { width: 115px; padding-right: 15px;
+         img { display: block; width: 100%; }
+      }
+      .title { font-size: 1rem; margin: 0 0 5px;
+         a { .a_bordered(@color-link); }
+      }
+   }
+}
+
+.profile-settings {
+   .form-label { font-weight: 400; padding: 8px 0 0; }
+   .profile-settings-btns .btn { margin: 0 10px 0 0;
+      &:last-child { margin-right: 0; }
+   }
+}
+
+.range-settings { position: relative; padding: 0 0 0 0; margin: 8px 0 0;
+   .irs { height: 10px; }
+   .irs-line,
+   .irs-bar,
+   .irs-bar-edge { top: 6px;  }
+   .irs-slider { top: 1px; }
+   .range-settings-percent {  position: absolute; right: -45px; top: 0; color: @color-grey-blue-lighter-txt; }
+   .range-setting-actions { position: absolute; right: -102px; top: 0;
+      button { border: none; background: none; color: @color-grey; margin: 0 0 0 8px;
+         &:hover { color: @color-blue; }
+         &.del:hover { color: @color-red; }
+      }
+   }
+   @media (max-width: @lg-max-width) { padding-right: 102px;
+      .range-settings-percent { right: 57px; }
+      .range-setting-actions { right: 0; }
+   }
+}
+
+

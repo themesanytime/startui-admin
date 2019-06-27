@@ -1,0 +1,141 @@
+@import '../partials/vars';
+
+
+.flatpickr-calendar {
+  margin-top: 4px;
+  border: 1px solid #e9ebee;
+  border-radius: 3px;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  &:not(.inline).arrowBottom {
+    margin-top: -4px;
+  }
+
+  &.noCalendar.showTimeInput.hasTime {
+    .flatpickr-time {
+      border-top: none;
+    }
+  }
+}
+
+
+/*.flatpickr-month {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  border-bottom: 1px solid #e9ebee;
+}*/
+
+/*
+
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  position: relative;
+  right: auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  line-height: normal;
+
+  &:hover {
+    svg {
+      fill: @color-blue;
+    }
+  }
+}
+
+.flatpickr-weekdays {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 35px;
+  font-size: 1.1rem;
+  text-transform: lowercase;
+  color: @color-bg-grey;
+}
+*/
+
+.flatpickr-input {
+  border: solid 1px fade(@color-border, 70%);
+  box-shadow: none;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  padding: .5rem .75rem;
+  line-height: 1.25;;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border-radius: .25rem;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+  color: @color-text !important;
+  &:focus {
+    border-color: @color-border;
+  }
+  &.form-control-error {
+    background-color: #fff6f6;
+    border-color: @color-red;
+    color: @color-red !important;
+  }
+  &:disabled {
+    background-color: @color-bg-page;
+  }
+}
+
+.flatpickr-current-month {
+  margin-right: -20px;
+}
+
+.flatpickr-days {
+  /*width: 297px;*/
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flatpickr-day {
+  border: 0;
+  border-radius: 3px;
+  color: #000;
+  line-height: 35px;
+
+  &.today {
+    color: #fff;
+    background: @color-blue;
+    border: none;
+    font-weight: bold;
+
+    &:hover {
+      border-color: @color-blue;
+    }
+  }
+
+  &:hover,
+  &.selected {
+    color: #fff;
+    background-color: @color-blue;
+
+    &:hover {
+      color: #fff;
+      background-color: @color-blue;
+    }
+  }
+
+  .disabled {
+    &:hover {
+      color: @color-bg-grey-light;
+    }
+  }
+
+  &.prevMonthDay,
+  &.nextMonthDay {
+    color: #999;
+  }
+}

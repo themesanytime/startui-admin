@@ -1,0 +1,981 @@
+@import '../partials/reset';
+@import '../partials/mixins';
+@import '../partials/vars';
+@import '../partials/icons';
+
+/* ==========================================================================
+   Menu List
+   ========================================================================== */
+
+.side-menu-list { margin: 0 0 25px;
+   .lbl { font-weight: 600; color: @color-grey-txt; font-size: 1rem; .hover_animate(); }
+   ul { display: none;
+      a { padding-left: 18px; }
+   }
+   .label { margin: 0 0 0 .5em; font-weight: 400; font-size: .75rem /*12/16*/; padding: .2em .45em .04em; position: relative; top: -1px; }
+
+   // Menu Item
+   >li { line-height: 16px;
+      &.divider { border-top: solid 1px @color-border;
+         &:first-child { border-top: none; }
+      }
+   }
+   a, li>span { display: block; padding: 11px 10px 11px 46px; position: relative; .hover_animate(); cursor: pointer; border-left: solid 4px transparent;
+      &:hover { background-color: @color-bg-grey;
+         .lbl { color: @color-text; }
+      }
+      &.label-right { padding-right: 38px;
+         .label { position: absolute; right: 21px; top: 50%; margin-top: -8px; }
+      }
+   }
+
+   // Menu Item with Submenu
+   li.with-sub { .hover_animate();
+      >span { padding-right: 25px;
+         &:before { content: ''; position: absolute; right: 21px; top: 50%; margin-top: -2px; display: block; width: 0; height: 0; border-style: solid; border-width: 5px 4px 0 4px; border-color: #adb7be transparent transparent transparent; .hover_animate(); transform: rotate(-90deg); }
+      }
+
+      li.with-sub {
+         >span {
+            padding-left: 19px;
+         }
+
+         li > a, li > span {
+            padding-left: 30px;
+         }
+
+         li.with-sub {
+            >span {
+               padding-left: 30px;
+            }
+
+            li > a, li > span {
+               padding-left: 40px;
+            }
+
+            li.with-sub {
+               >span {
+                  padding-left: 40px;
+               }
+
+               li > a, li > span {
+                  padding-left: 50px;
+               }
+            }
+         }
+      }
+   }
+
+   // Menu Opened Item
+   li.opened { background-color: @color-bg-grey-light;
+      >span {
+         &:before { transform: rotate(0deg); }
+         .lbl { color: @color-text; }
+      }
+
+      > ul {
+         display: block !important;
+      }
+   }
+
+   // Icons
+   .font-icon, .glyphicon, .fa, .tag-color { position: absolute; left: 18px; top: 13px; line-height: 16px; font-size: 1.0625rem /*17/16*/;
+      &.active:after { content: ''; display: block; width: 8px; height: 8px; position: absolute; top: -4px; right: -4px; background: @color-red; border-radius: 50%; border: solid 1px #fff; .hover_animate(); }
+   }
+   .fa { margin-top: -2px; }
+   .glyphicon { top: 11px; }
+   .tag-color { display: block; width: 16px; height: 16px; background: #000; border-radius: 2px; top: 11px;
+      &.green { background-color: @color-green; }
+      &.grey-blue { background-color: @color-grey-blue; }
+      &.red { background-color: @color-red; }
+      &.pink { background-color: @color-pink; }
+      &.orange { background-color: @color-orange-darker; }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Big Icon
+   ========================================================================== */
+
+.side-menu-big-icon .side-menu-list { text-align: center; margin-top: -10px;
+   .lbl { display: block; color: @color-text; }
+   ul a { padding: 10px; background-color: lighten(@color-grey-blue-lighter-txt, 10%);
+      &:hover { background-color: @color-grey-blue-lighter-txt; }
+   }
+
+   // Menu Item
+   a, >li>span { padding: 15px 10px; border-left: none; }
+
+
+   // Menu Item with Submenu
+   >li.with-sub {
+      >span { padding-right: 10px;
+         &:before { display: none; }
+         &:after { content: '\52'; .fontastic(); color: @color-grey-blue-lighter-txt; opacity: .5; position: absolute; right: 10px; top: 19px; .hover_animate(); }
+      }
+   }
+
+   // Menu Opened Item
+   >li.opened { color: #fff; background-color: @color-grey-blue-lighter-txt;
+      >a, >span { background-color: @color-grey-blue-lighter-txt; }
+      .font-icon, .glyphicon, .fa, .lbl { color: #fff; }
+      .font-icon, .glyphicon, .fa {
+         &.active:after { border-color: @color-grey-blue-lighter-txt; }
+      }
+      &.with-sub>span:after { color: #fff; opacity: 1; transform: rotate(-90deg); }
+   }
+
+   // Icons
+   .font-icon, .glyphicon, .fa { position: relative; top: 0; left: 0; display: inline-block; color: @color-grey-blue-lighter-txt; line-height: 1; font-size: 2rem; margin: 0 0 5px;
+      &.active:after { width: 14px; height: 14px; top: -8px; right: -7px; border-width: 2px; }
+   }
+}
+
+/* ==========================================================================
+   Icon's Colors
+   ========================================================================== */
+
+.side-menu-list>li {
+   &.brown {
+      .font-icon, .glyphicon, .fa { color: @color-brown; }
+      &.opened a, &.opened>span, &.opened.with-sub>span, .with-sub>span { border-left-color: @color-brown; }
+   }
+   &.green {
+      .font-icon, .glyphicon, .fa { color: @color-green; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-green; }
+   }
+   &.gold {
+      .font-icon, .glyphicon, .fa { color: @color-gold; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-gold; }
+   }
+   &.blue {
+      .font-icon, .glyphicon, .fa { color: @color-blue; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-blue; }
+   }
+   &.purple {
+      .font-icon, .glyphicon, .fa { color: @color-purple; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-purple; }
+   }
+   &.orange-red {
+      .font-icon, .glyphicon, .fa { color: @color-orange-red; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-orange-red; }
+   }
+   &.grey {
+      .font-icon, .glyphicon, .fa { color: @color-grey; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-grey; }
+   }
+   &.red {
+      .font-icon, .glyphicon, .fa { color: @color-red; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-red; }
+   }
+   &.aquamarine {
+      .font-icon, .glyphicon, .fa { color: @color-aquamarine; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-aquamarine; }
+   }
+   &.magenta {
+      .font-icon, .glyphicon, .fa { color: @color-magenta; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-magenta; }
+   }
+   &.blue-dirty {
+      .font-icon, .glyphicon, .fa { color: @color-blue-dirty; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-blue-dirty; }
+   }
+   &.coral {
+      .font-icon, .glyphicon, .fa { color: @color-coral; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-coral; }
+   }
+   &.pink-red {
+      .font-icon, .glyphicon, .fa { color: @color-pink-red; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-pink-red; }
+   }
+   &.pink {
+      .font-icon, .glyphicon, .fa { color: @color-pink; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-pink; }
+   }
+   &.blue-darker {
+      .font-icon, .glyphicon, .fa { color: @color-blue-darker; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-blue-darker; }
+   }
+   &.blue-sky {
+      .font-icon, .glyphicon, .fa { color: @color-blue-sky; }
+      &.opened a, &.opened>span, .with-sub>span { border-left-color: @color-blue-sky; }
+   }
+}
+
+
+/* ==========================================================================
+   Side menu
+   ========================================================================== */
+
+.side-menu { width: 240px; position: fixed; top: 0; left: 0; background: #fff; height: 100%; border-right: solid 1px @color-border; overflow: auto; z-index: 60; padding: 90px 0 110px;
+   .dark-theme & { padding-top: 60px; }
+
+   // Scroll
+   .jspPane { padding-top: 90px !important;
+      .dark-theme & { padding-top: 60px !important; }
+   }
+   .side-menu-title { font-weight: 600; text-transform: uppercase; color: @color-grey-blue-txt; padding: 0 22px 8px; font-size: .875rem /*14/16*/; }
+
+   // Avatar
+   .side-menu-avatar { padding: 28px 0; background: @color-bg-grey-light; margin: -10px 0 1px;
+      .avatar-preview { display: block; margin: 0 auto; }
+   }
+
+   // Compact Side Menu
+   &.side-menu-compact { width: 100px; padding-bottom: 0; padding-top: 80px;
+      .jspPane { padding-top: 80px !important; }
+      .side-menu-avatar { padding: 18px 0; margin-top: 0; }
+      .side-menu-list { text-align: center;
+         >li {
+            &.opened .lbl { color: @color-text; }
+         }
+         a { padding: 20px 9px 20px 5px; }
+         .font-icon, .glyphicon, .fa { position: relative; left: auto; top: 0; margin: 0; display: inline-block; font-size: 2.125rem /*34/16*/; line-height: normal; min-height: 40px;
+            &.active:after { width: 16px; height: 16px; border-width: 2px; top: -6px; right: -6px; }
+         }
+         .lbl { display: block; font-size: .875rem /*14/16*/; }
+      }
+   }
+
+   @media (max-width: @md-max-width) { left: -240px; .hover_animate();
+      .menu-left-opened & { left: 0 !important; }
+
+      &.side-menu-compact {
+         .with-side-menu-addl & { left: -270px; }
+      }
+   }
+}
+
+/* ==========================================================================
+   Additional Side Menu
+   ========================================================================== */
+
+.side-menu-addl { position: fixed; left: 100px; top: 0; width: 220px; height: 100%; background: #fff; border-right: solid 1px @color-border; overflow: auto; z-index: 60; padding: 100px 0 0; .hover_animate();
+   .jspPane { padding-top: 100px !important; }
+   .side-menu-addl-title { margin: 0 0 15px; padding: 8px 45px 8px 18px; position: relative;
+      .caption { font-size: .875rem /*14/16*/; font-weight: 600; color: @color-grey-txt; }
+      .font-icon, .glyphicon, .fa { color: @color-grey; position: absolute; top: 8px; right: 20px; font-size: 1rem; line-height: 18px; }
+   }
+   .side-menu-addl-top { padding: 0 18px 15px; border-bottom: solid 1px @color-border; margin: -5px 0 0; }
+   .side-menu-addl-list {
+      a { display: table; width: 100%; font-size: .875rem /*14/16*/; font-weight: 600; color: @color-grey-txt;
+         .tbl-cell { padding: 8px 0; vertical-align: middle;
+            &.tbl-cell-caption { padding-left: 18px; padding-right: 20px; }
+            &.tbl-cell-num { padding-right: 20px; text-align: right; white-space: nowrap; width: 10px; }
+         }
+         &:hover { background: @color-bg-grey; }
+      }
+      li {
+         &.header a { color: @color-text; }
+      }
+      .divider { margin: 10px 0; height: 0; overflow: hidden; border-top: solid 1px @color-border; }
+   }
+
+   // Menu list
+   .side-menu-list {
+      a, >li>span { border-left: none; }
+   }
+
+   // With Standart Menu
+   .with-side-menu-addl-full & { left: 240px; }
+
+   @media (max-width: @lg-max-width) { padding-top: 85px;
+      .jspPane { padding-top: 85px !important; }
+      .side-menu-addl-top { margin-top: 0; padding-top: 10px; }
+   }
+   @media (max-width: @md-max-width) { left: -220px;
+      .with-side-menu-addl-full & { left: -220px; }
+      .menu-left-opened & { left: 100px; }
+      .with-side-menu-addl-full.menu-left-opened & { left: 240px; }
+   }
+}
+
+/* ==========================================================================
+   Overlay (mobile version)
+   ========================================================================== */
+
+.mobile-menu-left-overlay { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 59; background: fade(@color-wet-asphalt, 50%);
+   @media (max-width: @md-max-width) {
+      .menu-left-opened & { display: block; }
+   }
+}
+
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+
+.side-table-of-contents { padding: .5rem 22px 15px; font-size: 1rem; font-weight: 600;
+   a { .a_color_text();
+      &.active { font-weight: 700; color: @color-text !important; }
+   }
+   li { padding: 0 0 .8em; }
+   ul { font-size: .875rem /*14/16*/; padding-left: 1rem; padding-top: .7rem;
+      a { .a_colored(@color-grey-blue-lighter-txt, @color-blue); }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Dark Theme (common)
+   ========================================================================== */
+
+.dark-theme .side-menu { background-color: @color-bg-black; border-right-color: @color-bg-black;
+
+   // Scroll
+   .jspDrag { border-color: @color-bg-black; background-color: lighten(@color-bg-black, 12%); }
+
+   // Avatar
+   .side-menu-avatar { background-color: @color-bg-black; border-bottom: solid 1px #272727; }
+
+   .side-menu-list {
+      .lbl { color: #fff; }
+
+      // Menu Item
+      a, >li>span {
+         &:hover { background-color: @color-grey-blue-lighter-txt;
+            .lbl { color: #fff; }
+            .font-icon, .glyphicon, .fa { color: #fff;
+               &.active:after { border-color: @color-grey-blue-lighter-txt !important; }
+            }
+         }
+      }
+
+      // Menu Item with Submenu
+      >li.with-sub {
+         >span {
+            &:before { border-top-color: @color-grey-blue-lighter-txt; }
+            &:hover:before { border-top-color: #fff; }
+         }
+
+         ul {
+            >li.with-sub {
+               a, >span { border-left-color: transparent;
+                  &:hover { background-color: #fff !important;
+                     .lbl { color: @color-text; }
+                     .font-icon, .glyphicon, .fa { color: @color-grey-blue-lighter-txt;
+                        &.active:after { border-color: #fff !important; }
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      // Menu Opened Item
+      >li.opened { background-color: @color-grey-blue-lighter-txt;
+         >span {
+            &:before { border-top-color: #fff; }
+            .lbl { color: #fff; }
+         }
+         .font-icon, .glyphicon, .fa { color: #fff;
+            &.active:after { border-color: @color-grey-blue-lighter-txt; }
+         }
+         a, >span { border-left-color: transparent; }
+      }
+
+      // Menu Opened Item with Submenu
+      >li.opened.with-sub {
+         a, >span { border-left-color: transparent;
+            &:hover { background-color: #fff !important;
+               .lbl { color: @color-text; }
+               .font-icon, .glyphicon, .fa { color: @color-grey-blue-lighter-txt;
+                  &.active:after { border-color: #fff !important; }
+               }
+            }
+         }
+      }
+
+      // Icons
+      .font-icon, .glyphicon, .fa { color: @color-grey-blue-lighter-txt; .hover_animate();
+         &.active:after { border-color: @color-bg-black; }
+      }
+   }
+
+   // Compact
+   &.side-menu-compact {
+      .side-menu-avatar { margin-top: -30px; }
+      .side-menu-list { text-align: center;
+         >li {
+            &.opened .lbl { color: #fff; }
+         }
+      }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Dark Theme Blue
+   ========================================================================== */
+
+.dark-theme.dark-theme-blue .side-menu-list {
+
+   // Menu Item
+   a, >li>span {
+      &:hover { background-color: @color-blue;
+         .font-icon, .glyphicon, .fa {
+            &.active:after { border-color: @color-blue !important; }
+         }
+      }
+   }
+
+   // Menu Opened Item
+   >li.opened { background-color: @color-blue;
+      .font-icon, .glyphicon, .fa {
+         &.active:after { border-color: @color-blue; }
+      }
+   }
+
+   // Menu Opened Item with Submenu
+   >li.opened.with-sub {
+      a, >span {
+         &:hover {
+            .font-icon, .glyphicon, .fa { color: @color-blue;
+               &.active:after { border-color: #fff !important; }
+            }
+         }
+      }
+   }
+
+}
+
+/* ==========================================================================
+   STYLE: Dark Theme Green
+   ========================================================================== */
+
+.dark-theme.dark-theme-green .side-menu-list {
+
+   // Menu Item
+   a, >li>span {
+      &:hover { background-color: @color-green;
+         .font-icon, .glyphicon, .fa {
+            &.active:after { border-color: @color-green !important; }
+         }
+      }
+   }
+
+   // Menu Opened Item
+   >li.opened { background-color: @color-green;
+      .font-icon, .glyphicon, .fa {
+         &.active:after { border-color: @color-green; }
+      }
+   }
+
+   // Menu Opened Item with Submenu
+   >li.opened.with-sub {
+      a, >span {
+         &:hover {
+            .font-icon, .glyphicon, .fa { color: @color-green;
+               &.active:after { border-color: #fff !important; }
+            }
+         }
+      }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Dark Theme Ultramarine
+   ========================================================================== */
+
+.dark-theme.dark-theme-ultramarine .side-menu-list {
+
+   // Menu Item
+   a, >li>span {
+      &:hover { background-color: @color-ultramarine;
+         .font-icon, .glyphicon, .fa {
+            &.active:after { border-color: @color-ultramarine !important; }
+         }
+      }
+   }
+
+   // Menu Opened Item
+   >li.opened { background-color: @color-ultramarine;
+      .font-icon, .glyphicon, .fa {
+         &.active:after { border-color: @color-ultramarine; }
+      }
+   }
+
+   // Menu Opened Item with Submenu
+   >li.opened.with-sub {
+      a, >span {
+         &:hover {
+            .font-icon, .glyphicon, .fa { color: @color-ultramarine;
+               &.active:after { border-color: #fff !important; }
+            }
+         }
+      }
+   }
+
+}
+
+/* ==========================================================================
+   STYLE: Theme Side Ebony Clay
+   ========================================================================== */
+
+.theme-side-ebony-clay .side-menu { background: @color-ebony-clay; border-right-color: transparent;
+
+   // Scroll styles
+   .jspDrag { border-color: @color-ebony-clay; background-color: #374248; }
+
+   .side-menu-list {
+      .lbl { color: #fff; }
+
+      // Menu Item
+      a, >li>span {
+         &:hover { background-color: #374248;
+            .font-icon, .glyphicon, .fa, .tag-color {
+               &.active:after { border-color: #374248 !important; }
+            }
+         }
+      }
+
+      // Menu Item with Submenu
+      >li.with-sub>span {
+         &:before { border-top-color: #9ba1a4; }
+      }
+
+      // Menu Opened Item
+      >li.opened { background-color: #374248;
+         >span {
+            &:before { border-top-color: #9ba1a4; }
+            .lbl { color: #fff; }
+         }
+         .font-icon, .glyphicon, .fa { color: #fff; }
+         .font-icon, .glyphicon, .fa, .tag-color {
+            &.active:after { border-color: #374248; }
+         }
+         a, >span { border-left-color: transparent; }
+      }
+
+      // Menu Opened Item with Submenu
+      >li.opened.with-sub {
+         a, >span { border-left-color: transparent;
+            &:hover { background-color: #2d383e !important;
+               .font-icon, .glyphicon, .fa {
+                  &.active:after { border-color: #2d383e !important; }
+               }
+            }
+         }
+      }
+
+      // Icons
+      .font-icon, .glyphicon, .fa, .tag-color {
+         &.active:after { border-color: @color-ebony-clay; }
+      }
+      .font-icon, .glyphicon, .fa { color: #fff; .hover_animate(); }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Theme Side Madison & Caribbean
+   ========================================================================== */
+
+.theme-side-madison-caribbean .side-menu { background: #2d3e4d; border-right-color: transparent;
+   .side-menu-title { color: #fff; }
+
+   // Scroll styles
+   .jspDrag { border-color: #2d3e4d; background-color: @color-madison; }
+
+   .side-menu-list {
+      .lbl { color: #fff; }
+
+      // Menu Item
+      a, >li>span {
+         &:hover { background-color: @color-madison;
+            .font-icon, .glyphicon, .fa {
+               &.active:after { border-color: @color-madison !important; }
+            }
+         }
+      }
+
+      // Menu Item with Submenu
+      >li.with-sub>span {
+         &:before { border-top-color: #9ba1a4; }
+      }
+
+      // Menu Opened Item
+      >li.opened { background-color: @color-madison;
+         >span {
+            &:before { border-top-color: #9ba1a4; }
+            .lbl { color: #fff; }
+         }
+         .font-icon, .glyphicon, .fa {
+            &.active:after { border-color: @color-madison; }
+         }
+         a, >span { border-left-color: transparent; }
+      }
+
+      // Menu Opened Item with Submenu
+      >li.opened.with-sub {
+         a, >span { border-left-color: transparent;
+            &:hover { background-color: darken(@color-madison, 4%) !important;
+               .font-icon, .glyphicon, .fa {
+                  &.active:after { border-color: darken(@color-madison, 4%) !important; }
+               }
+            }
+         }
+      }
+
+      // Icons
+      .font-icon, .glyphicon, .fa { color: @color-caribbean; .hover_animate();
+         &.active:after { border-color: @color-madison; }
+      }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Theme Side Caesium Dark & Caribbean
+   ========================================================================== */
+
+.theme-side-caesium-dark-caribbean .side-menu { background: @color-caesium-dark; border-right-color: transparent;
+   .side-menu-title { color: #acadb4; }
+
+   // Scroll styles
+   .jspDrag { border-color: @color-caesium-dark; background-color: darken(@color-caesium-dark, 5%); }
+
+   .side-menu-list {
+      .lbl { color: #acadb4; }
+
+      // Menu Item
+      a, >li>span {
+         &:hover { background-color: @color-caribbean;
+            .font-icon, .glyphicon, .fa { color: #fff;
+               &.active:after { border-color: @color-caribbean !important; }
+            }
+            .lbl { color: #fff; }
+         }
+      }
+
+      // Menu Item with Submenu
+      >li.with-sub>span {
+         &:before { border-top-color: #919299; }
+         &:hover:before { border-top-color: #fff; }
+      }
+
+      // Menu Opened Item
+      >li.opened { background-color: @color-caribbean;
+         >span {
+            &:before { border-top-color: #919299; }
+         }
+         .font-icon, .glyphicon, .fa { color: #fff;
+            &.active:after { border-color: darken(@color-caesium-dark, 4%); }
+         }
+         a, >span { border-left-color: transparent;
+            .lbl { color: #fff; }
+         }
+      }
+
+      // Menu Opened Item with Submenu
+      >li.opened.with-sub { background-color: darken(@color-caesium-dark, 4%);
+         a, >span { border-left-color: transparent;
+            &:hover { background-color: @color-caribbean !important;
+               .font-icon, .glyphicon, .fa {
+                  &.active:after { border-color: @color-caribbean !important; }
+               }
+               .lbl { color: #fff; }
+            }
+         }
+      }
+
+      // Icons
+      .font-icon, .glyphicon, .fa { color: #e3e3e5; .hover_animate();
+         &.active:after { border-color: @color-caesium-dark; }
+      }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Theme Side Tin
+   ========================================================================== */
+
+.theme-side-tin .side-menu { background: @color-tin; border-right-color: transparent;
+   .side-menu-title { color: #b4b5bb; }
+
+   // Scroll styles
+   .jspDrag { border-color: @color-tin; background-color: darken(@color-tin, 6%); }
+
+   .side-menu-list {
+      .lbl { color: #b4b5bb; }
+
+      // Menu Item
+      a, >li>span {
+         &:hover { background-color: darken(@color-tin, 4%);
+            .font-icon, .glyphicon, .fa {
+               &.active:after { border-color: darken(@color-tin, 4%) !important; }
+            }
+         }
+      }
+
+      // Menu Item with Submenu
+      >li.with-sub>span {
+         &:before { border-top-color: #9c9c9c; }
+      }
+
+      // Menu Opened Item
+      >li.opened { background-color: darken(@color-tin, 4%);
+         .font-icon, .glyphicon, .fa {
+            &.active:after { border-color: darken(@color-tin, 4%); }
+         }
+         a, >span { border-left-color: transparent; }
+      }
+
+      // Menu Opened Item with Submenu
+      >li.opened.with-sub {
+         a, >span { border-left-color: transparent;
+            &:hover { background-color: darken(@color-tin, 8%) !important;
+               .font-icon, .glyphicon, .fa {
+                  &.active:after { border-color: darken(@color-tin, 8%) !important; }
+               }
+            }
+         }
+      }
+
+      // Icons
+      .font-icon, .glyphicon, .fa { color: #e6e6e6; .hover_animate();
+         &.active:after { border-color: @color-tin; }
+      }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Theme Side Litmus & Blue
+   ========================================================================== */
+
+.theme-side-litmus-blue .side-menu { background: lighten(@color-litmus, 2%); border-right-color: transparent;
+   .side-menu-title { color: #fff; }
+
+   // Scroll styles
+   .jspDrag { border-color: lighten(@color-litmus, 2%); background-color: darken(@color-litmus, 2%); }
+
+   .side-menu-list {
+      .lbl { color: #fff; }
+
+      // Menu Item
+      a, >li>span {
+         &:hover { background-color: @color-blue;
+            .font-icon, .glyphicon, .fa {
+               &.active:after { border-color: @color-blue !important; }
+            }
+         }
+      }
+
+      // Menu Item with Submenu
+      >li.with-sub>span {
+         &:before { border-top-color: #9c9c9c; }
+         &:hover:before { border-top-color: #fff; }
+      }
+
+      // Menu Opened Item
+      >li.opened { background: @color-blue;
+         .font-icon, .glyphicon, .fa {
+            &.active:after { border-color: @color-litmus; }
+         }
+         a, >span { border-left-color: transparent; }
+      }
+
+      // Menu Opened Item with Submenu
+      >li.opened.with-sub { background-color: @color-litmus;
+         a, >span { border-left-color: transparent;
+            &:hover { background-color: @color-blue !important;
+               .font-icon, .glyphicon, .fa {
+                  &.active:after { border-color: @color-blue !important; }
+               }
+            }
+         }
+      }
+
+      // Icons
+      .font-icon, .glyphicon, .fa { color: #fff; .hover_animate();
+         &.active:after { border-color: lighten(@color-litmus, 2%); }
+      }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Theme Rebecca Purple
+   ========================================================================== */
+
+.theme-rebecca-purple .side-menu {
+
+   .side-menu-list {
+      .lbl { color: #838383; }
+
+      // Menu Item
+      a, >li>span {
+         &:hover { background-color: #f4f4f4;
+            .font-icon, .glyphicon, .fa {
+               &.active:after { border-color: #f4f4f4 !important; }
+            }
+         }
+      }
+
+      // Menu Item with Submenu
+      >li.with-sub>span {
+         &:before { border-top-color: #bbb; }
+         &:hover:before { border-top-color: #999; }
+      }
+
+      // Menu Opened Item
+      >li.opened { background: #f4f4f4;
+         .font-icon, .glyphicon, .fa {
+            &.active:after { border-color: #f4f4f4; }
+         }
+         a, >span { border-left-color: transparent; }
+      }
+
+      // Menu Opened Item with Submenu
+      >li.opened.with-sub { background-color: #f4f4f4;
+         a, >span { border-left-color: transparent;
+            &:hover { background-color: #cbcdd0 !important;
+               .font-icon, .glyphicon, .fa { color: #454545;
+                  &.active:after { border-color: #cbcdd0 !important; }
+               }
+               .lbl { color: #454545; }
+            }
+         }
+      }
+
+      // Icons
+      .font-icon, .glyphicon, .fa { color: #838383; .hover_animate(); }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Theme Picton Blue
+   ========================================================================== */
+
+.theme-picton-blue .side-menu {
+
+   .side-menu-list {
+
+      // Menu Item
+      a, >li>span {
+         &:hover { background-color: #eff6fc;
+            .font-icon, .glyphicon, .fa {
+               &.active:after { border-color: #eff6fc !important; }
+            }
+         }
+      }
+
+      // Menu Item with Submenu
+      >li.with-sub>span {
+         &:before { border-top-color: @color-picton-blue; }
+      }
+
+      // Menu Opened Item
+      >li.opened { background: #eff6fc;
+         .font-icon, .glyphicon, .fa {
+            &.active:after { border-color: #eff6fc; }
+         }
+         a, >span { border-left-color: transparent; }
+      }
+
+      // Menu Opened Item with Submenu
+      >li.opened.with-sub {
+         a, >span { border-left-color: transparent;
+            .lbl { color: @color-grey-txt; }
+            &:hover { background-color: #d1e5f8 !important;
+               .lbl { color: #454545; }
+            }
+         }
+      }
+
+      // Icons
+      .font-icon, .glyphicon, .fa { color: @color-picton-blue; .hover_animate(); }
+   }
+}
+
+/* ==========================================================================
+   STYLE: Theme Picton Blue & White & Ebony
+   ========================================================================== */
+
+.theme-picton-blue-white-ebony .side-menu { background: @color-ebony-clay; border-right-color: transparent;
+
+   // Scroll styles
+   .jspDrag { border-color: @color-ebony-clay; background-color: #374248; }
+
+   .side-menu-list {
+      .lbl { color: #929fa6; }
+
+      // Menu Item
+      a, >li>span {
+         &:hover { background-color: #374248;
+            .lbl { color: #fff; }
+            .font-icon, .glyphicon, .fa { color: #fff;
+               &.active:after { border-color: #374248 !important; }
+            }
+         }
+      }
+
+      // Menu Item with Submenu
+      >li.with-sub>span {
+         &:before { border-top-color: #9ba1a4; }
+      }
+
+      // Menu Opened Item
+      >li.opened { background-color: #374248;
+         .lbl { color: #fff; }
+         >span {
+            &:before { border-top-color: #9ba1a4; }
+         }
+         .font-icon, .glyphicon, .fa { color: #fff; }
+         .font-icon, .glyphicon, .fa, .tag-color {
+            &.active:after { border-color: #374248; }
+         }
+         a, >span { border-left-color: transparent; }
+      }
+
+      // Menu Opened Item with Submenu
+      >li.opened.with-sub {
+         a, >span { border-left-color: transparent;
+            &:hover { background-color: #2d383e !important;
+               .font-icon, .glyphicon, .fa {
+                  &.active:after { border-color: #2d383e !important; }
+               }
+            }
+         }
+      }
+
+      // Icons
+      .font-icon, .glyphicon, .fa, .tag-color {
+         &.active:after { border-color: @color-ebony-clay; }
+      }
+      .font-icon, .glyphicon, .fa { color: #929fa6; .hover_animate(); }
+   }
+}
+
+.show-hide-sidebar { position: relative; top: 5px; overflow: hidden; margin: 0; padding: 0; width: 30px; height: 30px; font-size: 0; text-indent: -9999px; appearance: none; box-shadow: none; border-radius: 0; border: none; cursor: pointer; transition: background 0.3s; background: none;
+   span { margin: 0 4px; position: absolute; top: 50%; margin-top: -1px; left: 0; right: 0; height: 3px; background: @color-grey; transition: transform 0.3s;
+      &:before,
+      &:after { position: absolute; display: block; left: 0; width: 100%; height: 3px; background-color: @color-grey; content: ""; }
+      &:before { top: -7px; transform-origin: top right; transition: transform 0.3s, width 0.3s, top 0.3s; }
+      &:after { bottom: -7px; transform-origin: bottom right; transition: transform 0.3s, width 0.3s, bottom 0.3s; }
+   }
+   &:hover {
+      span, span:before, span:after { background-color: @color-blue; }
+   }
+   @media (max-width: @md-max-width) { display: block; }
+}
+
+body {
+   &.sidebar-hidden {
+      .side-menu {
+         display: none;
+      }
+
+      .page-content {
+         padding-left: 20px;
+      }
+
+      .side-menu-addl {
+         left: 0;
+
+         + .page-content {
+            padding-left: 240px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: @md-max-width) {
+   .show-hide-sidebar {
+      display: none !important;
+   }
+}

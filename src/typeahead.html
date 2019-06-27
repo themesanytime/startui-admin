@@ -1,0 +1,165 @@
+//= template/head.html
+<link rel="stylesheet" href="css/separate/vendor/select2.min.css">
+<link rel="stylesheet" href="css/separate/vendor/typeahead.min.css">
+//= template/head-end.html
+
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<div class="tbl-row">
+						<div class="tbl-cell">
+							<h3>Typeahead (Autocomplete)</h3>
+							<ol class="breadcrumb breadcrumb-simple">
+								<li><a href="#">StartUI</a></li>
+								<li><a href="#">Forms</a></li>
+								<li class="active">Typeahead (Autocomplete)</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="card box-typical-full-height">
+				<div class="card-block">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="row">
+								<div class="col-md-10">
+									<label class="form-label">Countries</label>
+									<div class="typeahead-container">
+										<div class="typeahead-field">
+									<span class="typeahead-query">
+										<input id="typeahead-search-country-v1"
+											   class="form-control"
+											   name="q"
+											   type="search"
+											   autocomplete="off">
+									</span>
+									<span class="typeahead-button">
+										<button type="submit">
+											<span class="font-icon-search"></span>
+										</button>
+									</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row m-t-lg">
+								<div class="col-md-10">
+									<label class="form-label">Countries and Capitals</label>
+
+									<var id="result-container" class="result-container">No results matching</var>
+
+									<div class="typeahead-container">
+										<div class="typeahead-field">
+									<span class="typeahead-query">
+										<input id="typeahead-search-country-v2"
+											   class="form-control"
+											   name="q"
+											   type="search"
+											   autocomplete="off">
+									</span>
+									<span class="typeahead-button">
+										<button type="submit">
+											<span class="font-icon-search"></span>
+										</button>
+									</span>
+										</div>
+									</div>
+
+								</div>
+							</div><!--.row-->
+
+							<div class="row m-t-lg">
+								<div class="col-md-10">
+									<label class="form-label">Words and backdrop</label>
+
+									<div class="typeahead-container">
+										<div class="typeahead-field">
+									<span class="typeahead-query">
+										<input id="words"
+											   class="form-control"
+											   name="q"
+											   type="search"
+											   autocomplete="off">
+									</span>
+									<span class="typeahead-button">
+										<button type="submit">
+											<span class="font-icon-search"></span>
+										</button>
+									</span>
+										</div>
+									</div>
+								</div>
+							</div><!--.row-->
+
+							<div class="row m-t-lg">
+								<div class="col-md-10">
+									<label class="form-label">Categories</label>
+
+									<div class="typeahead-container">
+										<div class="typeahead-field">
+									<span class="typeahead-query">
+										<input id="categories"
+											   class="form-control"
+											   name="q"
+											   type="search"
+											   autocomplete="off">
+									</span>
+									<span class="typeahead-button">
+										<button type="submit">
+											<span class="font-icon-search"></span>
+										</button>
+									</span>
+										</div>
+									</div>
+								</div>
+							</div><!--.row-->
+
+							<!--<div class="row m-t-lg">
+								<div class="col-md-10">
+									<label class="form-label">Users</label>
+
+									<div class="typeahead-container">
+										<div class="typeahead-field">
+									<span class="typeahead-query">
+										<input id="users"
+											   class="form-control"
+											   name="q"
+											   type="search"
+											   autocomplete="off">
+									</span>
+									<span class="typeahead-button">
+										<button type="submit">
+											<span class="font-icon-search"></span>
+										</button>
+									</span>
+										</div>
+									</div>
+								</div>
+							</div>&lt;!&ndash;.row&ndash;&gt;-->
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/typeahead/jquery.typeahead.min.js"></script>
+	<script src="js/lib/select2/select2.full.min.js"></script>
+	<script src="js/lib/typeahead/typeahead-init.js"></script>
+
+//= template/foot.html
+
+
+

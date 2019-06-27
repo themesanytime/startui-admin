@@ -1,0 +1,39 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Card User
+   ========================================================================== */
+
+.card-user { padding: 15px 15px 10px; text-align: center;
+   .card-user-action { text-decoration: none; color: @color-grey-blue-lighter-txt; font-size: 1rem;
+      &:hover { color: @color-blue; }
+      .dropdown-user-menu {
+         button { padding: 0; border: none; background: none; color: @color-grey-blue-lighter-txt; position: relative; right: -5px; .hover_animate_none();
+            &:hover { color: @color-blue; }
+         }
+         &.open button { color: @color-blue; }
+      }
+   }
+   .card-user-photo { width: 92px; height: 102px; margin: 0 auto 10px; clear: both; padding: 10px 0 0;
+      img { display: block; width: 100%; border-radius: 50%; }
+   }
+   .card-user-name { font-weight: 600; font-size: 1rem; margin: 0 0 .15rem; }
+   .card-user-status { font-size: .875rem /*14/16*/; color: @color-blue; }
+   .card-user-info-row { font-size: .8125rem /*13/16*/; text-align: left; margin: 0 0 .25rem;
+      .font-icon { vertical-align: middle; margin: 0 5px 0 0; color: @color-grey-blue-lighter-txt; font-size: 1rem; position: relative; top: -.2rem; }
+   }
+   .card-user-social { text-align: center; font-size: 1.25rem; padding: 0 0 10px 0;
+      a { margin: 0 8px; .a_colored(@color-grey-blue-lighter-txt, @color-blue); }
+   }
+   .btn { min-width: 100px; margin: 12px 0 20px; }
+   .dropdown-item { font-size: .9375rem; }
+}
+
+.card-user-grid>div {
+   @media (min-width: 1600px) { width: 20%; }
+   @media (min-width: 1800px) { width: 16.666667%; }
+}
+
+
+

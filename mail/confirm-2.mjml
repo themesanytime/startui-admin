@@ -1,0 +1,65 @@
+<mjml>
+<mj-body>
+<mj-container width="700" background-color="#eceff4">
+    <mj-section padding-top="0" padding-bottom="24">
+    </mj-section>
+    <mj-section background-color="#fb5057">
+        <mj-column>
+            <mj-text color='white'
+                font-family="Proxima Nova, Arial, Arial, Helvetica, sans-serif"
+                font-size="16"
+                align="center"
+                padding="0">
+                Warning: You're approaching your limit. Please upgrade.
+            </mj-text>
+        </mj-column>
+    </mj-section>
+    <mj-section background-color="#d8e2e7" padding="0 1px 1px">
+        <mj-column background-color="white" padding="30">
+            <mj-text font-size="15"
+                padding="15px 30px 6px"
+                font-family="Proxima Nova, Arial, Arial, Helvetica, sans-serif">
+                You have 1 free report remaining. Add your credit card now to upgrade your account to a premium plan to ensure you don't miss out on any reports.
+            </mj-text>
+            <mj-button background-color="#00a8ff"
+                color="white"
+                font-size="15"
+                border="none"
+                border-radius="25"
+                align="left"
+                padding="8px 16px 10px"
+                paddint-top="0"
+                padding-left="30"
+                padding-right="30"
+                padding-bottom="16"
+                font-weight="400"
+                font-family="Proxima Nova, Arial, Arial, Helvetica, sans-serif"
+                href="#">
+                Confirm E-Mail Adress
+            </mj-button>
+            <mj-text font-size="15"
+                padding="0 30px 30px 30px"
+                font-family="Proxima Nova, Arial, Arial, Helvetica, sans-serif">
+                Upgrade My Account
+            </mj-text>
+        </mj-column>
+    </mj-section>
+    <mj-section padding="20px 0 0">
+        <mj-column>
+            <mj-text padding="0"
+                font-size="15"
+                color="#6b7a85"
+                align="center"
+                font-family="Proxima Nova, Arial, Arial, Helvetica, sans-serif">
+                <a href="#" style="text-decoration: none; color: inherit;">
+                    <span style="border-bottom: solid 1px #b3bac1">Unsubscribe</span>
+                </a>
+                from these alerts
+            </mj-text>
+        </mj-column>
+    </mj-section>
+    <mj-section padding-top="0" padding-bottom="24">
+    </mj-section>
+</mj-container>
+</mj-body>
+</mjml>

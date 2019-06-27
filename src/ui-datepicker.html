@@ -1,0 +1,399 @@
+//= template/head.html
+<link rel="stylesheet" href="css/lib/flatpickr/flatpickr.min.css">
+<link rel="stylesheet" href="css/separate/vendor/flatpickr.min.css">
+<link rel="stylesheet" href="css/separate/vendor/bootstrap-daterangepicker.min.css">
+<link rel="stylesheet" href="css/lib/clockpicker/bootstrap-clockpicker.min.css">
+<link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/lib/prism/prism.css">
+//= template/head-end.html
+
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<div class="tbl-row">
+						<div class="tbl-cell">
+							<h3>Datepicker</h3>
+							<ol class="breadcrumb breadcrumb-simple">
+								<li><a href="#">StartUI</a></li>
+								<li><a href="#">Forms</a></li>
+								<li class="active">Datepicker</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="card">
+				<div class="card-block">
+					<div class="row m-t-lg">
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class="input-group clockpicker" data-autoclose="true">
+									<input type="text" class="form-control" value="09:32">
+									<span class="input-group-append">
+										<span class="input-group-text"><span class="glyphicon glyphicon-time font-icon"></span></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<input type="text" class="form-control clockpicker" value="09:32">
+							</div>
+						</div>
+					</div>
+
+					<h5>Date Range Picker</h5>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class='input-group date'>
+									<input id="daterange" type="text" value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM" class="form-control">
+									<span class="input-group-append">
+										<span class="input-group-text"><i class="font-icon font-icon-calend"></i></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class='input-group date'>
+									<input id="daterange2" type="text" value="01/01/2015 - 01/31/2015" class="form-control">
+									<span class="input-group-append">
+										<span class="input-group-text"><i class="font-icon font-icon-calend"></i></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class='input-group date'>
+									<input id="daterange3" type="text" value="10/24/1984" class="form-control">
+									<span class="input-group-append">
+										<span class="input-group-text"><i class="font-icon font-icon-calend"></i></span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div><!--.row-->
+
+					<div class="main-container">
+						<div class="row">
+							<div class="col-3">
+								<h3>DatePicker</h3>
+								<div class="form-group">
+									<input class="flatpickr form-control" id="flatpickr" type="text" placeholder="Select Date..">
+								</div>
+							</div>
+						</div>
+
+						<h3 id="flatpickr-syntax">Syntax</h3>
+						<p>
+							There are multiple ways to create a Flatpickr instance. In all cases, config is optional. The return value will be the Flatpickr instance, or an array of instances.
+						</p>
+
+                    <pre class="language-javascript">
+<code>document.getElementsByClassName("myClass").flatpickr({..config});
+document.getElementById("myID").flatpickr();
+$(".calendar").flatpickr(); // jQuery</code>
+</pre>
+
+						<p>
+							Or pass in a node directly.
+						</p>
+                    <pre class="language-javascript">
+<code>new Flatpickr(HTMLElement, [options]);</code>
+</pre>
+
+						<h3 id="flatpickr-basic-usage">Basic Usage</h3>
+						<p><b>A basic datepicker</b></p>
+
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-date-formatting">Date Formatting</h3>
+						<p>Using <a href="#flatpickr-options" target="_blank">dateFormat</a></p>
+
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-date-format="d-m-Y"&gt;
+&lt;input class="form-control" data-date-format="m/d/Y"&gt;
+&lt;input class="form-control" data-date-format="l, F j, Y"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-date-format="d-m-Y" value="14-08-2016">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-date-format="m/d/Y" placeholder="American Format (m/d/Y)">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-date-format="l, F j, Y" placeholder="Fancy Textual Format (l, F j, Y)">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-datetime-picker">DateTime Picker</h3>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-enable-time="true"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-enable-time="true">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-datetime-picker-24-hour-mode">DateTime Picker: 24 Hour Mode</h3>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-enable-time="true" data-time_24hr="true"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-enable-time="true" data-time_24hr="true">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-datetime-picker-with-seconds">DateTime Picker with seconds</h3>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-enable-time="true" data-enable-seconds="true"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-enable-time="true" data-enable-seconds="true">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-time-picker">Time Picker</h3>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-enable-time="true" data-enable-seconds="true" data-no-calendar="true" value="09:01:45"&gt;
+&lt;input class="form-control" data-enable-time="true" data-enable-seconds="true" data-no-calendar="true" value="09:01:30 PM"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-enable-time="true" data-enable-seconds="true" data-no-calendar="true" value="09:01:45">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-enable-time="true" data-enable-seconds="true" data-no-calendar="true" value="09:01:30 PM">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-date-limits">Date Limits - minDate and maxDate</h3>
+						<p>The example below conveniently uses data-attributes for setting minDate and maxDate <a href="#flatpickr-options">options</a>.</p>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-min-date="today"&gt;
+&lt;input class="form-control" data-min-date="2016-09-20"&gt;
+&lt;input class="form-control" data-min-date="September 2, 2015"&gt;
+&lt;input class="form-control" data-min-date="today" data-max-date="2016-8-20"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-min-date="today">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-min-date="2016-09-20" placeholder="minDate: 2016-09-20">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-min-date="September 2, 2015" placeholder="minDate: 2015/09/02">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-min-date="today" data-max-date="2016-8-20" placeholder="minDate: today, maxDate: 2016-8-20">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-human-friendly">Human-friendly Date Output</h3>
+						<p>
+							altInput can be used for displaying a friendly date format (per <code>altFormat</code>) to the user while sending the date
+							formatted as <code>dateFormat</code> to the server. Feel free to inspect the input element below after picking a date to see what's going on.
+						</p>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-alt-input="true" data-alt-format="F j, Y"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-alt-input="true" data-alt-format="F j, Y">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-preload-date-time">Preload Date and Time</h3>
+						<p>
+							You may load the calendar with a predefined value, ranging from	simple dates, such as "2016-04-10" to full-fledged datetime strings.
+							To keep the dates in UTC/GMT, see the <a href="#flatpickr-utc">UTC option</a>.
+						</p>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-enable-time="true" value="Sun, 24 Jul 2016 05:16:47 GMT"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-enable-time="true" value="Sun, 24 Jul 2016 05:16:47 GMT">
+							</div>
+						</div>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-enable-time="true" data-default-date="2016-12-27T16:16:22.585Z"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-default-date="2016-12-27T16:16:22.585Z">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-custom-elements">Custom elements and input groups</h3>
+						<p>
+							<strong>Flatpickr</strong> can parse an input group of textboxes and buttons, common in <strong>Bootstrap</strong> and other frameworks.
+							This permits additional markup, as well as custom elements to trigger the state of the calendar.
+							Mark your input element with <code>data-input</code> (mandatory), and any additional buttons
+							with <code>data-toggle</code>, <code>data-open</code>, <code>data-close</code>, or <code>data-clear</code>.
+						</p>
+						<div class="form-group row">
+							<div class="col-lg-4 flatpickr" data-wrap="true" data-click-opens="false">
+								<div class="input-group icon icon-lg icon-color-primary">
+									<input class="form-control" placeholder="Pick date" data-input>
+                                	<span class="input-group-append" data-toggle>
+										<span class="input-group-text"><span class="font-icon font-icon-calend"></span></span>
+                                    </span>
+								</div>
+							</div>
+						</div>
+
+						<h3 id="flatpickr-disabling-dates">Disabling dates</h3>
+						<p>Disable a date interval, or a specific date.</p>
+                    <pre class="language-javascript">
+<code>$("#disable-range").flatpickr({
+	disable: [
+		{
+			from: "2016-08-16",
+			to: "2016-08-19"
+		},
+		"2016-08-24",
+		new Date().fp_incr(30) // 30 days from now
+	]
+});</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input id="flatpickr-disable-range" class="form-control">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-allowing-manual-input">Allowing manual input</h3>
+						<p>You may let your users input dates themselves simply by toggling the <code>allowInput</code> option</p>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-enable-time="true" data-allow-input="true"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-enable-time="true" data-allow-input="true">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-display-week-numbers">Display week numbers</h3>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-week-numbers=true placeholder="Enabled week numbers"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-week-numbers=true placeholder="Enabled week numbers">
+							</div>
+						</div>
+
+						<h3 id="flatpickr-inline-or-embedded">Inline or embedded calendar</h3>
+                    <pre class="language-html">
+<code>&lt;input class="form-control" data-inline="true" placeholder="Pick a date below"&gt;</code>
+</pre>
+						<div class="form-group row">
+							<div class="col-lg-4">
+								<input class="form-control flatpickr" data-inline="true" placeholder="Pick a date below">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script type="text/javascript" src="js/lib/moment/moment-with-locales.min.js"></script>
+	<script type="text/javascript" src="js/lib/flatpickr/flatpickr.min.js"></script>
+	<script src="js/lib/clockpicker/bootstrap-clockpicker.min.js"></script>
+	<script src="js/lib/clockpicker/bootstrap-clockpicker-init.js"></script>
+	<script src="js/lib/daterangepicker/daterangepicker.js"></script>
+	<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="js/lib/prism/prism.js"></script>
+	<script>
+		$(function() {
+			function cb(start, end) {
+				$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+			}
+			cb(moment().subtract(29, 'days'), moment());
+
+			$('#daterange').daterangepicker({
+				"timePicker": true,
+				ranges: {
+					'Today': [moment(), moment()],
+					'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+					'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+					'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+					'This Month': [moment().startOf('month'), moment().endOf('month')],
+					'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+				},
+				"linkedCalendars": false,
+				"autoUpdateInput": false,
+				"alwaysShowCalendars": true,
+				"showWeekNumbers": true,
+				"showDropdowns": true,
+				"showISOWeekNumbers": true
+			});
+
+			$('#daterange2').daterangepicker();
+
+			$('#daterange3').daterangepicker({
+				singleDatePicker: true,
+				showDropdowns: true
+			});
+
+			$('#daterange').on('show.daterangepicker', function(ev, picker) {
+				/*$('.daterangepicker select').selectpicker({
+					size: 10
+				});*/
+			});
+
+			/* ==========================================================================
+			 Datepicker
+			 ========================================================================== */
+
+			$('.flatpickr').flatpickr();
+			$("#flatpickr-disable-range").flatpickr({
+				disable: [
+					{
+						from: "2016-08-16",
+						to: "2016-08-19"
+					},
+					"2016-08-24",
+					new Date().fp_incr(30) // 30 days from now
+				]
+			});
+		});
+	</script>
+
+//= template/foot.html

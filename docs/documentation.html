@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Documentation</title>
+
+	<link href="../build/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
+	<link href="../build/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
+	<link href="../build/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
+	<link href="../build/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
+	<link href="../build/img/favicon.png" rel="icon" type="image/png">
+	<link href="../build/img/favicon.ico" rel="shortcut icon">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    <link rel="stylesheet" href="../build/css/main.css">
+</head>
+<body class="with-side-menu">
+<!--<body class="with-side-menu-compact">-->
+<!--<body class="with-side-menu-compact with-side-menu-addl">-->
+
+	<header class="site-header">
+	    <div class="container-fluid">
+	        <a href="#" class="site-logo">
+	            <img class="hidden-md-down" src="../build/img/logo-2.png" alt="">
+	            <img class="hidden-lg-up" src="../build/img/logo-2-mob.png" alt="">
+	        </a>
+	        <button class="hamburger hamburger--htla">
+	            <span>toggle menu</span>
+	        </button>
+	        <div class="site-header-content">
+	            <div class="site-header-content-in">
+	                <div class="site-header-shown">
+						Thank you for purchasing StartUI
+	                </div><!--.site-header-shown-->
+	            </div><!--site-header-content-in-->
+	        </div><!--.site-header-content-->
+	    </div><!--.container-fluid-->
+	</header><!--.site-header-->
+
+	<div class="mobile-menu-left-overlay"></div>
+	<nav class="side-menu">
+		<section>
+			<header class="side-menu-title">Documentation</header>
+			<ul class="side-table-of-contents">
+				<li><a href="#gettings-started-with-startui">Getting Started</a>
+					<ul>
+						<li><a href="#introduction">Introduction</a></li>
+						<li><a href="#installing-bower-and-gulp">Install Bower and Gulp</a></li>
+					</ul>
+				</li>
+				<li><a href="#theme">Theme</a>
+					<ul>
+						<li><a href="#theme-package-contents">Package contents</a></li>
+						<li><a href="#theme-included-files">Included files</a></li>
+						<li><a href="#theme-layouts-options">Layout &amp; Options</a></li>
+						<li><a href="#theme-helpers">Helpers</a></li>
+						<li><a href="#theme-resources">Resources</a></li>
+						<li><a href="#theme-plugins">Plugins</a></li>
+						<li><a href="#theme-landing-pages">Landing pages</a></li>
+					</ul>
+				</li>
+				<li><a href="#credits">Credits</a></li>
+			</ul>
+		</section>
+	</nav><!--.side-menu-->
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<div class="box-typical box-typical-padding documentation">
+				<header class="documentation-header">
+					<h2 id="gettings-started-with-startui">Getting started with StartUI</h2>
+					<p class="lead color-blue-grey">Thanks for Purchasing StartUI. StartUI is a clean admin template based on Boostrap 4. Built with CSS, jQuery and Less.</p>
+					<div class="documentation-header-by">
+						By:
+						<div class="avatar-preview avatar-preview-24">
+							<a href="#"><img src="../build/img/avatar-1-48.png" alt=""></a>
+						</div>
+						<a href="#">StartUI</a>,
+						published February 10th, at 6:35pm
+					</div>
+				</header>
+
+				<hr>
+
+				<div class="text-block text-block-typical">
+					<h4 id="introduction">Introduction</h4>
+					<p>
+						A full featured, premium web application admin dashboard built with Twitter Bootstrap 4, JQuery and CSS. It comes with a lot of ready to use components ideal for bulding you web application, CRM, CMS, admin panel, dashboard, or any other type of application backend.
+						StartUI coded highly responsive for your mobile phone &amp; tablets. Completely modular with many unique features, it will help you build your next awesome product.
+					</p>
+					<p>
+						You can visit the <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> page to find out all the various components that you can implement with StartUI. The docs are comprehensive and they include everything to help you get started with using all the various components.
+					</p>
+					<p>
+						Once you've purchased <b>StartUI</b>, please leave a rating! Positive ratings help bring out more updates and add more features to the template.
+					</p>
+					<p>
+						If you have any questions that are beyond the scope of this help file, please feel free to get in touch.
+					</p>
+
+					<p class="alert alert-info">
+						Support requests can go through the form on my <a href="http://themeforest.net/user/themesanytime" target="_blank">ThemeForest profile page</a>
+					</p>
+
+					<div class="alert alert-warning">
+						<p>Support for my items includes:</p>
+
+						<ul>
+							<li>
+								Responding to questions or problems regarding the item and its features
+							</li>
+							<li>
+								Fixing bugs and reported issues
+							</li>
+							<li>
+								Providing updates to ensure compatibility with new software versions
+							</li>
+						</ul>
+
+						<p>Item support does not include:</p>
+
+						<ul>
+							<li>
+								Customization and installation services
+							</li>
+							<li>Support for third party software and plug-ins</li>
+						</ul>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="text-block text-block-typical">
+					<h3 id="installing-bower-and-gulp">Install Bower and Gulp</h3>
+					<p>The template is built on top of gulp and bower tools. Use of these tools is completely optional.</p>
+					<h5>What is bower and gulp?</h5>
+					<p>Gulp is the build system used to build and preview your project. Bower is a package manager is used for dependency management, so that you no longer have to manually download and manage your scripts.</p>
+					<h5>Installing requirements</h5>
+					<p>In order to utilize the build and livereload features of the template you need to install the following on your development computer.</p>
+					<ul>
+						<li>Node.js and NPM. You can download Node.js from here <a href="https://nodejs.org/download/">https://nodejs.org/download/</a>. Npm comes bundled with Node.js</li>
+						<li>Next you need to install bower and gulp using this command <code>npm install --global bower gulp</code></li>
+						<li>Finally run <code>npm install</code> and <code>bower install</code> from the root of your project to install all the necessary dependencies. By default bower packages will install to app/vendor.</li>
+					</ul>
+					<p>Once you have all tools and dependencies installed you can use this command in your project:</p>
+					<ul>
+						<li><code>gulp</code></li>
+						<li><code>gulp build</code></li>
+					</ul>
+					<p><code>gulp</code> launches a localhost preview of your app (with Livereload) and will compile either your sass files or less files to css</p>
+					<p><code>gulp build</code> will create your production files.</p>
+				</div>
+
+				<hr>
+
+				<div class="text-block text-block-typical">
+					<h2 id="theme">Theme</h2>
+				</div>
+
+				<div class="text-block text-block-typical">
+					<h4 id="theme-package-contents">Package contents</h4>
+					<p>
+						The download package includes JavaScript, font assets, img assets, json data files, source less files.
+					</p>
+					<p>
+						Files under the <code>build</code> folder have not been modified in anyway.
+						This should in essense help you manage all your third party components and plugins with ease.
+						A list of all third party resources can be found in the <code>src</code> section.
+						These are not covered in this documentation but instead you can heard on over to each respective plugin's homepage to discover how you can use them with the template.
+						The docs are comprehensive and they include everything to help you get started.
+					</p>
+					<p>
+						Folder structure:
+					</p>
+<pre class="code">
+theme/
+   ├── build
+   │   ├── css
+   │   ├── fonts
+   │   ├── img
+   │   └── js
+   ├── docs
+   ├── mail
+   ├── landing
+   ├── src
+   │   ├── fonts
+   │   ├── img
+   │   ├── js
+   │   │   ├── app
+   │   │   ├── lib
+   │   │   └── vendor
+   │   ├── styles
+   │   │   ├── lib
+   │   │   ├── pages
+   │   │   ├── partials
+   │   │   └── vendor
+   │   ├── template
+   └── └── └── body
+</pre>
+				</div>
+
+				<p>
+					<b>/build</b> - contains compiled files of the admin theme.
+				</p>
+				<p>
+					<b>/docs</b> - contains documentation.
+				</p>
+				<p>
+					<b>/mail</b> - contains source and compiled files of the email templates.
+				</p>
+				<p>
+					<b>/src/</b> - contains core source files of the admin theme.
+				</p>
+				<p class="m-l-lg">
+					<b>/bower_components/</b> - javascript plugins installed using bower
+				</p>
+				<p class="m-l-lg">
+					<b>/fonts/</b> - fonts
+				</p>
+				<p class="m-l-lg">
+					<b>/img/</b> - images
+				</p>
+				<div class="m-l-lg">
+					<b>/styles/</b> - less styles
+					<div class="m-l-lg">
+						<b>main.less</b> - master file, which are included all the other styles
+
+						<div>
+							<b>/partials/</b> - basic styles
+
+							<p class="m-l-lg">
+								<b>base.less</b> -styles of basic blocks (head, footer, sidebar)
+							</p>
+							<p class="m-l-lg">
+								<b>fonts.less</b> - include of additional fonts
+							</p>
+							<p class="m-l-lg">
+								<b>forms.less</b> - form elements styles
+							</p>
+							<p class="m-l-lg">
+								<b>grids.less</b> - the general structure of the pages, grids
+							</p>
+							<p class="m-l-lg">
+								<b>helpers.less</b> - helper classes
+							</p>
+							<p class="m-l-lg">
+								<b>icons.less</b> - include font icons
+							</p>
+							<p class="m-l-lg">
+								<b>interface.less</b> - styles of interface elements (buttons, progress bars, tables, etc.)
+							</p>
+							<p class="m-l-lg">
+								<b>mixins.less</b> - less mixins
+							</p>
+							<p class="m-l-lg">
+								<b>reset.less</b> - reset styles
+							</p>
+							<p class="m-l-lg">
+								<b>typography.less</b> - typography
+							</p>
+							<p class="m-l-lg">
+								<b>vars.less</b> - less vars
+							</p>
+						</div>
+					</div>
+					<div class="m-l-lg">
+						<b>/vendor/</b> - styles of javascript plugins
+					</div>
+					<p class="m-l-lg">
+						<b>/lib/</b> - js css styles of additional plug-ins that are included to each page separately
+					</p>
+					<p class="m-l-lg">
+						<b>/pages/</b> - individual page styles
+					</p>
+					<p class="m-l-lg">
+						<b>/elements/</b> - styles separate interface elements (players, steps progress ordering, etc.)
+					</p>
+				</div>
+
+				<div class="m-l-lg">
+					<b>/js/</b> - javscript files
+					<p class="m-l-lg">
+						<b>plugins.js</b> - include common plug-ins are used on all pages
+					</p>
+					<p class="m-l-lg">
+						<b>/vendor/</b> - js plugins that can not be set through the bower
+					</p>
+					<p class="m-l-lg">
+						<b>/lib/</b> - additional js plugins that include each page separately
+					</p>
+					<p class="m-l-lg">
+						<b>/app/app.js</b> - custom scripts, plug-ins common initialization
+					</p>
+				</div>
+
+				<div class="m-l-lg">
+					<b>/template/</b> - html templates of repeating blocks
+
+					<p class="m-l-lg">
+						<b>/body/</b> - &lt;body&gt; tag templates for different pages
+					</p>
+				</div>
+
+				<p>
+					<b>/node_modules/</b> - modules node.js library
+				</p>
+
+				<br>
+				<div class="text-block text-block-typical">
+					<h4 id="theme-included-files">Included files</h4>
+					<ul>
+						<li>
+							<a href="../build/activity.html">activity.html</a>
+							<span>Users activity</span>
+						</li>
+						<li>
+							<a href="../build/alerts.html">alerts.html</a>
+							<span>Alerts panels</span>
+						</li>
+						<li>
+							<a href="../build/asphalt-menu.html">asphalt-menu.html</a>
+							<span>Black top menu</span>
+						</li>
+						<li>
+							<a href="../build/avatars.html">avatars.html</a>
+							<span>Default users avatars</span>
+						</li>
+						<li>
+							<a href="../build/blank.html">blank.html</a>
+							<span>Blank page</span>
+						</li>
+						<li>
+							<a href="../build/cards.html">cards.html</a>
+							<span>Bootstrap cards</span>
+						</li>
+						<li>
+							<a href="../build/chat.html">chat.html</a>
+							<span>Chat with messages</span>
+						</li>
+						<li>
+							<a href="../build/chat-index.html">chat-index.html</a>
+							<span>Chat index, choose a user for conversation</span>
+						</li>
+						<li>
+							<a href="../build/chat-write.html">chat-write.html</a>
+							<span>Write a message to conversation</span>
+						</li>
+						<li>
+							<a href="../build/chat-write.html">components-upload.html</a>
+							<span>Upload widgets</span>
+						</li>
+						<li>
+							<a href="../build/contacts.html">contacts.html</a>
+							<span>Contacts - users list</span>
+						</li>
+						<li>
+							<a href="../build/contacts-page.html">contacts-page.html</a>
+							<span>Contact page</span>
+						</li>
+						<li>
+							<a href="../build/dark-menu.html">dark-menu.html</a>
+							<span>Default dark menu with gray menu items</span>
+						</li>
+						<li>
+							<a href="../build/dark-menu-blue.html">dark-menu-blue.html</a>
+							<span>Default dark menu with blue menu items</span>
+						</li>
+						<li>
+							<a href="../build/dark-menu-green.html">dark-menu-green.html</a>
+							<span>Default dark menu with green menu items</span>
+						</li>
+						<li>
+							<a href="../build/dark-menu-ultramarine.html">dark-menu-ultramarine.html</a>
+							<span>Default dark menu with ultramarine menu items</span>
+						</li>
+						<li>
+							<a href="../build/dashboard.html">dashboard.html</a>
+							<span>Main dashboard</span>
+						</li>
+						<li>
+							<a href="../build/dashboard-addl-menu.html">dashboard-addl-menu.html</a>
+							<span>Dashboard with left submenu</span>
+						</li>
+						<li>
+							<a href="../build/dashboard-compact-menu.html">dashboard-compact-menu.html</a>
+							<span>Dashboard with compact menu</span>
+						</li>
+						<li>
+							<a href="../build/datatables.html">datatables.html</a>
+							<span>Datatables</span>
+						</li>
+						<li>
+							<a href="../build/datatables-filter-control.html">datatables-filter-control.html</a>
+							<span>Datatables with filters</span>
+						</li>
+						<li>
+							<a href="../build/datatables-fixed-columns.html">datatables-fixed-columns.html</a>
+							<span>Datatables with fixed columns. Change fixed columns by input field in header</span>
+						</li>
+						<li>
+							<a href="../build/datatables-mobile.html">datatables-mobile.html</a>
+							<span>Datatables mobile layout. For view example, change browser size</span>
+						</li>
+						<li>
+							<a href="../build/datatables-reorder-columns.html">datatables-reorder-columns.html</a>
+							<span>Datatables reorder columns. Move column by brag and drop</span>
+						</li>
+						<li>
+							<a href="../build/datatables-reorder-rows.html">datatables-reorder-rows.html</a>
+							<span>Datatables reorder rows. Move row by brag and drop</span>
+						</li>
+						<li>
+							<a href="../build/datatables-resize-columns.html">datatables-resize-columns.html</a>
+							<span>Datatables resize columns</span>
+						</li>
+						<li>
+							<a href="../build/documentation.html">documentation.html</a>
+							<span>Documentation layout</span>
+						</li>
+						<li>
+							<a href="../build/editor.html">editor.html</a>
+							<span>Wysiwyg editors</span>
+						</li>
+						<li>
+							<a href="../build/elements.html">elements.html</a>
+							<span>Bootstrap UI components</span>
+						</li>
+						<li>
+							<a href="../build/empty.html">empty.html</a>
+							<span>Page without items</span>
+						</li>
+						<li>
+							<a href="../build/error-404.html">error-404.html</a>
+							<span>404 error page</span>
+						</li>
+						<li>
+							<a href="../build/error-500.html">error-500.html</a>
+							<span>500 error page</span>
+						</li>
+						<li>
+							<a href="../build/faq.html">faq.html</a>
+							<span>FAQ page</span>
+						</li>
+						<li>
+							<a href="../build/faq-search.html">faq-search.html</a>
+							<span>FAQ page with search bar</span>
+						</li>
+						<li>
+							<a href="../build/files.html">files.html</a>
+							<span>File Manager</span>
+						</li>
+						<li>
+							<a href="../build/gallery.html">gallery.html</a>
+							<span>Image gallery</span>
+						</li>
+						<li>
+							<a href="../build/helpers.html">helpers.html</a>
+							<span>CSS helper classes</span>
+						</li>
+						<li>
+							<a href="../build/icons.html">icons.html</a>
+							<span>Icons collection</span>
+						</li>
+						<li>
+							<a href="../build/list-tasks.html">list-tasks.html</a>
+							<span>Tasks list</span>
+						</li>
+						<li>
+							<a href="../build/mail.html">mail.html</a>
+							<span>Mail app</span>
+						</li>
+						<li>
+							<a href="../build/nestable.html">nestable.html</a>
+							<span>Nestable lists</span>
+						</li>
+						<li>
+							<a href="../build/notice-bootstrap-notify.html">notice-bootstrap-notify.html</a>
+							<span>Bootstrap notifications</span>
+						</li>
+						<li>
+							<a href="../build/notice-notie.js.html">notice-notie.js.html</a>
+							<span>Notie.js notifications</span>
+						</li>
+						<li>
+							<a href="../build/notice-pnotify.html">notice-pnotify.html</a>
+							<span>Pnotify.js notifications</span>
+						</li>
+						<li>
+							<a href="../build/notifications.html">notifications.html</a>
+							<span>All notifications in one page</span>
+						</li>
+						<li>
+							<a href="../build/panels.html">panels.html</a>
+							<span>Panels with different colors</span>
+						</li>
+						<li>
+							<a href="../build/player.html">player.html</a>
+							<span>Music and Video players</span>
+						</li>
+						<li>
+							<a href="../build/prices.html">prices.html</a>
+							<span>Prices page</span>
+						</li>
+						<li>
+							<a href="../build/profile.html">profile.html</a>
+							<span>Social user profile (Version 1)</span>
+						</li>
+						<li>
+							<a href="../build/profile-2.html">profile-2.html</a>
+							<span>User profile (Version 2)</span>
+						</li>
+						<li>
+							<a href="../build/profile-edit.html">profile-edit.html</a>
+							<span>Social user profile, edit functional</span>
+						</li>
+						<li>
+							<a href="../build/project.html">project.html</a>
+							<span>View project page</span>
+						</li>
+						<li>
+							<a href="../build/range-slider.html">range-slider.html</a>
+							<span>Range sliders</span>
+						</li>
+						<li>
+							<a href="../build/scheduler.html">scheduler.html</a>
+							<span>Scheduler (Fullcalendar)</span>
+						</li>
+						<li>
+							<a href="../build/sign-in.html">sign-in.html</a>
+							<span>Login page</span>
+						</li>
+						<li>
+							<a href="../build/steps.html">steps.html</a>
+							<span>Form steps</span>
+						</li>
+						<li>
+							<a href="../build/sign-up.html">sign-up.html</a>
+							<span>Register page</span>
+						</li>
+						<li>
+							<a href="../build/tables.html">tables.html</a>
+							<span>Bootstrap tables</span>
+						</li>
+						<li>
+							<a href="../build/tabs.html">tabs.html</a>
+							<span>Bootstrap tabs</span>
+						</li>
+						<li>
+							<a href="../build/typeahead.html">typeahead.html</a>
+							<span>Autocomplete for inputs</span>
+						</li>
+						<li>
+							<a href="../build/typography.html">typography.html</a>
+							<span>Bootstrap typography</span>
+						</li>
+						<li>
+							<a href="../build/ui-buttons.html">ui-buttons.html</a>
+							<span>Buttons</span>
+						</li>
+						<li>
+							<a href="../build/ui-checkboxes.html">ui-checkboxes.html</a>
+							<span>Checkboxes and radio buttons</span>
+						</li>
+						<li>
+							<a href="../build/ui-datepicker.html">ui-datepicker.html</a>
+							<span>Date and time pickers</span>
+						</li>
+						<li>
+							<a href="../build/ui-form.html">ui-form.html</a>
+							<span>Form inputs</span>
+						</li>
+						<li>
+							<a href="../build/ui-form-extras.html">ui-form-extras.html</a>
+							<span>Plugins for form inputs. Auto size for textarea, max length for inputs, hide/show password for password fields</span>
+						</li>
+						<li>
+							<a href="../build/ui-form-input-mask.html">ui-form-input-mask.html</a>
+							<span>Form input masks</span>
+						</li>
+						<li>
+							<a href="../build/ui-form-validation.html">ui-form-validation.html</a>
+							<span>Form validation</span>
+						</li>
+						<li>
+							<a href="../build/ui-select.html">ui-select.html</a>
+							<span>Form select fields</span>
+						</li>
+						<li>
+							<a href="../build/widgets.html">widgets.html</a>
+							<span>Collection of dashboard widgets</span>
+						</li>
+					</ul>
+				</div>
+
+				<br>
+
+				<div class="text-block text-block-typical">
+					<h4 id="theme-layouts-options">Layouts &amp; Options</h4>
+
+					<p>This theme is a fluid layout with 3+ columns. Default blank layout with side menu looks:</p>
+
+					<img src="img/base_layout.png">
+				</div>
+
+				<br>
+
+				<div class="text-block text-block-typical">
+					<h4 id="theme-helpers">Helper classes</h4>
+
+					<div class="text-block bs">
+						<p>These are all the available helper classes used in the template</p>
+
+						<h5>Borders</h5>
+						<ul>
+							<li><code>.no-border</code> <code>.b-a-0</code> remove all borders</li>
+							<li><code>.b-a</code> border on all 4 sides</li>
+							<li><code>.b-l</code> left border</li>
+							<li><code>.b-r</code> right border</li>
+							<li><code>.b-t</code> top border</li>
+							<li><code>.b-b</code> bottom border</li>
+							<li><code>.b-t-0</code> border-top: 0</li>
+							<li><code>.b-r-0</code> border-right: 0</li>
+							<li><code>.border-primary</code> border color primary</li>
+							<li><code>.border-default</code> border color default</li>
+							<li><code>.border-warning</code> border color warning</li>
+							<li><code>.border-success</code> border color success</li>
+							<li><code>.border-info</code> border color info</li>
+							<li><code>.border-white</code> border color white</li>
+							<li><code>.border-danger</code> border color danger</li>
+						</ul><br/>
+
+						<h5>Border radius</h5>
+						<ul>
+							<li><code>.no-radius</code> remove border radius</li>
+							<li><code>.round</code> 4 corner border-radius</li>
+							<li><code>.brtl</code> top left border radius</li>
+							<li><code>.brtr</code> top right border radius</li>
+							<li><code>.blbl</code> bottom left border radius</li>
+							<li><code>.brbr</code> bottom right border radius</li>
+						</ul><br/>
+
+						<h5>Overflow</h5>
+						<ul>
+							<li><code>.overflow-hidden</code> overflow hidden</li>
+							<li><code>.overflow-visible</code> overflow visible</li>
+							<li><code>.overflow-auto</code> overflow auto</li>
+						</ul><br/>
+
+						<h5>Positioning</h5>
+						<ul>
+							<li><code>.relative</code> position: relative</li>
+							<li><code>.absolute</code> position: absolute</li>
+							<li><code>.lt</code> left: 0</li>
+							<li><code>.rt</code> right: 0</li>
+							<li><code>.bt</code> bottom: 0</li>
+							<li><code>.tp</code> top: 0</li>
+						</ul><br/>
+
+						<h5>Text alignment</h5>
+						<ul>
+							<li><code>.text-left</code> Left aligned text.</li>
+							<li><code>.text-center</code> Center aligned text.</li>
+							<li><code>.text-right</code> Right aligned text.</li>
+							<li><code>.text-justify</code> Justified text.</li>
+							<li><code>.text-nowrap</code> no wrap text.</li>
+						</ul><br/>
+
+						<h5>Other</h5>
+						<ul>
+							<li><code>.no-padding</code> remove padding</li>
+							<li><code>.no-margin</code> remove margin</li>
+							<li><code>.no-bg</code> transparent background</li>
+							<li><code>.no-shadow</code> remove box shadows</li>
+							<li><code>.shadow</code> add a subtle box shadow</li>
+							<li><code>.text-shadow</code> add a subtle text shadow</li>
+							<li><code>.block</code> display block</li>
+						</ul><br/>
+
+						<h5>Margins and paddings</h5>
+						<table class="table font-16">
+							<thead>
+							<tr>
+								<th>Class</th>
+								<th>Description</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td><code>.m-x-n</code></td>
+								<td>-15px margin left and right</td>
+							</tr>
+							<tr>
+								<td><code>.m-r-n</code></td>
+								<td>-15px margin right</td>
+							</tr>
+							<tr>
+								<td><code>.m-l-n</code></td>
+								<td>-15px margin left</td>
+							</tr>
+							<tr>
+								<td><code>.m-a-lg</code></td>
+								<td>30px margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-r-lg</code></td>
+								<td>30px right margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-b-lg</code></td>
+								<td>30px bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-l-lg</code></td>
+								<td>30px left margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-t-lg</code></td>
+								<td>30px top margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-x-lg</code></td>
+								<td>30px left and right margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-y-lg</code></td>
+								<td>30px top and bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-a-md</code></td>
+								<td>20px margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-r-md</code></td>
+								<td>20px right margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-b-md</code></td>
+								<td>20px bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-l-md</code></td>
+								<td>20px left margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-t-md</code></td>
+								<td>20px top margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-x-md</code></td>
+								<td>20px left and right margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-y-md</code></td>
+								<td>20px top and bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-a</code></td>
+								<td>15px margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-r</code></td>
+								<td>15px right margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-b</code></td>
+								<td>15px bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-l</code></td>
+								<td>15px left margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-t</code></td>
+								<td>15px top margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-x</code></td>
+								<td>15px left and right margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-y</code></td>
+								<td>15px top and bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-x-auto</code></td>
+								<td>auto left and right margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-a-0</code></td>
+								<td>0px margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-r-0</code></td>
+								<td>0px right margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-b-0</code></td>
+								<td>0px bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-l-0</code></td>
+								<td>0px left margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-t-0</code></td>
+								<td>0px top margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-x-0</code></td>
+								<td>0px left and right margin</td>
+							</tr>
+							<tr>
+								<td><code>.m-y-0</code></td>
+								<td>0px top and bottom margin</td>
+							</tr>
+							</tbody>
+						</table>
+						<table class="table font-16">
+							<thead>
+							<tr>
+								<th>Class</th>
+								<th>Description</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td><code>.p-x-n</code></td>
+								<td>-15px padding left and right</td>
+							</tr>
+							<tr>
+								<td><code>.p-r-n</code></td>
+								<td>-15px padding right</td>
+							</tr>
+							<tr>
+								<td><code>.p-l-n</code></td>
+								<td>-15px padding left</td>
+							</tr>
+							<tr>
+								<td><code>.p-a-lg</code></td>
+								<td>30px padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-r-lg</code></td>
+								<td>30px right padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-b-lg</code></td>
+								<td>30px bottom padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-l-lg</code></td>
+								<td>30px left padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-t-lg</code></td>
+								<td>30px top padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-x-lg</code></td>
+								<td>30px left and right padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-y-lg</code></td>
+								<td>30px top and bottom padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-a-md</code></td>
+								<td>20px padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-r-md</code></td>
+								<td>20px right padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-b-md</code></td>
+								<td>20px bottom padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-l-md</code></td>
+								<td>20px left padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-t-md</code></td>
+								<td>20px top padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-x-md</code></td>
+								<td>20px left and right padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-y-md</code></td>
+								<td>20px top and bottom padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-a</code></td>
+								<td>15px padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-r</code></td>
+								<td>15px right padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-b</code></td>
+								<td>15px bottom padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-l</code></td>
+								<td>15px left padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-t</code></td>
+								<td>15px top padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-x</code></td>
+								<td>15px left and right padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-y</code></td>
+								<td>15px top and bottom padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-x-auto</code></td>
+								<td>auto left and right padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-a-0</code></td>
+								<td>0px padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-r-0</code></td>
+								<td>0px right padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-b-0</code></td>
+								<td>0px bottom padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-l-0</code></td>
+								<td>0px left padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-t-0</code></td>
+								<td>0px top padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-x-0</code></td>
+								<td>0px left and right padding</td>
+							</tr>
+							<tr>
+								<td><code>.p-y-0</code></td>
+								<td>0px top and bottom padding</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<br>
+
+				<div class="text-block text-block-typical">
+					<h4 id="theme-resources">Resources</h4>
+
+					<ul class="list-unstyled">
+						<li>
+							Images from <a href="https://www.pexels.com/" target="_blank">www.pexels.com</a> (Free)
+						</li>
+						<li>
+							Avatars from <a href="https://www.uifaces.com/" target="_blank">www.uifaces.com</a> (Free)
+						</li>
+					</ul>
+
+					<br>
+					<h4 id="theme-plugins">Plugins</h4>
+
+					<ul class="list-unstyled">
+						<li>
+							<a href="http://www.jacklmoore.com/autosize" target="_blank">Autosize</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/blueimp/JavaScript-Canvas-to-Blob" target="_blank">JavaScript Canvas to Blob</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/blueimp/jQuery-File-Upload" target="_blank">jQuery File Upload (Blueimp)</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/blueimp/JavaScript-Load-Image" target="_blank">JavaScript Load Image (Blueimp)</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/blueimp/JavaScript-Templates" target="_blank">JavaScript Templates (Blueimp)</a> (MIT)
+						</li>
+						<li>
+							<a href="http://getbootstrap.com" target="_blank">Bootstrap</a> (MIT)
+						</li>
+						<li>
+							<a href="http://silviomoreto.github.io/bootstrap-select" target="_blank">Bootstrap Select</a> (MIT)
+						</li>
+						<li>
+							<a href="http://github.com/lipis/bootstrap-sweetalert" target="_blank">Bootstrap Sweet Alert</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/wenzhixin/bootstrap-table" target="_blank">Bootstrap Table</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/istvan-ujjmeszaros" target="_blank">Bootstrap Touchspin</a> (Apache 2.0)
+						</li>
+						<li>
+							<a href="http://weareoutman.github.io/clockpicker/" target="_blank">Bootstrap clockpicker</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/Eonasdan/bootstrap-datetimepicker" target="_blank">Bootstrap Datetime Picker</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/fancyapps/fancyBox" target="_blank">FancyBox</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/Teleborder/FileSaver.js" target="_blank">FileSaver</a> (MIT)
+						</li>
+						<li>
+							<a href="http://fullcalendar.io/" target="_blank">FullCalendar</a> (MIT)
+						</li>
+						<li>
+							<a href="http://fullcalendar.io/scheduler/" target="_blank">FullCalendar Scheduler</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/niklasvh/html2canvas" target="_blank">html2canvas</a> (MIT)
+						</li>
+						<li>
+							<a href="http://www.runningcoder.org/jqueryvalidation/" target="_blank">jQuery form Validation</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/jquery/jquery-dist" target="_blank">jQuery</a> (MIT)
+						</li>
+						<li>
+							<a href="http://www.runningcoder.org/jquerytypeahead/" target="_blank">jQuery Typeahead</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/vitch/jScrollPane" target="_blank">jScrollPane</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/mrrio/jspdf" target="_blank">jsPDF</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/simonbengtsson/jspdf-autotable" target="_blank">jsPDF AutoTable</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/liabru/jquery-match-height" target="_blank">jquery.matchHeight</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/moment/moment" target="_blank">Moment</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/moment/moment-timezone" target="_blank">Moment Timezone</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/benpickles/peity" target="_blank">Peity</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/maciej-gurban/responsive-bootstrap-toolkit" target="_blank">Responsive bootstrap toolkit</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/ivaynberg/select2" target="_blank">Select2</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/kenwheeler/slick" target="_blank">Slick</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/hhurz/tableExport.jquery.plugin" target="_blank">Table Export jQuery plugin</a> (MIT)
+						</li>
+						<li>
+							<a href="http://github.hubspot.com/tether" target="_blank">Tether</a> (MIT)
+						</li>
+						<li>
+							<a href="http://mimo84.github.io/bootstrap-maxlength/" target="_blank">Bootstrap MaxLength</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/wenzhixin/bootstrap-show-password" target="_blank">Hide/Show Password</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/igorescobar/jQuery-Mask-Plugin" target="_blank">jQuery Mask Plugin</a> (MIT)
+						</li>
+						<li>
+							<a href="http://lab.hakim.se/ladda" target="_blank">Ladda buttons</a> (MIT)
+						</li>
+						<li>
+							<a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">Remarkable bootstrap notify</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/sciactive/pnotify" target="_blank">PNotify</a> (Apache 2.0)
+						</li>
+						<li>
+							<a href="https://github.com/jaredreich/notie.js" target="_blank">Notie</a> (MIT)
+						</li>
+						<li>
+							<a href="http://summernote.org/" target="_blank">Summernote</a> (MIT)
+						</li>
+						<li>
+							<a href="http://plottablejs.org" target="_blank">Plottable.js</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/masayuki0812/c3" target="_blank">C3.js</a> (MIT)
+						</li>
+						<li>
+							<a href="https://github.com/IonDen/ion.rangeSlider" target="_blank">Ion rangeSlider</a> (MIT)
+						</li>
+					</ul>
+				</div>
+
+				<hr>
+
+				<div class="text-block text-block-typical">
+					<h2 id="theme-landing-pages">Landing Pages</h2>
+					<p>
+						Landing pages you can get from <a href="https://github.com/develoid/startui_landing_pages" target="_blank">https://github.com/develoid/startui_landing_pages</a>
+					</p>
+				</div>
+
+				<hr>
+
+				<div class="text-block text-block-typical">
+					<h2 id="credits">Credits</h2>
+					<p>
+						Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme.
+						No guarantees, but I'll do my best to assist.
+						If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section
+					</p>
+				</div>
+			</div><!--.box-typical-->
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	<script src="../build/js/plugins.js"></script>
+	<script src="../build/js/app.js"></script>
+</body>
+</html>

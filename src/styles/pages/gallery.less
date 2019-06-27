@@ -1,0 +1,58 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Gallery
+   ========================================================================== */
+
+.box-typical .box-typical-header .action-btn.view { color: @color-border;
+   &.active, &:hover { color: @color-grey-blue-lighter-txt; }
+}
+
+.gallery-grid { .clearfix(); padding: 8px;
+   .gallery-col { float: left; width: 20%; padding: 7px; }
+}
+.gallery-item { position: relative; border-radius: 5px; overflow: hidden;
+   p { margin: 0; }
+   .gallery-picture { display: block; width: 100%; border-radius: 5px; }
+   .gallery-hover-layout { opacity: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 101%; height: 101%; display: table; border-collapse: separate; border-spacing: 0; }
+   .gallery-hover-layout-in { display: table-cell; vertical-align: middle; text-align: center; background: fade(@color-blue, 90%); padding: 10px; color: #fff; max-width: 100px; border-radius: 5px; }
+   .gallery-item-title { font-weight: 600; }
+   p { width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+   .btn-group { padding: .75rem 0;
+      .btn { background: none; border: solid 1px #fff;
+         &:hover { background-color: #fff; color: @color-blue; }
+         .font-icon-cloud { position: relative; top: 1px; }
+      }
+   }
+
+   &:hover {
+      .gallery-hover-layout { opacity: 1; }
+   }
+
+   // Doc
+   .gallery-doc { display: table; border-collapse: separate; border-spacing: 0; position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; }
+   .gallery-doc-in { display: table-cell; vertical-align: middle; text-align: center; padding: 10px; border: solid 1px @color-border; background: @color-bg-grey-light; border-radius: 5px; max-width: 100px;
+      .font-icon { color: @color-grey; font-size: 2rem; }
+   }
+}
+
+@media (min-width: 1550px) {
+   .gallery-grid .gallery-col { width: 16.666667%; }
+}
+@media (min-width: 1800px) {
+   .gallery-grid .gallery-col { width: 14.285714%; }
+}
+@media (max-width: 1350px) {
+   .gallery-grid .gallery-col { width: 25%; }
+}
+@media (max-width: 1150px) {
+   .gallery-grid .gallery-col { width: 33.333333%; }
+}
+@media (max-width: @sm-max-width) {
+   .gallery-grid .gallery-col { width: 50%; }
+}
+@media (max-width: 480px) {
+   .gallery-grid .gallery-col { width: 100%; }
+}
+

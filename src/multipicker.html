@@ -1,0 +1,376 @@
+//= template/head.html
+
+<link rel="stylesheet" href="css/lib/multipicker/multipicker.min.css"> <!-- original css -->
+<link rel="stylesheet" href="css/separate/vendor/multipicker.min.css"> <!-- customization css -->
+
+//= template/head-end.html
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<div class="tbl-row">
+						<div class="tbl-cell">
+							<h3>Multi Picker</h3>
+							<ol class="breadcrumb breadcrumb-simple">
+								<li><a href="#">StartUI</a></li>
+								<li><a href="#">Components</a></li>
+								<li class="active">Multi Picker</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-block">
+							<div class="row">
+								<div class="col-lg-6">
+									<h4>Multipicker days (multiple)</h4>
+
+									<div>
+										<ul id="days">
+											<li>Su</li>
+											<li>Mo</li>
+											<li>Tu</li>
+											<li>We</li>
+											<li>Th</li>
+											<li>Fr</li>
+											<li>Sa</li>
+										</ul>
+									</div>
+
+									<h4 class="m-t-md">Multipicker days (single)</h4>
+
+									<div>
+										<ul id="days-single">
+											<li>Su</li>
+											<li>Mo</li>
+											<li>Tu</li>
+											<li>We</li>
+											<li>Th</li>
+											<li>Fr</li>
+											<li>Sa</li>
+										</ul>
+									</div>
+
+									<h4 class="m-t-md">Multipicker days (prepopulated)</h4>
+
+									<div>
+										<ul id="days-prepopulated">
+											<li data-value="Sunday">Su</li>
+											<li data-value="Monday">Mo</li>
+											<li data-value="Tuesday">Tu</li>
+											<li data-value="Wednesday">We</li>
+											<li data-value="Thursday">Th</li>
+											<li data-value="Friday">Fr</li>
+											<li data-value="Saturday">Sa</li>
+										</ul>
+									</div>
+
+									<h4 class="m-t-md">Multipicker days (vertical)</h4>
+
+									<div>
+										<div id="days-vertical">
+											<span>Su</span>
+											<span>Mo</span>
+											<span>Tu</span>
+											<span>We</span>
+											<span>Th</span>
+											<span>Fr</span>
+											<span>Sa</span>
+										</div>
+									</div>
+
+									<h4 class="m-t-md">Multipicker months (single)</h4>
+
+									<div>
+										<div id="months">
+											<label for="zero">JAN</label>
+											<input id="zero" type="checkbox" name="club" value="0">
+											<label for="one">FEB</label>
+											<input id="one" type="checkbox" name="club" value="1">
+											<label for="two">MAR</label>
+											<input id="two" type="checkbox" name="club" value="2">
+											<label for="three">APR</label>
+											<input id="three"type="checkbox" name="club" value="3">
+											<label for="four">MAY</label>
+											<input id="four" type="checkbox" name="club" value="4">
+											<label for="five">JUN</label>
+											<input id="five" type="checkbox" name="club" value="5">
+											<label for="six">JUL</label>
+											<input id="six" type="checkbox" name="club" value="6">
+											<label for="seven">AUG</label>
+											<input id="seven" type="checkbox" name="club" value="7">
+											<label for="eight">SEB</label>
+											<input id="eight" type="checkbox" name="club" value="8">
+											<label for="nine">OCT</label>
+											<input id="nine" type="checkbox" name="club" value="9">
+											<label for="ten">NOV</label>
+											<input id="ten" type="checkbox" name="club" value="10">
+											<label for="eleven">DEC</label>
+											<input id="eleven" type="checkbox" name="club" value="11">
+										</div>
+									</div>
+
+									<h4 class="m-t-md">Multipicker programming languages (multiple)</h4>
+
+									<div>
+										<div id="programming-languages">
+											<input type="checkbox" name="lang" value="C">
+											<input type="checkbox" name="lang" value="JS">
+											<input type="checkbox" name="lang" value="Swift">
+											<input type="checkbox" name="lang" value="Java">
+											<input type="checkbox" name="lag" value="C#">
+											<input type="checkbox" name="lang" value="C++">
+											<input type="checkbox" name="lang" value="PHP">
+										</div>
+									</div>
+
+									<h4 class="m-t-md">Multipicker languages (single)</h4>
+
+									<div>
+										<div id="languages">
+											<input type="checkbox" name="language" value="EN">
+											<input type="checkbox" name="language" value="HY">
+											<input type="checkbox" name="language" value="RU">
+											<input type="checkbox" name="language" value="EN">
+											<input type="checkbox" name="language" value="JP">
+											<input type="checkbox" name="language" value="DE">
+											<input type="checkbox" name="language" value="FR">
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-6">
+									<h4>Multipicker days (multiple)</h4>
+
+									<div>
+										<ul id="days-no-border" class="no-border">
+											<li>Su</li>
+											<li>Mo</li>
+											<li>Tu</li>
+											<li>We</li>
+											<li>Th</li>
+											<li>Fr</li>
+											<li>Sa</li>
+										</ul>
+									</div>
+
+									<h4 class="m-t-md">Multipicker days (single)</h4>
+
+									<div>
+										<ul id="days-single-no-border" class="no-border">
+											<li>Su</li>
+											<li>Mo</li>
+											<li>Tu</li>
+											<li>We</li>
+											<li>Th</li>
+											<li>Fr</li>
+											<li>Sa</li>
+										</ul>
+									</div>
+
+									<h4 class="m-t-md">Multipicker days (prepopulated)</h4>
+
+									<div>
+										<ul id="days-prepopulated-no-border" class="no-border">
+											<li data-value="Sunday">Su</li>
+											<li data-value="Monday">Mo</li>
+											<li data-value="Tuesday">Tu</li>
+											<li data-value="Wednesday">We</li>
+											<li data-value="Thursday">Th</li>
+											<li data-value="Friday">Fr</li>
+											<li data-value="Saturday">Sa</li>
+										</ul>
+									</div>
+
+									<h4 class="m-t-md">Multipicker days (vertical)</h4>
+
+									<div>
+										<div id="days-vertical-no-border" class="no-border">
+											<span>Su</span>
+											<span>Mo</span>
+											<span>Tu</span>
+											<span>We</span>
+											<span>Th</span>
+											<span>Fr</span>
+											<span>Sa</span>
+										</div>
+									</div>
+
+									<h4 class="m-t-md">Multipicker months (single)</h4>
+
+									<div>
+										<div id="months-no-border" class="no-border">
+											<label for="zero1">JAN</label>
+											<input id="zero1" type="checkbox" name="club" value="0">
+											<label for="one1">FEB</label>
+											<input id="one1" type="checkbox" name="club" value="1">
+											<label for="two1">MAR</label>
+											<input id="two1" type="checkbox" name="club" value="2">
+											<label for="three1">APR</label>
+											<input id="three1" type="checkbox" name="club" value="3">
+											<label for="four1">MAY</label>
+											<input id="four1" type="checkbox" name="club" value="4">
+											<label for="five1">JUN</label>
+											<input id="five1" type="checkbox" name="club" value="5">
+											<label for="six1">JUL</label>
+											<input id="six1" type="checkbox" name="club" value="6">
+											<label for="seven1">AUG</label>
+											<input id="seven1" type="checkbox" name="club" value="7">
+											<label for="eight1">SEB</label>
+											<input id="eight1" type="checkbox" name="club" value="8">
+											<label for="nine1">OCT</label>
+											<input id="nine1" type="checkbox" name="club" value="9">
+											<label for="ten1">NOV</label>
+											<input id="ten1" type="checkbox" name="club" value="10">
+											<label for="eleven1">DEC</label>
+											<input id="eleven1" type="checkbox" name="club" value="11">
+										</div>
+									</div>
+
+									<h4 class="m-t-md">Multipicker programming languages (multiple)</h4>
+
+									<div>
+										<div id="programming-languages-no-border" class="no-border">
+											<input type="checkbox" name="lang" value="C">
+											<input type="checkbox" name="lang" value="JS">
+											<input type="checkbox" name="lang" value="Swift">
+											<input type="checkbox" name="lang" value="Java">
+											<input type="checkbox" name="lag" value="C#">
+											<input type="checkbox" name="lang" value="C++">
+											<input type="checkbox" name="lang" value="PHP">
+										</div>
+									</div>
+
+									<h4 class="m-t-md">Multipicker languages (single)</h4>
+
+									<div>
+										<div id="languages-no-border" class="no-border">
+											<input type="checkbox" name="language" value="EN">
+											<input type="checkbox" name="language" value="HY">
+											<input type="checkbox" name="language" value="RU">
+											<input type="checkbox" name="language" value="EN">
+											<input type="checkbox" name="language" value="JP">
+											<input type="checkbox" name="language" value="DE">
+											<input type="checkbox" name="language" value="FR">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/multipicker/multipicker.min.js"></script>
+	<script>
+		$(function() {
+			$("#days").multiPicker({ selector : "li" });
+			$("#days-no-border").multiPicker({ selector : "li" });
+			$("#days-single").multiPicker({
+				selector : "li",
+				isSingle : true
+			});
+			$("#days-single-no-border").multiPicker({
+				selector : "li",
+				isSingle : true
+			});
+			$("#days-prepopulated").multiPicker({
+				selector : "li",
+				prePopulate : ["Tuesday", "Friday"],
+				valueSource : "data-value"
+			});
+			$("#days-prepopulated-no-border").multiPicker({
+				selector : "li",
+				prePopulate : ["Tuesday", "Friday"],
+				valueSource : "data-value"
+			});
+			$("#days-vertical").multiPicker({
+				selector   : "span",
+				cssOptions : {
+					vertical: true
+				}
+			});
+			$("#days-vertical-no-border").multiPicker({
+				selector   : "span",
+				cssOptions : {
+					vertical: true
+				}
+			});
+			$("#months").multiPicker({
+				selector    : "checkbox",
+				prePopulate : "1", // array or single value
+				isSingle	: true,
+				cssOptions 	: {
+					size	  : "large", // small, medium or large, default medium
+					element	  : {
+						"font-size"   : "11px",
+						"color" 	  : "#3a3a3a",
+						"font-weight" : "bold"
+					},
+					selected: {
+						"border-color" : "#ff4c4c",
+						"font-size"    : "14px"
+					},
+					picker: {
+						"border-color" : "#ff4c4c"
+					}
+				}
+			});
+			$("#months-no-border").multiPicker({
+				selector    : "checkbox",
+				prePopulate : "1", // array or single value
+				isSingle	: true,
+				cssOptions 	: {
+					size	  : "large", // small, medium or large, default medium
+					element	  : {
+						"font-size"   : "11px",
+						"color" 	  : "#3a3a3a",
+						"font-weight" : "bold"
+					},
+					selected: {
+						"border-color" : "#ff4c4c",
+						"font-size"    : "14px"
+					},
+					picker: {
+						"border-color" : "#ff4c4c"
+					}
+				}
+			});
+			$("#languages").multiPicker({
+				selector	: "radio"
+			});
+			$("#languages-no-border").multiPicker({
+				selector	: "radio"
+			});
+			$("#programming-languages").multiPicker({
+				selector	: "checkbox",
+				cssOptions : {
+					size 	  : "large"
+				}
+			});
+			$("#programming-languages-no-border").multiPicker({
+				selector	: "checkbox",
+				cssOptions : {
+					size 	  : "large"
+				}
+			});
+		});
+	</script>
+//= template/foot.html
+
+
+

@@ -1,0 +1,260 @@
+//= template/head.html
+
+<link rel="stylesheet" href="css/lib/bootstrap-sweetalert/sweetalert.css">
+<link rel="stylesheet" href="css/separate/vendor/sweet-alert-animations.min.css">
+
+//= template/head-end.html
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<div class="box-typical box-typical-padding">
+				<h4 class="with-border">Sweet Alert</h4>
+
+				<div class="alert alert-success" role="alert">
+					<p>
+						SweetAlert automatically centers itself on the page and looks great no matter if you're using a desktop computer, mobile or tablet. <br> It's even highly customizeable, as you can see below!
+					</p>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card mb-4">
+							<div class="card-header">
+								Basic message
+							</div>
+							<div class="card-block">
+								<p class="card-text">
+									<button class="btn btn-primary swal-btn-basic">Try Alert!</button>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4">
+							<div class="card-header">
+								Title with a text under
+							</div>
+							<div class="card-block">
+								<p class="card-text">
+									<button class="btn btn-primary swal-btn-text">Try Alert!</button>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4">
+							<div class="card-header">
+								Success message!
+							</div>
+							<div class="card-block">
+								<p class="card-text">
+									<button class="btn btn-primary swal-btn-success">Try Alert!</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card mb-4">
+							<div class="card-header">
+								Warning message
+							</div>
+							<div class="card-block">
+								<p class="card-text">
+									<button class="btn btn-primary swal-btn-warning">Try Alert!</button>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4">
+							<div class="card-header">
+								Cancel message
+							</div>
+							<div class="card-block">
+								<p class="card-text">
+									<button class="btn btn-primary swal-btn-cancel">Try Alert!</button>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4">
+							<div class="card-header">
+								Info message
+							</div>
+							<div class="card-block">
+								<p class="card-text">
+									<button class="btn btn-primary swal-btn-info">Try Alert!</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">
+								Custom image message
+							</div>
+							<div class="card-block">
+								<p class="card-text">
+									<button class="btn btn-primary swal-btn-custom-img">Try Alert!</button>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">
+								Input message
+							</div>
+							<div class="card-block">
+								<p class="card-text">
+									<button class="btn btn-primary swal-btn-input">Try Alert!</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--.box-typical-->
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.swal-btn-basic').click(function(e){
+				e.preventDefault();
+				swal("Here's a message!");
+			});
+
+			$('.swal-btn-text').click(function(e){
+				e.preventDefault();
+				swal({
+					title: "Here's a message!",
+					text: "It's pretty, isn't it?"
+				});
+			});
+
+			$('.swal-btn-success').click(function(e){
+				e.preventDefault();
+				swal({
+					title: "Good job!",
+					text: "You clicked the button!",
+					type: "success",
+					confirmButtonClass: "btn-success",
+					confirmButtonText: "Success"
+				});
+			});
+
+			$('.swal-btn-warning').click(function(e){
+				e.preventDefault();
+				swal({
+							title: "Are you sure?",
+							text: "Your will not be able to recover this imaginary file!",
+							type: "warning",
+							showCancelButton: true,
+							cancelButtonClass: "btn-default",
+							confirmButtonClass: "btn-warning",
+							confirmButtonText: "Warning",
+							closeOnConfirm: false
+						},
+						function(){
+							swal({
+								title: "Deleted!",
+								text: "Your imaginary file has been deleted.",
+								type: "success",
+								confirmButtonClass: "btn-success"
+							});
+						});
+			});
+
+			$('.swal-btn-cancel').click(function(e){
+				e.preventDefault();
+				swal({
+							title: "Are you sure?",
+							text: "You will not be able to recover this imaginary file!",
+							type: "warning",
+							showCancelButton: true,
+							confirmButtonClass: "btn-danger",
+							confirmButtonText: "Yes, delete it!",
+							cancelButtonText: "No, cancel plx!",
+							closeOnConfirm: false,
+							closeOnCancel: false
+						},
+						function(isConfirm) {
+							if (isConfirm) {
+								swal({
+									title: "Deleted!",
+									text: "Your imaginary file has been deleted.",
+									type: "success",
+									confirmButtonClass: "btn-success"
+								});
+							} else {
+								swal({
+									title: "Cancelled",
+									text: "Your imaginary file is safe :)",
+									type: "error",
+									confirmButtonClass: "btn-danger"
+								});
+							}
+						});
+			});
+
+			$('.swal-btn-custom-img').click(function(e){
+				e.preventDefault();
+				swal({
+					title: "Sweet!",
+					text: "Here's a custom image.",
+					confirmButtonClass: "btn-success",
+					imageUrl: 'img/smile.png'
+				});
+			});
+
+			$('.swal-btn-info').click(function(e){
+				e.preventDefault();
+				swal({
+					title: "Are you sure?",
+					text: "Your will not be able to recover this imaginary file!",
+					type: "info",
+					showCancelButton: true,
+					cancelButtonClass: "btn-default",
+					confirmButtonText: "Info",
+					confirmButtonClass: "btn-primary"
+				});
+			});
+
+			$('.swal-btn-input').click(function(e){
+				e.preventDefault();
+				swal({
+					title: "An input!",
+					text: "Write something interesting:",
+					type: "input",
+					showCancelButton: true,
+					closeOnConfirm: false,
+					inputPlaceholder: "Write something"
+				}, function (inputValue) {
+					if (inputValue === false) return false;
+					if (inputValue === "") {
+						swal.showInputError("You need to write something!");
+						return false
+					}
+					swal("Nice!", "You wrote: " + inputValue, "success");
+				});
+			});
+		});
+	</script>
+
+//= template/foot.html
+
+
+

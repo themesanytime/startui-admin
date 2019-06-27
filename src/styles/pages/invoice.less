@@ -1,0 +1,125 @@
+@import "../partials/vars";
+
+.invoice {
+  h5 {
+    color: #343434;
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+
+  .company-info {
+    h5 {
+      margin-bottom: 5px;
+    }
+  }
+
+  .invoice-block {
+    margin-top: 30px;
+
+    div {
+      margin-bottom: 10px;
+    }
+  }
+
+  .payment-details {
+    margin-top: 25px;
+    float: right;
+    width: 500px;
+    border: 1px solid #d8e2e7;
+    border-radius: 4px;
+    padding: 25px;
+
+    strong {
+      display: block;
+      margin-bottom: 25px;
+    }
+
+    table {
+      width: 100%;
+
+      td {
+        padding-bottom: 10px;
+      }
+
+      tr:first-child td {
+        padding-bottom: 25px;
+      }
+
+      tr:last-child td {
+        padding-bottom: 0;
+      }
+
+      td {
+        width: 50%;
+      }
+    }
+  }
+
+  .table-details {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .terms-and-conditions {
+    strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  .total-amount {
+    width: 300px;
+    float: right;
+
+    div {
+      margin-bottom: 15px;
+      padding-left: 30px;
+    }
+
+    .colored {
+      color: #00A8FF;
+    }
+
+    .actions {
+      margin-top: 35px;
+      padding-left: 0;
+
+      .btn {
+        min-width: 120px;
+        margin-right: 20px;
+      }
+
+      .btn:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: @lg-max-width) {
+  .invoice {
+    .payment-details {
+      width: 354px;
+    }
+
+    .total-amount, .payment-details {
+      float: none;
+    }
+
+    .total-amount {
+      margin-top: 35px;
+    }
+  }
+}
+
+@media (max-width: @md-max-width) {
+  .invoice {
+    .payment-details {
+      width: 500px;
+    }
+
+    .invoice-info {
+      margin-top: 35px;
+    }
+  }
+}

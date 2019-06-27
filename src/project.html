@@ -1,0 +1,932 @@
+//= template/head.html
+<link rel="stylesheet" href="css/lib/summernote/summernote.css">
+<link rel="stylesheet" href="css/separate/pages/editor.min.css">
+<link rel="stylesheet" href="css/separate/vendor/select2.min.css">
+<link rel="stylesheet" href="css/separate/pages/project.min.css">
+//= template/head-end.html
+<body class="with-side-menu">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xxl-9 col-lg-12 col-xl-8 col-md-8">
+					<section class="box-typical proj-page">
+						<section class="proj-page-section proj-page-header">
+							<div class="title">
+								Logo Portal Banese
+								<i class="font-icon font-icon-pencil"></i>
+							</div>
+							<div class="project">Project: <a href="#">Lorem Ipsum</a></div>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section">
+							<div class="tbl proj-page-team">
+								<div class="tbl-row">
+									<div class="tbl-cell tbl-cell-admin">
+										<div class="avatar-preview avatar-preview-32">
+											<a href="#">
+												<img src="img/photo-64-2.jpg" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="tbl-cell tbl-cell-divider">
+										<i class="font-icon font-icon-arrow-right"></i>
+									</div>
+									<div class="tbl-cell">
+										<div class="avatar-preview avatar-preview-32">
+											<a href="#">
+												<img src="img/photo-64-1.jpg" alt="">
+											</a>
+										</div>
+										<div class="avatar-preview avatar-preview-32">
+											<a href="#">
+												<img src="img/photo-64-3.jpg" alt="">
+											</a>
+										</div>
+										<div class="avatar-preview avatar-preview-32">
+											<a href="#">
+												<img src="img/photo-64-4.jpg" alt="">
+											</a>
+										</div>
+										<div class="avatar-preview avatar-preview-32">
+											<a href="#">
+												<img src="img/avatar-2-64.png" alt="">
+											</a>
+										</div>
+										<div class="avatar-preview avatar-preview-32">
+											<a href="#">
+												<img src="img/avatar-1-64.png" alt="">
+											</a>
+										</div>
+										<div class="avatar-preview avatar-preview-32">
+											<a href="#">
+												<img src="img/avatar-3-64.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="tbl-cell tbl-cell-date">3 days ago - 23 min read</div>
+								</div>
+							</div>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section">
+							<div class="proj-page-main-controls">
+								<div class="proj-page-main-controls-left">
+									<button type="button" class="btn btn-select">Assign</button>
+									<div class="select">
+										<select class="select2 select2-white">
+											<option>More</option>
+											<option>More</option>
+											<option>More</option>
+											<option>More</option>
+										</select>
+									</div>
+								</div>
+								<div class="proj-page-main-controls-right">
+									<button type="button" class="btn btn-select">Start Project</button>
+									<button type="button" class="btn btn-select">Resolve Issue</button>
+									<div class="select">
+										<select class="select2 select2-white">
+											<option>Workflow</option>
+											<option>Workflow</option>
+											<option>Workflow</option>
+											<option>Workflow</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="proj-page-txt">
+								<header class="proj-page-subtitle">
+									<h3>Lorem Ipsum</h3>
+								</header>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+							</div>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section">
+							<header class="proj-page-subtitle with-del">
+								<h3>Checklist programming</h3>
+								<button type="button" class="proj-page-del">
+									<i class="font-icon font-icon-trash"></i>
+								</button>
+							</header>
+							<div class="progress-with-amount progress-compact-style">
+								<div class="progress">
+									<div class="progress-bar progress-success" role="progressbar" style="width: 25%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<div class="progress-with-amount-number">25%</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+									<input type="checkbox" id="check-1">
+									<label for="check-1">Check me out</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="check-2" checked>
+									<label for="check-2">Check me out</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="check-3" disabled>
+									<label for="check-3">Check me out</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="check-4" checked disabled>
+									<label for="check-4">Check me out</label>
+								</div>
+							</div>
+							<button type="button" class="btn btn-grey">Add checklist item</button>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-add-txt">
+							<input type="text" class="form-control"/>
+							<button type="button" class="btn">Add</button>
+							<button type="button" class="proj-page-del">
+								<i class="font-icon font-icon-trash"></i>
+							</button>
+						</section><!--.proj-page-add-txt-->
+
+						<section class="proj-page-section">
+							<header class="proj-page-subtitle">
+								<h3>Uploading</h3>
+							</header>
+							<div class="drop-zone">
+								<!--
+                                при перетаскиваении добавляем класс .dragover
+                                <div class="drop-zone dragover">
+                                -->
+								<i class="font-icon font-icon-cloud-upload-2"></i>
+								<div class="drop-zone-caption">Drag file to upload</div>
+								<span class="btn btn-rounded btn-file">
+									<span>Choose file</span>
+									<input type="file" name="files[]" multiple>
+								</span>
+							</div>
+							<ul class="uploading-list">
+								<li class="uploading-list-item">
+									<div class="uploading-list-item-wrapper">
+										<div class="uploading-list-item-name">
+											<i class="font-icon font-icon-cam-photo"></i>
+											photo.png
+										</div>
+										<div class="uploading-list-item-size">7,5 mb</div>
+										<button type="button" class="uploading-list-item-close">
+											<i class="font-icon-close-2"></i>
+										</button>
+									</div>
+									<div class="progress">
+										<span class="progress-bar" style="width: 25%;">25%</span>
+									</div>
+									<div class="uploading-list-item-progress">37% done</div>
+									<div class="uploading-list-item-speed">90KB/sec</div>
+								</li>
+								<li class="uploading-list-item">
+									<div class="uploading-list-item-wrapper">
+										<div class="uploading-list-item-name">
+											<i class="font-icon font-icon-page"></i>
+											task.doc
+										</div>
+										<div class="uploading-list-item-size">7,5 mb</div>
+										<button type="button" class="uploading-list-item-close">
+											<i class="font-icon-close-2"></i>
+										</button>
+									</div>
+									<div class="progress">
+										<span class="progress-bar" style="width: 50%;">50%</span>
+									</div>
+									<div class="uploading-list-item-progress">37% done</div>
+									<div class="uploading-list-item-speed">90KB/sec</div>
+								</li>
+								<li class="uploading-list-item">
+									<div class="uploading-list-item-wrapper">
+										<div class="uploading-list-item-name">
+											<i class="font-icon font-icon-cam-photo"></i>
+											dashboard.png
+										</div>
+										<div class="uploading-list-item-size">7,5 mb</div>
+										<button type="button" class="uploading-list-item-close">
+											<i class="font-icon-close-2"></i>
+										</button>
+									</div>
+									<div class="progress">
+										<span class="progress-bar" style="width: 100%;">100%</span>
+									</div>
+									<div class="uploading-list-item-progress">Completed</div>
+									<div class="uploading-list-item-speed">90KB/sec</div>
+								</li>
+							</ul>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-attach-section scrollable-block">
+							<div class="proj-page-attach-section-in">
+								<header class="proj-page-subtitle">
+									<h3>Attachments 1</h3>
+								</header>
+								<div class="proj-page-attach-grid">
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+									<div class="gd-doc">
+										<div class="gd-doc-preview">
+											<a href="#">
+												<img src="img/doc.jpg" alt="">
+												<span class="icon"><i class="font-icon font-icon-downloaded"></i></span>
+											</a>
+										</div>
+										<div class="gd-doc-title">History Class Final</div>
+										<div class="gd-doc-date">05/30/2014</div>
+									</div>
+								</div>
+							</div>
+						</section><!--.proj-page-attach-section-->
+
+						<section class="proj-page-section">
+							<header class="proj-page-subtitle">
+								<h3>Attachments 2</h3>
+							</header>
+							<div class="proj-page-attach">
+								<i class="font-icon font-icon-pdf"></i>
+								<p class="name">Concept and UX.pdf</p>
+								<p class="date">16:48, 02 dec 2016</p>
+								<p>
+									<a href="#">View</a>
+									<a href="#">Download</a>
+								</p>
+							</div>
+						</section><!--.proj-page-attach-section-->
+
+						<section class="proj-page-section">
+							<header class="proj-page-subtitle">
+								<h3>Comments</h3>
+							</header>
+							<div class="comment-rows-container scrollable-block">
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/photo-64-2.jpg" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Tom Roy</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.
+											Pretty cool, isn't it?</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number color-green">1</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item selected">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/avatar-2-64.png" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Vasilisa</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>yeees!</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number">0</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/avatar-2-64.png" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Vasilisa</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>Very good message</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number color-red">-5</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/photo-64-2.jpg" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Tim Berkly</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>Hello!</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number">0</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/photo-64-2.jpg" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Mark Mo</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.
+											Pretty cool, isn't it?</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number color-green">1</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/avatar-2-64.png" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Vasilisa</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>yes!</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number">0</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/avatar-2-64.png" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Vasilisa</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>How are you?</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number color-red">-5</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/photo-64-2.jpg" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Tom Boy</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>Refresh the page</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number">0</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/photo-64-2.jpg" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Mask Roy</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.
+											Pretty cool, isn't it?</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number color-green">1</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/avatar-2-64.png" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Vasilisa</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>May be...</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number">0</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/avatar-2-64.png" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Vasilisa</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>Ok</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number color-red">-5</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+
+								<div class="comment-row-item">
+									<div class="avatar-preview avatar-preview-32">
+										<a href="#">
+											<img src="img/photo-64-2.jpg" alt="">
+										</a>
+									</div>
+									<div class="tbl comment-row-item-header">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-name">Leo Van</div>
+											<div class="tbl-cell tbl-cell-date">04.07.15, 20:02 PM</div>
+										</div>
+									</div>
+									<div class="comment-row-item-content">
+										<p>Cool!</p>
+										<button type="button" class="comment-row-item-action edit">
+											<i class="font-icon font-icon-pencil"></i>
+										</button>
+										<button type="button" class="comment-row-item-action del">
+											<i class="font-icon font-icon-trash"></i>
+										</button>
+									</div>
+									<a href="#" class="comment-row-item-reply">Reply</a>
+									<div class="comment-row-item-rating">
+										<i class="glyphicon glyphicon-menu-down"></i>
+										<span class="number">0</span>
+										<i class="glyphicon glyphicon-menu-up"></i>
+									</div>
+								</div><!--.comment-row-item-->
+							</div><!--.comment-rows-container-->
+
+							<div class="leave-comment-block">
+								<div class="avatar-preview avatar-preview-32">
+									<img src="img/photo-64-2.jpg" alt="">
+								</div>
+								<div class="summernote-theme-1">
+									<div class="summernote">This lorem ipsum generator is made for all the webdesigners, designers, webmasters and others who need lorem ipsum. Generator is made the way that everyone can use it, but especially for projects which need html markup. You can decide which html tags you want and our generator will generate just as you specified.
+										Pretty cool, isn't it?</div>
+								</div>
+								<div class="viewable-access">
+									<div class="btn-group choose">
+										<button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="font-icon font-icon-lock"></i>
+										</button>
+										<div class="dropdown-menu">
+											<a class="dropdown-item" href="#"><i class="font-icon font-icon-lock"></i>Action</a>
+											<a class="dropdown-item" href="#"><i class="font-icon font-icon-lock"></i>Another action</a>
+										</div>
+									</div>
+									<div class="lbl">Viewable by All Users</div>
+								</div>
+
+								<div class="chat-area-bottom">
+									<button type="submit" class="btn btn-rounded float-left">Send</button>
+									<button type="reset" class="btn btn-rounded btn-default float-left">Clear</button>
+									<div class="dropdown dropdown-typical dropup attach">
+										<a class="dropdown-toggle dropdown-toggle-txt"
+										   id="dd-chat-attach"
+										   data-target="#"
+										   data-toggle="dropdown"
+										   aria-haspopup="true"
+										   aria-expanded="false">
+											<span class="lbl">Attach</span>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-chat-attach">
+											<a class="dropdown-item" href="#"><i class="font-icon font-icon-cam-photo"></i>Photo</a>
+											<a class="dropdown-item" href="#"><i class="font-icon font-icon-cam-video"></i>Video</a>
+											<a class="dropdown-item" href="#"><i class="font-icon font-icon-sound"></i>Audio</a>
+											<a class="dropdown-item" href="#"><i class="font-icon font-icon-page"></i>Document</a>
+											<a class="dropdown-item" href="#"><i class="font-icon font-icon-earth"></i>Map</a>
+										</div>
+									</div>
+								</div><!--.chat-area-bottom-->
+							</div><!--.leave-comment-block-->
+						</section><!--.proj-page-attach-section-->
+					</section><!--.proj-page-->
+				</div>
+
+				<div class="col-xxl-3 col-lg-12 col-xl-4 col-md-4">
+					<section class="box-typical proj-page">
+						<section class="proj-page-section proj-page-time-info">
+							<div class="tbl">
+								<div class="tbl-row">
+									<div class="tbl-cell">Time estimated</div>
+									<div class="tbl-cell tbl-cell-time">4h 30m</div>
+								</div>
+								<div class="tbl-row">
+									<div class="tbl-cell">Time working</div>
+									<div class="tbl-cell tbl-cell-time">2h 10m</div>
+								</div>
+							</div>
+							<div class="progress-compact-style">
+								<div class="progress">
+									<span class="progress-bar" style="width: 65%;">65%</span>
+								</div>
+							</div>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section proj-page-labels">
+							<header class="proj-page-subtitle padding-sm">
+								<h3>Label</h3>
+							</header>
+							<a href="#" class="label label-light-grey">Default</a>
+							<a href="#" class="label label-light-grey">Primary</a>
+							<a href="#" class="label label-light-grey">Success</a>
+							<a href="#" class="label label-light-grey">Info</a>
+							<a href="#" class="label label-light-grey">Warning</a>
+							<a href="#" class="label label-light-grey">Danger</a>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section proj-page-assigned">
+							<header class="proj-page-subtitle padding-sm">
+								<h3>Assigned to</h3>
+							</header>
+							<div class="user-card-row">
+								<div class="tbl-row">
+									<div class="tbl-cell tbl-cell-photo">
+										<a href="#">
+											<img src="img/photo-64-2.jpg" alt="">
+										</a>
+									</div>
+									<div class="tbl-cell">
+										<p class="user-card-row-name"><a href="#">Tim Collins</a></p>
+										<p class="color-blue-grey-lighter">Developer</p>
+									</div>
+								</div>
+							</div>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section proj-page-people">
+							<header class="proj-page-subtitle padding-sm">
+								<h3>People</h3>
+							</header>
+							<div class="tbl tbl-people">
+								<div class="tbl-row">
+									<div class="tbl-cell tbl-cell-lbl">Assignee</div>
+									<div class="tbl-cell">
+										<div class="user-card-row">
+											<div class="tbl-row">
+												<div class="tbl-cell tbl-cell-photo">
+													<a href="#">
+														<img src="img/photo-64-2.jpg" alt="">
+													</a>
+												</div>
+												<div class="tbl-cell">Tim Collins</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tbl-row">
+									<div class="tbl-cell tbl-cell-lbl">Reporter</div>
+									<div class="tbl-cell">
+										<div class="user-card-row">
+											<div class="tbl-row">
+												<div class="tbl-cell tbl-cell-photo">
+													<a href="#">
+														<img src="img/photo-64-2.jpg" alt="">
+													</a>
+												</div>
+												<div class="tbl-cell">Tim Collins</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tbl-row">
+									<div class="tbl-cell tbl-cell-lbl">Votes</div>
+									<div class="tbl-cell"><a href="#"><span class="semibold">11</span> vote for this issue</a></div>
+								</div>
+								<div class="tbl-row">
+									<div class="tbl-cell tbl-cell-lbl">Watches</div>
+									<div class="tbl-cell"><a href="#"><span class="semibold">56</span> start watching this issue</a></div>
+								</div>
+							</div>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section proj-page-dates">
+							<header class="proj-page-subtitle padding-sm">
+								<h3>Dates</h3>
+							</header>
+							<div class="tbl">
+								<div class="tbl-row">
+									<div class="tbl-cell tbl-cell-lbl">Created:</div>
+									<div class="tbl-cell">5 days ago</div>
+								</div>
+								<div class="tbl-row">
+									<div class="tbl-cell tbl-cell-lbl">Updates:</div>
+									<div class="tbl-cell">6 days ago</div>
+								</div>
+							</div>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section">
+							<header class="proj-page-subtitle padding-sm">
+								<h3>Developers</h3>
+							</header>
+							<a href="#">Create branch</a>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section proj-page-agile">
+							<header class="proj-page-subtitle padding-sm">
+								<h3>Agile</h3>
+							</header>
+							<div class="tbl">
+								<div class="tbl-row">
+									<div class="tbl-cell">Future Sprint</div>
+									<div class="tbl-cell"><a href="#">Sprit - Signature</a></div>
+								</div>
+							</div>
+							<a href="#">View on Board</a>
+						</section><!--.proj-page-section-->
+
+						<section class="proj-page-section">
+							<ul class="proj-page-actions-list">
+								<li><a href="#"><i class="font-icon font-icon-check-square"></i>Create checklist</a></li>
+								<li><a href="#"><i class="font-icon font-icon-alarm-2"></i>Due date</a></li>
+								<li><a href="#"><i class="font-icon font-icon-archive"></i>Move to archive</a></li>
+							</ul>
+						</section><!--.proj-page-section-->
+					</section><!--.proj-page-->
+				</div>
+			</div><!--.row-->
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/select2/select2.full.min.js"></script>
+	<script src="js/lib/summernote/summernote.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.summernote').summernote();
+		});
+	</script>
+
+//= template/foot.html
+
+
+

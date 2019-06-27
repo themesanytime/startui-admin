@@ -1,0 +1,92 @@
+//= template/head.html
+<link rel="stylesheet" href="css/lib/summernote/summernote.css"/>
+<link rel="stylesheet" href="css/separate/pages/editor.min.css">
+//= template/head-end.html
+
+<body class="with-side-menu-addl-full">
+
+	//= template/header.html
+
+	//= template/side-menu.html
+
+	<nav class="side-menu-addl">
+		<ul class="side-menu-addl-list">
+			<li>
+				<a href="editor-summernote.html">
+					<span class="tbl-row">
+						<span class="tbl-cell tbl-cell-caption">Summernote</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="editor-simplemde.html">
+                <span class="tbl-row">
+                    <span class="tbl-cell tbl-cell-caption">Simplemde</span>
+                </span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<h3>Summernote Editor</h3>
+					<ol class="breadcrumb breadcrumb-simple">
+						<li><a href="#">StartUI</a></li>
+						<li><a href="#">Editors</a></li>
+						<li class="active">Summernote Editor</li>
+					</ol>
+				</div>
+			</header>
+
+			<section class="box-typical box-typical-padding">
+				<h3 class="with-border">Summernote</h3>
+				<div class="summernote-theme-1">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+				<div class="summernote-theme-2">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+				<div class="summernote-theme-3">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+				<div class="summernote-theme-4">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+				<div class="summernote-theme-5">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+				<div class="summernote-theme-6">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+				<div class="summernote-theme-7">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+				<div class="summernote-theme-8">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+				<div class="summernote-theme-9">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+				<div class="summernote-theme-10">
+					<textarea class="summernote" name="name">Hello Summernote</textarea>
+				</div>
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	//= template/footer.html
+
+	<script src="js/lib/summernote/summernote.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.summernote').summernote();
+		});
+	</script>
+
+//= template/foot.html
+
+
+

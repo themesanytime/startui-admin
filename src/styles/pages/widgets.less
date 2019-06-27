@@ -1,0 +1,494 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+// Upload
+.box-typical-upload { height: 314px;
+  .box-typical-upload-in { padding: 10px; }
+  .drop-zone { width: auto; margin-bottom: 1rem; height: auto; padding-bottom: 1rem; }
+}
+
+// Comments
+.comment-item { padding: 15px; border-top: solid 1px @color-border-light; font-size: .9375rem;
+  &:first-child { border-top: none; }
+  p { margin: 0; }
+  .user-card-row { margin: 0 0 12px; font-size: .9375rem; }
+  .comment-item-txt { line-height: 1.4; }
+  .comment-item-meta { padding: 10px 0 5px; .clearfix();
+    a, button { float: left; border: none; background: none; margin: 0 15px 0 0; color: @color-grey; font-size: 1rem;
+      &:hover { color: @color-blue; }
+      &.star {
+        &:hover, &.active { color: #f18482; }
+      }
+    }
+  }
+
+  .box-typical-full-screen & {
+    .comment-item-txt { font-size: 1rem; }
+  }
+}
+
+// Contacts
+.contact-row-list {
+  .contact-row:nth-child(odd) { background: @color-bg-grey-super-light; }
+}
+.contact-row { padding: 15px 20px 15px 15px; color: @color-grey-blue-txt; line-height: 1.2;
+  .box-typical-full-screen & { padding-top: 20px; padding-bottom: 20px; }
+  .user-card-row { font-size: .9375rem; }
+}
+
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
+
+.widget { margin: 0 0 30px; }
+
+.widget-header-dark { border-radius: .25rem .25rem 0 0; background: @color-bg-black-blue; color: #fff; font-weight: 600; padding: .75rem 1rem; text-align: center;
+  &.with-btn { text-align: left; position: relative; padding-right: 55px; }
+  .widget-header-btn { display: block; width: 46px; height: 100%; position: absolute; right: 0; top: 0; background: darken(@color-bg-black-blue, 8%); border: none; border-radius: 0 .25rem 0 0; color: @color-grey-blue-lighter-txt;
+    &:hover { color: #fff; }
+    .font-icon { vertical-align: middle; position: relative; top: 1px; }
+  }
+}
+
+/* ==========================================================================
+   Widgets tabs
+   ========================================================================== */
+
+.widget-tabs-content { background: #fff; border: solid 1px @color-border-light; border-top: none; border-bottom: none; min-height: 230px; padding: 30px 0 0; }
+
+.widget-tabs-nav { display: table; width: 100%; border-collapse: collapse; table-layout: fixed; text-align: center;
+  .nav-item { display: table-cell; }
+  .nav-link { display: block; height: 94px; position: relative; background: @color-bg-grey-super-light; .hover_animate_none(); font-weight: 600; font-size: .75rem; text-transform: uppercase;
+    &:hover { background-color: @color-bg-grey-light; }
+    &.active { cursor: default; }
+  }
+  .nav-item:first-child .nav-link { border-bottom-left-radius: .25rem; }
+  .nav-item:last-child .nav-link { border-bottom-right-radius: .25rem; }
+  .font-icon { display: block; height: 64px; overflow: hidden; line-height: 70px; font-size: 1.875rem /*30/16*/; }
+
+  &.bordered {
+    .nav-link { border: solid 1px @color-border-light; border-left: none; border-top: none; color: @color-grey-blue-lighter-txt;
+      &:before { content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 0; border-top: solid 1px @color-border-light; }
+      &.active { background-color: #fff; color: @color-purple;
+        &:before { display: none; }
+      }
+    }
+    .nav-item:first-child .nav-link { border-left: solid 1px @color-border-light; }
+  }
+
+  &.colored {
+    .nav-link { color: #fff;
+      &.green { background-color: @color-green;
+        &:hover, &.active { background-color: darken(@color-green, 5%); }
+      }
+      &.blue { background-color: @color-blue;
+        &:hover, &.active { background-color: darken(@color-blue, 5%); }
+      }
+      &.orange { background-color: @color-orange;
+        &:hover, &.active { background-color: darken(@color-orange, 5%); }
+      }
+      &.red { background-color: @color-red;
+        &:hover, &.active { background-color: darken(@color-red, 5%); }
+      }
+    }
+  }
+}
+
+// Компактная версия
+.widget-tabs-compact {
+  .widget-tabs-content { min-height: 102px; border-top: solid 1px @color-border-light; border-radius: .25rem .25rem 0 0; padding: 18px; }
+  .widget-tabs-nav {
+    .nav-link { height: 80px; font-size: .875rem; }
+    .font-icon { font-size: 1.625rem /*26/16*/; height: 48px; line-height: 60px; }
+  }
+}
+
+.top-tabs {
+  &.widget-tabs-compact {
+    .widget-tabs-content { border-top: none; border-bottom: solid 1px @color-border-light; border-bottom-left-radius: .25rem; border-bottom-right-radius: .25rem; }
+    .widget-tabs-nav {
+      border-top-left-radius: .25rem;
+      border-top-right-radius: .25rem;
+
+      .nav-link {
+        border-top: solid 1px @color-border-light;
+      }
+
+      .nav-item:first-child .nav-link {
+        border-top-left-radius: .25rem;
+      }
+
+      .nav-item:last-child .nav-link {
+        border-top-right-radius: .25rem;
+      }
+    }
+  }
+
+  .widget-tabs-nav {
+    .nav-link {
+      &:before { border-top: none; }
+
+      &.active {
+        border-bottom: none;
+      }
+    }
+
+    &.colored {
+      .nav-link {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Widgets simple
+   ========================================================================== */
+
+.widget-simple-sm { border: solid 1px @color-border-light; background: #fff; border-radius: .25rem; text-align: center;
+  .widget-simple-sm-icon { height: 80px; overflow: hidden; line-height: 80px; font-size: 2.75rem /*44/16*/;
+    .font-icon { position: relative; top: 5px; }
+  }
+  .widget-simple-sm-statistic { line-height: 1; padding: 15px 10px;
+    .number { font-weight: 600; font-size: 1.5rem /*24/16*/; margin: 0 0 6px; }
+    .caption { font-size: .875rem; font-weight: 600; text-transform: uppercase; }
+  }
+  .widget-simple-sm-bottom { border-top: solid 1px @color-border-light; background: @color-bg-grey-light; font-weight: 600; padding: 15px 10px; font-size: .9375rem; line-height: normal; border-radius: 0 0 3px 3px;
+    a { .a_color_text(); }
+    &.statistic { font-weight: normal; text-transform: uppercase; line-height: 1rem;
+      strong { font-weight: 600; }
+      .arrow { font-size: 1rem; }
+    }
+  }
+}
+
+.widget-simple-sm-fill { color: #fff; border-radius: .25rem; text-align: center; background: @color-blue;
+  .widget-simple-sm-icon { height: 80px; overflow: hidden; line-height: 80px; font-size: 2.75rem /*44/16*/;
+    .font-icon { position: relative; top: 17px; }
+  }
+  .widget-simple-sm-fill-caption { font-weight: 600; font-size: .9375rem; line-height: normal; padding: 16px 10px 15px; }
+
+  &.red { background-color: @color-red; }
+  &.green { background-color: @color-green; }
+  &.orange { background-color: @color-orange; }
+  &.purple { background-color: @color-purple; }
+  &.grey { background-color: @color-grey; }
+}
+
+/* ==========================================================================
+   Widgets time
+   ========================================================================== */
+
+.widget-time {
+  .widget-time-content { padding: .75rem .25rem 1rem; background: #fff; border-radius: 0 0 .25rem .25rem; border: solid 1px @color-border-light; border-top: none; color: @color-bg-black-blue; text-align: center; }
+  .count-item { display: inline-block; vertical-align: top; line-height: 1; font-weight: 600;
+    &.divider { padding: 0 10px; opacity: .5; font-size: 2.875rem /*46/16*/; }
+  }
+  .count-item-number { font-size: 2.875rem /*46/16*/; }
+  .count-item-caption { font-size: .75rem; text-transform: uppercase; padding: .25rem 0 0; }
+
+  &.aquamarine {
+    .widget-time-content { color: #fff; background-color: @color-aquamarine; border-color: @color-aquamarine; }
+  }
+}
+
+/* ==========================================================================
+   Widgets weather
+   ========================================================================== */
+
+.widget-weather {
+  .widget-weather-big { height: 175px; background: @color-blue; color: #fff; border-radius: .25rem .25rem 0 0; text-align: center; overflow: hidden; .clearfix();
+    .icon { float: left; width: 60%; line-height: 174px; font-size: 6.875rem /*110/16*/; padding: 0 0 0 5%;
+      .font-icon { vertical-align: middle; position: relative; top: 2px; }
+    }
+    .info { float: left; width: 40%; line-height: 1; padding: 48px 0 0; }
+    .degrees { font-size: 3.5rem /*56/16*/; }
+    .weather { font-weight: 600; padding: 0 18px 0 0; }
+  }
+  .widget-weather-content { background: #fff; border: solid 1px @color-border-light; border-top: none; border-radius: 0 0 .25rem .25rem; .clearfix(); }
+  .widget-weather-item { text-align: center; }
+  .widget-weather-item-time { white-space: nowrap; line-height: 42px; }
+  .widget-weather-item-info { border-top: solid 1px @color-border-light; line-height: 1; padding: 15px 0;
+    .font-icon { color: @color-blue; font-size: 2.25rem; display: block; margin: 0 0 6px; }
+  }
+  .slick-dots { background: @color-bg-grey-light; border-top: solid 1px @color-border-light; text-align: center; padding: 4px 0; border-radius: 0 0 3px 3px;
+    li { display: inline-block; padding: 6px 0; }
+    button { border: none; background: @color-grey; width: 6px; height: 6px; overflow: hidden; text-indent: -1000px; border-radius: 50%; margin: 0 6px; line-height: 6px;
+      &:hover { background-color: @color-blue; }
+    }
+    .slick-active button { background-color: @color-blue; }
+  }
+}
+
+/* ==========================================================================
+   Widgets accordion
+   ========================================================================== */
+
+.widget-accordion { background: #fff; border-radius: .25rem; border: solid 1px @color-border-light;
+  .panel { border-top: solid 1px @color-border-light;
+    &:first-child { border-top: none; }
+  }
+  .panel:first-child .panel-heading a { border-radius: 3px 3px 0 0; }
+  .panel:last-child .panel-heading a { border-radius: 0 0 3px 3px; }
+  .panel-heading a { display: block; padding: 12px 44px 12px 15px; color: @color-text; font-weight: 600; background: @color-bg-grey-super-light; position: relative;
+    .font-icon { font-size: .75rem; height: 16px; line-height: 16px; display: block; position: absolute; right: 15px; top: 50%; margin-top: -6px; color: @color-grey; .hover_animate(); }
+    &:hover { background: none;
+      .font-icon { color: @color-text; }
+    }
+    &[aria-expanded="true"] { background: none; color: @color-link;
+      .font-icon { color: @color-link; }
+    }
+  }
+  .panel-collapse-in { padding: 0 15px 15px; font-size: .9375rem; }
+  .title { font-weight: 600; margin: 0 0 .25rem; font-size: 1rem; }
+  .user-card-row { margin: 0 0 1rem; font-size: .9375rem; }
+}
+
+/* ==========================================================================
+   Widgets youtube
+   ========================================================================== */
+
+.widget-youtube { border: none; overflow: hidden; position: relative; }
+
+/* ==========================================================================
+   Widgets header
+   ========================================================================== */
+
+.widgets-header {
+  .tbl-outer { table-layout: fixed; }
+  .tbl-outer>.tbl-row>.tbl-cell { border-left: solid 1px @color-border-light; padding: 15px 30px;
+    &:first-child { border-left: none; padding-left: 0; }
+    &:last-child { padding-right: 0; }
+  }
+  .tbl-item { line-height: 1.25rem;
+    .tbl-cell { padding: 0; }
+    .tbl-cell-progress { width: 66px; padding-left: 10px; }
+    .title { font-weight: 600; color: fade(@color-text, 80%); }
+    .amount { font-weight: 600; font-size: 1rem; }
+    .amount-sm { color: @color-grey-blue-lighter-txt; font-size: .875rem; }
+  }
+
+  @media (max-width: @sm-max-width) {
+    .tbl-outer,
+    .tbl-outer>.tbl-row,
+    .tbl-outer>.tbl-row>.tbl-cell { display: block; }
+    .tbl-outer>.tbl-row>.tbl-cell { border-left: none; border-top: solid 1px @color-border-light; padding-left: 0; padding-right: 0; }
+  }
+}
+
+/* ==========================================================================
+   Widget user card
+   ========================================================================== */
+
+.widget-user { background: #fff; border-radius: .25rem; border: solid 1px @color-border-light; text-align: center;
+  .widget-user-bg { height: 92px; border-radius: .25rem .25rem 0 0; background: no-repeat 50% 50%; background-size: cover; margin: -1px -1px 0; }
+  .widget-user-photo { width: 110px; height: 110px; margin: -68px auto 10px; position: relative;
+    img { display: block; width: 100%; height: 100%; border: solid 2px #fff; border-radius: 50%; background: #fff; }
+  }
+  .widget-user-name { font-size: 1.375rem /*22/16*/;
+    .font-icon { color: @color-gold; font-size: 1.125rem; vertical-align: middle; margin: 0 0 0 3px; position: relative; top: 1px; }
+  }
+  .widget-user-stat { border-top: solid 1px @color-border-light; .clearfix(); margin: 15px 0 0;
+    .item { float: left; width: 33.333333%; padding: 18px 5px 20px; }
+    .number { font-size: 1.375rem /*22/16*/; }
+    .caption { color: @color-grey-blue-lighter-txt; font-size: .9375rem; }
+  }
+}
+
+/* ==========================================================================
+   Widget tasks & activity
+   ========================================================================== */
+
+.widget-tasks,
+.widget-activity { border: solid 1px @color-border-light; background: #fff; padding: 0 0 5px; border-radius: .25rem;
+  .widget-header { border-bottom: solid 1px @color-border-light; padding: 12px 15px; font-weight: 600;
+    .label { padding-right: .5em; padding-left: .5em; margin-left: 3px; }
+  }
+  .widget-tasks-item,
+  .widget-activity-item { padding: 12px 15px; position: relative;
+    .user-card-row { font-size: 1rem; line-height: 20px; }
+  }
+  .widget-tasks-item { padding-right: 35px;
+    &:nth-child(odd) { background: @color-bg-grey-super-light; }
+  }
+  .widget-menu { position: absolute; top: 50%; right: 15px; margin-top: -9px;
+    >button { border: none; background: none; padding: 0; color: @color-grey-blue-lighter-txt; font-size: 1.125rem; line-height: 1; }
+
+    &.open>button,
+    >button:hover { color: @color-blue; }
+  }
+  .widget-activity-item { color: @color-grey-blue-lighter-txt;
+    &:before { content: ''; display: block; width: 0; height: 100%; position: absolute; left: 31px; top: 50%; border-left: solid 1px @color-border-light; }
+    &:last-child:before { display: none; }
+    a { .a_color_text(); }
+    .user-card-row { position: relative; }
+  }
+}
+
+/* ==========================================================================
+   Widget pie charts
+   ========================================================================== */
+
+.ggl-pie-chart-container,
+.ggl-pie-chart { position: relative; width: 156px; height: 156px; margin: 0 auto; }
+.ggl-pie-chart-container {
+  &.size-180 { width: 180px; height: 180px;
+    .ggl-pie-chart { width: 180px; height: 180px; }
+    .ggl-pie-chart-title { top: 66px; }
+  }
+}
+.ggl-pie-chart-title { position: absolute; left: 15%; top: 54px; text-align: center; width: 70%; font-weight: 600; line-height: 1;
+  .caption { color: @color-grey-blue-lighter-txt; text-transform: uppercase; font-size: .75rem; margin: 0 0 4px; }
+  .number { font-size: 2.25rem /*36/16*/; }
+}
+
+.widget-pie-chart { background: #fff; border: solid 1px @color-border-light; border-radius: .25rem; padding: 15px; .clearfix();
+  .legends-col { float: left; width: 55%; .clearfix();
+    .col { float: left; width: 50%; }
+  }
+  .chart-col { float: left; width: 45%; }
+  .chart-box-info { margin: 0 30px 18px 0; border: solid 1px @color-border-light; border-radius: .25rem; background: #fff; text-align: center; font-weight: 600; line-height: 1;
+    .number, .caption { padding: 0 10px; }
+    .number { font-size: 1.5rem /*24/16*/; padding-top: 12px; padding-bottom: 12px; }
+    .caption { border-top: solid 1px @color-border-light; background: @color-bg-grey-light; border-radius: 0 0 3px 3px; padding-top: 12px; padding-bottom: 12px; }
+  }
+
+  .col-60, .col-40 { float: left; }
+  .col-60 { width: 60%; }
+  .col-40 { width: 40%; }
+  .no-padding { margin: 0 -15px; }
+  .tbl-grid {
+    .tbl-cell-55 { width: 55%; }
+    .tbl-cell-45 { width: 45%; }
+    .tbl-cell-60 { width: 60%; }
+    .tbl-cell-40 { width: 40%; }
+    .tbl-cell-30 { width: 30%; }
+    .tbl-cell-33 { width: 33%; }
+    .tbl-cell-33 { width: 33%; }
+    .tbl-cell-35 { width: 35%; }
+    .tbl-cell-340px { width: 285px; }
+    .col { float: left; width: 50%; }
+  }
+
+  .display-inline { text-align: left; display: inline-block; vertical-align: top; }
+
+  .widget-pie-chart-header { .clearfix(); margin: 0 0 10px;
+    .widget-pie-chart-header-title { font-weight: 600; padding: .375rem 0; position: relative; top: 2px; }
+    .period { position: relative; padding: 0 0 0 55px;
+      .lbl { position: absolute; left: 0; top: 2px; padding: .375rem 0; }
+    }
+  }
+}
+
+.chart-legend { padding: 14px 0;
+  .circle { display: inline-block; width: 13px; height: 13px; border-radius: 50%; border: solid 4px @color-grey;
+    &.red { border-color: @color-red; }
+    &.blue { border-color: @color-blue; }
+    &.orange { border-color: @color-orange; }
+    &.green { border-color: @color-green; }
+    &.purple { border-color: @color-purple; }
+    &.pink { border-color: @color-pink; }
+  }
+  .percent { display: inline-block; font-weight: 600; font-size: 1.25rem /*20/16*/;
+    sup { font-weight: 400; color: @color-grey-blue-lighter-txt; margin: 0 0 0 4px; }
+  }
+  .caption { font-size: .875rem; padding: 2px 0 0; }
+}
+
+.chart-legend-tbl,
+.chart-legend-list {
+  .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: @color-grey; margin: 0 5px 0 0; position: relative; top: -1px;
+    &.red { background-color: @color-red; }
+    &.blue { background-color: @color-blue; }
+    &.orange { background-color: @color-orange; }
+    &.green { background-color: @color-green; }
+    &.purple { background-color: @color-purple; }
+    &.pink { background-color: @color-pink; }
+  }
+
+  &.font-16 { font-size: 1rem; }
+}
+
+.chart-legend-tbl { clear: both;
+  .title { font-weight: 600; margin: 0 0 8px; }
+  .tbl { width: auto; }
+  .tbl-cell { padding: 3px 0; }
+  .tbl-cell-legend { padding-right: 10px; }
+  .tbl-cell-value { text-align: right; padding-left: 10px; border-left: solid 1px @color-border-light; color: @color-grey-blue-lighter-txt; }
+}
+
+.chart-legend-list { font-size: .75rem; padding: 5px 0 0;
+  li { margin: 5px 0; }
+}
+
+/* ==========================================================================
+   Widget combo chart
+   ========================================================================== */
+
+.widget-chart-combo { background: #fff; border: solid 1px @color-border-light; border-radius: .25rem; .clearfix();
+  .widget-chart-combo-header { padding: 10px 10px 0; border-bottom: solid 1px @color-border-light; .clearfix();
+    .widget-chart-combo-header-left,
+    .widget-chart-combo-header-right { margin: 0 0 10px; }
+    .widget-chart-combo-header-left { float: left; width: 145px; }
+    .widget-chart-combo-header-right { float: right; width: 262px; position: relative; padding: 0 70px 0 0;
+      .btn { position: absolute; right: 0; top: 0; padding-left: 0; padding-right: 0; width: 60px; }
+    }
+  }
+
+  .widget-chart-combo-side { float: right; width: 150px; position: relative; background: @color-bg-grey-light; border-radius: 0 0 3px 0; border-left: solid 1px @color-border-light;
+    .tbl { height: 100%; }
+    .tbl-cell { padding: 10px 10px 10px 15px; font-size: .9575rem; border-top: solid 1px @color-border-light; }
+    .tbl-row:first-child .tbl-cell { border-top: none; }
+    .number { font-size: 1rem; font-weight: 600; }
+  }
+
+  .widget-chart-combo-content { float: left; width: 100%; margin-right: -150px; }
+  .widget-chart-combo-content-in { margin-right: 150px; padding: 15px 15px 5px; }
+  .widget-chart-combo-content-title { font-weight: 600; margin: 0 0 15px; }
+
+  .chart { width: 100%; height: 210px; }
+  .chart-legend-list {
+    li { display: inline-block; vertical-align: top; margin-right: 20px; font-size: 1rem; }
+    .dot { top: -2px; }
+  }
+}
+
+/* ==========================================================================
+   Widget chart extra
+   ========================================================================== */
+
+.widget-chart-extra {
+  .widget-chart-extra-section { border-top: solid 1px @color-border-light; padding: 15px; }
+  .widget-chart-extra-inner { background: #fff; border: solid 1px @color-border-light; border-top: none; border-radius: 0 0 .25rem .25rem; }
+  .widget-chart-extra-title { font-size: 1rem; font-weight: 600; margin: 0 0 12px; }
+}
+
+.widget-chart-extra-blue { background: #008ffb; color: #fff; padding: 15px 0; border-radius: .25rem .25rem 0 0;
+  .widget-chart-extra-blue-title { padding: 0 15px 15px; text-align: center; font-size: 1.125rem; font-weight: 600; }
+  .chart { height: 230px; }
+}
+
+.widget-chart-extra-bars { .clearfix();
+  .widget-chart-extra-bars-chart { float: left; width: 100%; margin-right: -95px; }
+  .widget-chart-extra-bars-chart-in { margin-right: 95px; }
+  .widget-chart-extra-bars-txt { float: right; width: 95px; position: relative; text-align: right;
+    .number { height: 64px; overflow: hidden; line-height: 64px; margin: 0 0 2px; color: @color-purple; font-size: 2.25rem /*36/16*/; font-weight: 600; }
+    .caption { font-size: .875rem; }
+  }
+}
+
+.widget-chart-extra-stat { table-layout: fixed;
+  .tbl-cell { vertical-align: top; }
+  .title { font-weight: 600; margin: 0 0 5px; }
+  .number { color: @color-purple; font-size: 2.25rem /*36/16*/; font-weight: 600; line-height: 1; }
+}
+
+.cstm-chart-bars { display: table; width: 100%; table-layout: fixed;
+  .cstm-chart-bars-in { display: table-row; }
+  .item { display: table-cell; vertical-align: top; }
+  .bar, .caption { width: 65%; max-width: 16px; }
+  .bar { border-radius: 2px; height: 64px; background: @color-bg-page; position: relative; overflow: hidden; margin: 0 0 5px;
+    >div { position: absolute; left: 0; bottom: 0; width: 100%; border-radius: 0 0 2px 2px; background: @color-purple; }
+  }
+  .caption { text-align: center; font-size: .75rem; }
+}

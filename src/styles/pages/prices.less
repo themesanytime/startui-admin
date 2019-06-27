@@ -1,0 +1,33 @@
+@import '../partials/mixins';
+@import '../partials/vars';
+
+/* ==========================================================================
+   Prices
+   ========================================================================== */
+
+.prices-page { text-align: center;
+   p { margin: 0; }
+   .prices-page-title { font-size: 1.75rem; margin: 0 0 15px; padding: 10px 0 0; }
+   .prices-page-subtitle { padding-bottom: 30px; font-size: 1.25rem; }
+   .prices-page-bottom { padding: 30px 0 15px; }
+}
+
+.price-card { width: 100%; max-width: 225px; text-align: center; display: inline-block; vertical-align: bottom; margin: 20px 7px 0;
+   .price-card-header { border: solid 1px @color-border-light; border-radius: .25rem .25rem 0 0; background: @color-bg-grey-light; padding: 15px; font-size: 1.25rem /*20/16*/; }
+   .price-card-body { background: #fff; border: solid 1px @color-border-light; border-top: none; border-radius: 0 0 .25rem .25rem; padding: 25px 0; }
+   .price-card-amount { font-size: 2.375rem /*38/16*/; line-height: 1; white-space: nowrap; }
+   .price-card-amount-lbl { padding: 10px 0 15px; }
+   .price-card-list { text-align: left; padding: 20px 30px 18px;
+      li { margin: 0 0 .25rem; }
+      .font-icon { color: @color-blue; vertical-align: middle; margin: 0 5px 0 0; }
+   }
+   .price-card-label { padding: 10px; background: @color-blue; color: #fff; }
+}
+
+@media (max-width: @md-max-width) {
+   .price-card { display: block; max-width: none; margin-right: 0; margin-left: 0;
+      .price-card-list { display: inline-block; }
+   }
+}
+
+

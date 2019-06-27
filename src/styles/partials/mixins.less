@@ -1,0 +1,26 @@
+@import '../partials/vars';
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+.clearfix() { zoom: 1;
+	&:before, &:after { content: " "; display: table; }
+	&:after { clear: both; }
+}
+.hover_animate() { transition: all 0.2s ease-in-out; }
+.hover_animate_none() { transition: none; }
+
+.a_color_text() { color: @color-text;
+	&:hover { color: @color-blue; }
+}
+.a_bordered(@color) { text-decoration: none; color: @color; border-bottom: solid 1px fade(@color, 30%);
+	&:hover { border-bottom-color: transparent; }
+}
+.a_bordered_hover(@color) { text-decoration: none; color: @color; border-bottom: solid 1px transparent;
+	&:hover { border-bottom-color: fade(@color, 50%); }
+}
+.a_colored(@color, @color-hover) { text-decoration: none; color: @color; border: none;
+	&:hover { color: @color-hover; }
+}
+
